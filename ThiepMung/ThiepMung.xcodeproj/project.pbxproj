@@ -48,6 +48,16 @@
 		D974BEC21C87EAF00005938A /* btn_menu.png in Resources */ = {isa = PBXBuildFile; fileRef = D974BEBF1C87EAF00005938A /* btn_menu.png */; };
 		D974BEC31C87EAF00005938A /* btn_menu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D974BEC01C87EAF00005938A /* btn_menu@2x.png */; };
 		D974BEC41C87EAF00005938A /* btn_menu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D974BEC01C87EAF00005938A /* btn_menu@2x.png */; };
+		D974BEC71C87F3C40005938A /* SubItemCollectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D974BEC61C87F3C40005938A /* SubItemCollectionView.xib */; };
+		D974BEC81C87F3C40005938A /* SubItemCollectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D974BEC61C87F3C40005938A /* SubItemCollectionView.xib */; };
+		D974BECB1C87F3DA0005938A /* SubItemCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = D974BECA1C87F3DA0005938A /* SubItemCollectionView.m */; };
+		D974BECC1C87F3DA0005938A /* SubItemCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = D974BECA1C87F3DA0005938A /* SubItemCollectionView.m */; };
+		D974BED01C87F67A0005938A /* CollectionItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D974BECE1C87F67A0005938A /* CollectionItemViewController.m */; };
+		D974BED11C87F67A0005938A /* CollectionItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D974BECE1C87F67A0005938A /* CollectionItemViewController.m */; };
+		D974BED21C87F67A0005938A /* CollectionItemViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D974BECF1C87F67A0005938A /* CollectionItemViewController.xib */; };
+		D974BED31C87F67A0005938A /* CollectionItemViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D974BECF1C87F67A0005938A /* CollectionItemViewController.xib */; };
+		D974BED61C87FAD90005938A /* ItemCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = D974BED51C87FAD90005938A /* ItemCollection.m */; };
+		D974BED71C87FAD90005938A /* ItemCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = D974BED51C87FAD90005938A /* ItemCollection.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +110,14 @@
 		D974BEBF1C87EAF00005938A /* btn_menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_menu.png; sourceTree = "<group>"; };
 		D974BEC01C87EAF00005938A /* btn_menu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_menu@2x.png"; sourceTree = "<group>"; };
 		D974BEC51C87EB5D0005938A /* MacroUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MacroUtilities.h; sourceTree = "<group>"; };
+		D974BEC61C87F3C40005938A /* SubItemCollectionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SubItemCollectionView.xib; sourceTree = "<group>"; };
+		D974BEC91C87F3DA0005938A /* SubItemCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubItemCollectionView.h; sourceTree = "<group>"; };
+		D974BECA1C87F3DA0005938A /* SubItemCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubItemCollectionView.m; sourceTree = "<group>"; };
+		D974BECD1C87F67A0005938A /* CollectionItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionItemViewController.h; sourceTree = "<group>"; };
+		D974BECE1C87F67A0005938A /* CollectionItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionItemViewController.m; sourceTree = "<group>"; };
+		D974BECF1C87F67A0005938A /* CollectionItemViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionItemViewController.xib; sourceTree = "<group>"; };
+		D974BED41C87FAD90005938A /* ItemCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemCollection.h; sourceTree = "<group>"; };
+		D974BED51C87FAD90005938A /* ItemCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemCollection.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -219,6 +237,8 @@
 		D974BE7F1C87E4B60005938A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D974BED41C87FAD90005938A /* ItemCollection.h */,
+				D974BED51C87FAD90005938A /* ItemCollection.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -269,6 +289,12 @@
 				D974BE8F1C87E5170005938A /* HomeViewController.h */,
 				D974BE901C87E5170005938A /* HomeViewController.m */,
 				D974BE911C87E5170005938A /* HomeViewController.xib */,
+				D974BEC91C87F3DA0005938A /* SubItemCollectionView.h */,
+				D974BECA1C87F3DA0005938A /* SubItemCollectionView.m */,
+				D974BEC61C87F3C40005938A /* SubItemCollectionView.xib */,
+				D974BECD1C87F67A0005938A /* CollectionItemViewController.h */,
+				D974BECE1C87F67A0005938A /* CollectionItemViewController.m */,
+				D974BECF1C87F67A0005938A /* CollectionItemViewController.xib */,
 			);
 			path = HomeViewController;
 			sourceTree = "<group>";
@@ -405,6 +431,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D974BED21C87F67A0005938A /* CollectionItemViewController.xib in Resources */,
 				D974BEC31C87EAF00005938A /* btn_menu@2x.png in Resources */,
 				D974BEB51C87E8B40005938A /* MenuTableViewCell.xib in Resources */,
 				D974BEC11C87EAF00005938A /* btn_menu.png in Resources */,
@@ -413,6 +440,7 @@
 				D974BE941C87E5170005938A /* HomeViewController.xib in Resources */,
 				D974BEA91C87E5590005938A /* SidebarViewController.xib in Resources */,
 				D974BE661C87DFC90005938A /* LaunchScreen.xib in Resources */,
+				D974BEC71C87F3C40005938A /* SubItemCollectionView.xib in Resources */,
 				D974BEBD1C87E9610005938A /* CustomNavigationBar.xib in Resources */,
 				D974BEA21C87E5420005938A /* RootViewController.xib in Resources */,
 				D974BE9B1C87E52E0005938A /* InfoViewController.xib in Resources */,
@@ -424,6 +452,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D974BEC81C87F3C40005938A /* SubItemCollectionView.xib in Resources */,
 				D974BEC41C87EAF00005938A /* btn_menu@2x.png in Resources */,
 				D974BEB61C87E8B40005938A /* MenuTableViewCell.xib in Resources */,
 				D974BE8E1C87E4E10005938A /* BaseViewController.xib in Resources */,
@@ -433,6 +462,7 @@
 				D974BEBE1C87E9610005938A /* CustomNavigationBar.xib in Resources */,
 				D974BE951C87E5170005938A /* HomeViewController.xib in Resources */,
 				D974BEC21C87EAF00005938A /* btn_menu.png in Resources */,
+				D974BED31C87F67A0005938A /* CollectionItemViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -451,8 +481,11 @@
 				D974BE991C87E52E0005938A /* InfoViewController.m in Sources */,
 				D974BEAE1C87E59C0005938A /* SWRevealViewController.m in Sources */,
 				D974BEBB1C87E9610005938A /* CustomNavigationBar.m in Sources */,
+				D974BED01C87F67A0005938A /* CollectionItemViewController.m in Sources */,
 				D974BE5B1C87DFC90005938A /* AppDelegate.m in Sources */,
 				D974BE921C87E5170005938A /* HomeViewController.m in Sources */,
+				D974BECB1C87F3DA0005938A /* SubItemCollectionView.m in Sources */,
+				D974BED61C87FAD90005938A /* ItemCollection.m in Sources */,
 				D974BE581C87DFC90005938A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -467,9 +500,12 @@
 				D974BE8C1C87E4E10005938A /* BaseViewController.m in Sources */,
 				D974BE9A1C87E52E0005938A /* InfoViewController.m in Sources */,
 				D974BEA81C87E5590005938A /* SidebarViewController.m in Sources */,
+				D974BED71C87FAD90005938A /* ItemCollection.m in Sources */,
 				D974BE931C87E5170005938A /* HomeViewController.m in Sources */,
 				D974BEB41C87E8B40005938A /* MenuTableViewCell.m in Sources */,
+				D974BECC1C87F3DA0005938A /* SubItemCollectionView.m in Sources */,
 				D974BEA11C87E5420005938A /* RootViewController.m in Sources */,
+				D974BED11C87F67A0005938A /* CollectionItemViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -658,6 +694,7 @@
 				D974BE771C87DFC90005938A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D974BE781C87DFC90005938A /* Build configuration list for PBXNativeTarget "ThiepMungTests" */ = {
 			isa = XCConfigurationList;
@@ -666,6 +703,7 @@
 				D974BE7A1C87DFC90005938A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

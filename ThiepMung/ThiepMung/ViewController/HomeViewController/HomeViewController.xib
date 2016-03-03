@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7706"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController">
@@ -26,12 +27,30 @@
                                 <constraint firstAttribute="height" constant="45" id="vSJ-SL-O5g"/>
                             </constraints>
                         </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9BR-x8-kt4">
+                            <rect key="frame" x="0.0" y="45" width="320" height="240"/>
+                            <color key="backgroundColor" red="0.21176470589999999" green="0.67843137249999996" blue="0.92156862750000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="9BR-x8-kt4" secondAttribute="height" multiplier="4:3" id="nOc-31-ZK0"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RR3-Z8-0cy">
+                            <rect key="frame" x="0.0" y="285" width="320" height="283"/>
+                            <color key="backgroundColor" red="0.42352941179999998" green="0.74509803919999995" blue="0.1058823529" alpha="1" colorSpace="calibratedRGB"/>
+                        </view>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
+                        <constraint firstAttribute="trailing" secondItem="9BR-x8-kt4" secondAttribute="trailing" id="Iff-43-j4L"/>
+                        <constraint firstAttribute="bottom" secondItem="RR3-Z8-0cy" secondAttribute="bottom" id="KUw-Sj-ZDt"/>
                         <constraint firstItem="zbU-y7-ekV" firstAttribute="leading" secondItem="e3d-V3-CZp" secondAttribute="leading" id="Ryx-zU-pVn"/>
+                        <constraint firstItem="9BR-x8-kt4" firstAttribute="leading" secondItem="e3d-V3-CZp" secondAttribute="leading" id="TO2-ZH-xsX"/>
                         <constraint firstItem="zbU-y7-ekV" firstAttribute="top" secondItem="e3d-V3-CZp" secondAttribute="top" id="eU6-kz-84C"/>
+                        <constraint firstItem="RR3-Z8-0cy" firstAttribute="leading" secondItem="e3d-V3-CZp" secondAttribute="leading" id="fJ7-bo-Ypl"/>
                         <constraint firstAttribute="trailing" secondItem="zbU-y7-ekV" secondAttribute="trailing" id="nTu-7g-fPv"/>
+                        <constraint firstAttribute="trailing" secondItem="RR3-Z8-0cy" secondAttribute="trailing" id="trU-fk-Rrt"/>
+                        <constraint firstItem="9BR-x8-kt4" firstAttribute="top" secondItem="zbU-y7-ekV" secondAttribute="bottom" id="v4F-WS-qeH"/>
+                        <constraint firstItem="RR3-Z8-0cy" firstAttribute="top" secondItem="e3d-V3-CZp" secondAttribute="top" constant="285" id="w2a-34-AR2"/>
                     </constraints>
                 </view>
             </subviews>
