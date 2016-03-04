@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "MacroUtilities.h"
 #import "ItemCollection.h"
+#import "UIImageView+WebCache.h"
 
 @interface BaseViewController : UIViewController
 

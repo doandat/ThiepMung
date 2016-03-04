@@ -12,7 +12,7 @@
 
 @property (nonatomic) CGFloat heightCollectionCell;
 
-@property (nonatomic) NSArray *arrData;
+@property (nonatomic) NSMutableArray *arrData;
 
 
 

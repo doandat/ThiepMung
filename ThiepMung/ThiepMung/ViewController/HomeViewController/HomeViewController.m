@@ -8,8 +8,11 @@
 
 #import "HomeViewController.h"
 #import "SWRevealViewController.h"
+#import "HomeTableViewCellSecond.h"
 
-@interface HomeViewController ()
+@interface HomeViewController (){
+    NSMutableArray *arrDataSource;
+}
 
 @end
 
@@ -27,6 +30,10 @@
     [_navigationBar.btnMenu addTarget:revealController action:@selector(revealToggle:) forControlEvents:UIControlEventTouchUpInside];
     [_navigationBar.lbTitle setText:@"Home"];
     [_navigationBar.lbTitle setFont:[UIFont fontWithName:@"Helvetica-Bold" size:25]];
+    
+    self.tableView.dataSource = self;
+    self.tableView.delegate = self;
+//    [self.tableView registerClass:[HomeTableViewCellSecond class] forCellReuseIdentifier:@"HomeTableViewCellSecondIdentifier"];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -34,14 +41,56 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
+#pragma mark - Table view data source
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    // Return the number of sections.
+    
+    return 1;
 }
-*/
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+//    return [arrDataSource count];
+    return 4;
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    HomeTableViewCellSecond *cell = [tableView dequeueReusableCellWithIdentifier:@"HomeTableViewCellSecondIdentifier"];
+    if (cell == nil) {
+        NSArray *topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"HomeTableViewCellSecond" owner:self options:nil];
+        cell = [topLevelObjects objectAtIndex:0];
+    }
+    [cell.btnTitle setTitle:@"Viet Thu Phap" forState:UIControlStateNormal];
+    return cell;
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 150;
+}
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+}
+
+//- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+//    UIView *viewHeader = [[UIView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 45)];
+//    UILabel *lbTitle = [[UILabel alloc]initWithFrame:CGRectMake(25, 5, self.view.frame.size.width -20, 34)];
+//    [lbTitle setText:@"Menu"];
+//    [lbTitle setFont:[UIFont fontWithName:@"Helvetica-Bold" size:30]];
+//    [lbTitle setTextColor:[UIColor whiteColor]];
+//    
+//    [viewHeader addSubview:lbTitle];
+//    [viewHeader setBackgroundColor:[UIColor colorWithRed:23/255.0f green:137/255.0f blue:206/255.0f alpha:1.0f]];
+//    UIView *viewSeparator = [[UIView alloc]initWithFrame:CGRectMake(0, 44, 375, 1)];
+//    [viewSeparator setBackgroundColor:[UIColor colorWithRed:27/255.0f green:156/255.0f blue:222/255.0f alpha:1.0f]];
+//    [viewHeader addSubview:viewSeparator];
+//    
+//    return viewHeader;
+//}
+//
+//- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+//    return 45;
+//}
 
 @end

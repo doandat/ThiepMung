@@ -9,10 +9,13 @@
 #import "BaseViewController.h"
 #import "CustomNavigationBar.h"
 
-@interface HomeViewController : BaseViewController
+@interface HomeViewController : BaseViewController<UITableViewDelegate,UITableViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UIView *viewContain;
 
 @property (weak, nonatomic) IBOutlet CustomNavigationBar *navigationBar;
+
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+
 
 @end
