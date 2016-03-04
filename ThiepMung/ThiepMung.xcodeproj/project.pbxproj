@@ -45,6 +45,18 @@
 		D90797DD1C89361F0088F3C5 /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = D90797BD1C89361F0088F3C5 /* UIView+WebCacheOperation.m */; };
 		D90797DF1C8936BD0088F3C5 /* placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = D90797DE1C8936BD0088F3C5 /* placeholder.png */; };
 		D90797E01C8936BD0088F3C5 /* placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = D90797DE1C8936BD0088F3C5 /* placeholder.png */; };
+		D90797E41C8938E70088F3C5 /* HomeTableViewCellFirst.m in Sources */ = {isa = PBXBuildFile; fileRef = D90797E21C8938E70088F3C5 /* HomeTableViewCellFirst.m */; };
+		D90797E51C8938E70088F3C5 /* HomeTableViewCellFirst.m in Sources */ = {isa = PBXBuildFile; fileRef = D90797E21C8938E70088F3C5 /* HomeTableViewCellFirst.m */; };
+		D90797E61C8938E70088F3C5 /* HomeTableViewCellFirst.xib in Resources */ = {isa = PBXBuildFile; fileRef = D90797E31C8938E70088F3C5 /* HomeTableViewCellFirst.xib */; };
+		D90797E71C8938E70088F3C5 /* HomeTableViewCellFirst.xib in Resources */ = {isa = PBXBuildFile; fileRef = D90797E31C8938E70088F3C5 /* HomeTableViewCellFirst.xib */; };
+		D90797EB1C8939EC0088F3C5 /* HomeCellFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D90797E91C8939EC0088F3C5 /* HomeCellFirstViewController.m */; };
+		D90797EC1C8939EC0088F3C5 /* HomeCellFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D90797E91C8939EC0088F3C5 /* HomeCellFirstViewController.m */; };
+		D90797ED1C8939EC0088F3C5 /* HomeCellFirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D90797EA1C8939EC0088F3C5 /* HomeCellFirstViewController.xib */; };
+		D90797EE1C8939EC0088F3C5 /* HomeCellFirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D90797EA1C8939EC0088F3C5 /* HomeCellFirstViewController.xib */; };
+		D90797F21C89412E0088F3C5 /* ViewShowImageController.m in Sources */ = {isa = PBXBuildFile; fileRef = D90797F01C89412E0088F3C5 /* ViewShowImageController.m */; };
+		D90797F31C89412E0088F3C5 /* ViewShowImageController.m in Sources */ = {isa = PBXBuildFile; fileRef = D90797F01C89412E0088F3C5 /* ViewShowImageController.m */; };
+		D90797F41C89412E0088F3C5 /* ViewShowImageController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D90797F11C89412E0088F3C5 /* ViewShowImageController.xib */; };
+		D90797F51C89412E0088F3C5 /* ViewShowImageController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D90797F11C89412E0088F3C5 /* ViewShowImageController.xib */; };
 		D974BE581C87DFC90005938A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D974BE571C87DFC90005938A /* main.m */; };
 		D974BE5B1C87DFC90005938A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D974BE5A1C87DFC90005938A /* AppDelegate.m */; };
 		D974BE5E1C87DFC90005938A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D974BE5D1C87DFC90005938A /* ViewController.m */; };
@@ -146,6 +158,15 @@
 		D90797BC1C89361F0088F3C5 /* UIView+WebCacheOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WebCacheOperation.h"; sourceTree = "<group>"; };
 		D90797BD1C89361F0088F3C5 /* UIView+WebCacheOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WebCacheOperation.m"; sourceTree = "<group>"; };
 		D90797DE1C8936BD0088F3C5 /* placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder.png; sourceTree = "<group>"; };
+		D90797E11C8938E70088F3C5 /* HomeTableViewCellFirst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeTableViewCellFirst.h; sourceTree = "<group>"; };
+		D90797E21C8938E70088F3C5 /* HomeTableViewCellFirst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeTableViewCellFirst.m; sourceTree = "<group>"; };
+		D90797E31C8938E70088F3C5 /* HomeTableViewCellFirst.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeTableViewCellFirst.xib; sourceTree = "<group>"; };
+		D90797E81C8939EC0088F3C5 /* HomeCellFirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeCellFirstViewController.h; sourceTree = "<group>"; };
+		D90797E91C8939EC0088F3C5 /* HomeCellFirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeCellFirstViewController.m; sourceTree = "<group>"; };
+		D90797EA1C8939EC0088F3C5 /* HomeCellFirstViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeCellFirstViewController.xib; sourceTree = "<group>"; };
+		D90797EF1C89412E0088F3C5 /* ViewShowImageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewShowImageController.h; sourceTree = "<group>"; };
+		D90797F01C89412E0088F3C5 /* ViewShowImageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewShowImageController.m; sourceTree = "<group>"; };
+		D90797F11C89412E0088F3C5 /* ViewShowImageController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewShowImageController.xib; sourceTree = "<group>"; };
 		D974BE521C87DFC90005938A /* ThiepMung.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThiepMung.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D974BE561C87DFC90005938A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D974BE571C87DFC90005938A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -415,6 +436,15 @@
 				D90797951C89250F0088F3C5 /* HomeTableViewCellSecond.h */,
 				D90797961C89250F0088F3C5 /* HomeTableViewCellSecond.m */,
 				D90797971C89250F0088F3C5 /* HomeTableViewCellSecond.xib */,
+				D90797E11C8938E70088F3C5 /* HomeTableViewCellFirst.h */,
+				D90797E21C8938E70088F3C5 /* HomeTableViewCellFirst.m */,
+				D90797E31C8938E70088F3C5 /* HomeTableViewCellFirst.xib */,
+				D90797E81C8939EC0088F3C5 /* HomeCellFirstViewController.h */,
+				D90797E91C8939EC0088F3C5 /* HomeCellFirstViewController.m */,
+				D90797EA1C8939EC0088F3C5 /* HomeCellFirstViewController.xib */,
+				D90797EF1C89412E0088F3C5 /* ViewShowImageController.h */,
+				D90797F01C89412E0088F3C5 /* ViewShowImageController.m */,
+				D90797F11C89412E0088F3C5 /* ViewShowImageController.xib */,
 			);
 			path = HomeViewController;
 			sourceTree = "<group>";
@@ -566,7 +596,10 @@
 				D974BEBD1C87E9610005938A /* CustomNavigationBar.xib in Resources */,
 				D974BEA21C87E5420005938A /* RootViewController.xib in Resources */,
 				D974BE9B1C87E52E0005938A /* InfoViewController.xib in Resources */,
+				D90797E61C8938E70088F3C5 /* HomeTableViewCellFirst.xib in Resources */,
+				D90797ED1C8939EC0088F3C5 /* HomeCellFirstViewController.xib in Resources */,
 				D974BE631C87DFC90005938A /* Images.xcassets in Resources */,
+				D90797F41C89412E0088F3C5 /* ViewShowImageController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -577,9 +610,11 @@
 				D907979B1C89250F0088F3C5 /* HomeTableViewCellSecond.xib in Resources */,
 				D974BEC81C87F3C40005938A /* SubItemCollectionView.xib in Resources */,
 				D974BEC41C87EAF00005938A /* btn_menu@2x.png in Resources */,
+				D90797E71C8938E70088F3C5 /* HomeTableViewCellFirst.xib in Resources */,
 				D90797E01C8936BD0088F3C5 /* placeholder.png in Resources */,
 				D974BEB61C87E8B40005938A /* MenuTableViewCell.xib in Resources */,
 				D974BE8E1C87E4E10005938A /* BaseViewController.xib in Resources */,
+				D90797EE1C8939EC0088F3C5 /* HomeCellFirstViewController.xib in Resources */,
 				D974BE9C1C87E52E0005938A /* InfoViewController.xib in Resources */,
 				D974BEAA1C87E5590005938A /* SidebarViewController.xib in Resources */,
 				D974BEA31C87E5420005938A /* RootViewController.xib in Resources */,
@@ -587,6 +622,7 @@
 				D974BE951C87E5170005938A /* HomeViewController.xib in Resources */,
 				D974BEC21C87EAF00005938A /* btn_menu.png in Resources */,
 				D974BED31C87F67A0005938A /* CollectionItemViewController.xib in Resources */,
+				D90797F51C89412E0088F3C5 /* ViewShowImageController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -598,12 +634,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				D90797D21C89361F0088F3C5 /* UIImage+GIF.m in Sources */,
+				D90797EB1C8939EC0088F3C5 /* HomeCellFirstViewController.m in Sources */,
 				D90797CC1C89361F0088F3C5 /* SDWebImageManager.m in Sources */,
+				D90797F21C89412E0088F3C5 /* ViewShowImageController.m in Sources */,
 				D90797DA1C89361F0088F3C5 /* UIImageView+WebCache.m in Sources */,
 				D90797CA1C89361F0088F3C5 /* SDWebImageDownloaderOperation.m in Sources */,
 				D974BE5E1C87DFC90005938A /* ViewController.m in Sources */,
 				D90797C21C89361F0088F3C5 /* SDImageCache.m in Sources */,
 				D90797BE1C89361F0088F3C5 /* MKAnnotationView+WebCache.m in Sources */,
+				D90797E41C8938E70088F3C5 /* HomeTableViewCellFirst.m in Sources */,
 				D974BEA01C87E5420005938A /* RootViewController.m in Sources */,
 				D90797D41C89361F0088F3C5 /* UIImage+MultiFormat.m in Sources */,
 				D974BEB31C87E8B40005938A /* MenuTableViewCell.m in Sources */,
@@ -638,6 +677,7 @@
 				D974BEAF1C87E59C0005938A /* SWRevealViewController.m in Sources */,
 				D90797D71C89361F0088F3C5 /* UIImage+WebP.m in Sources */,
 				D974BEBC1C87E9610005938A /* CustomNavigationBar.m in Sources */,
+				D90797EC1C8939EC0088F3C5 /* HomeCellFirstViewController.m in Sources */,
 				D974BE721C87DFC90005938A /* ThiepMungTests.m in Sources */,
 				D974BE8C1C87E4E10005938A /* BaseViewController.m in Sources */,
 				D974BE9A1C87E52E0005938A /* InfoViewController.m in Sources */,
@@ -648,6 +688,7 @@
 				D974BE931C87E5170005938A /* HomeViewController.m in Sources */,
 				D90797991C89250F0088F3C5 /* HomeTableViewCellSecond.m in Sources */,
 				D974BEB41C87E8B40005938A /* MenuTableViewCell.m in Sources */,
+				D90797E51C8938E70088F3C5 /* HomeTableViewCellFirst.m in Sources */,
 				D90797C51C89361F0088F3C5 /* SDWebImageCompat.m in Sources */,
 				D90797C11C89361F0088F3C5 /* NSData+ImageContentType.m in Sources */,
 				D974BECC1C87F3DA0005938A /* SubItemCollectionView.m in Sources */,
@@ -656,6 +697,7 @@
 				D90797DB1C89361F0088F3C5 /* UIImageView+WebCache.m in Sources */,
 				D90797D91C89361F0088F3C5 /* UIImageView+HighlightedWebCache.m in Sources */,
 				D90797BF1C89361F0088F3C5 /* MKAnnotationView+WebCache.m in Sources */,
+				D90797F31C89412E0088F3C5 /* ViewShowImageController.m in Sources */,
 				D90797D31C89361F0088F3C5 /* UIImage+GIF.m in Sources */,
 				D974BEA11C87E5420005938A /* RootViewController.m in Sources */,
 				D90797CF1C89361F0088F3C5 /* SDWebImagePrefetcher.m in Sources */,

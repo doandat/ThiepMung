@@ -8,6 +8,7 @@
 
 #import "HomeViewController.h"
 #import "SWRevealViewController.h"
+#import "HomeTableViewCellFirst.h"
 #import "HomeTableViewCellSecond.h"
 
 @interface HomeViewController (){
@@ -23,7 +24,7 @@
     [self.navigationController setNavigationBarHidden:YES];
     SWRevealViewController *revealController = [self revealViewController];
     
-    [revealController panGestureRecognizer];
+//    [revealController panGestureRecognizer];
     [revealController tapGestureRecognizer];
     
     //custom navigationbar
@@ -46,27 +47,46 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     // Return the number of sections.
     
-    return 1;
+    return 2;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
 //    return [arrDataSource count];
+    if (section==0) {
+        return 1;
+    }else
     return 4;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    HomeTableViewCellSecond *cell = [tableView dequeueReusableCellWithIdentifier:@"HomeTableViewCellSecondIdentifier"];
-    if (cell == nil) {
-        NSArray *topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"HomeTableViewCellSecond" owner:self options:nil];
-        cell = [topLevelObjects objectAtIndex:0];
+    if (indexPath.section==0) {
+        HomeTableViewCellFirst *cell = [tableView dequeueReusableCellWithIdentifier:@"HomeTableViewCellFirstIdentifier"];
+        if (cell == nil) {
+            NSArray *topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"HomeTableViewCellFirst" owner:self options:nil];
+            cell = [topLevelObjects objectAtIndex:0];
+        }
+        [self addChildViewController:cell.homeCellFirstVC];
+        [cell.homeCellFirstVC didMoveToParentViewController:self];
+
+        return cell;
+    }else{
+        HomeTableViewCellSecond *cell = [tableView dequeueReusableCellWithIdentifier:@"HomeTableViewCellSecondIdentifier"];
+        if (cell == nil) {
+            NSArray *topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"HomeTableViewCellSecond" owner:self options:nil];
+            cell = [topLevelObjects objectAtIndex:0];
+        }
+        [cell.btnTitle setTitle:@"Viet Thu Phap" forState:UIControlStateNormal];
+        return cell;
     }
-    [cell.btnTitle setTitle:@"Viet Thu Phap" forState:UIControlStateNormal];
-    return cell;
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 150;
+    if (indexPath.section==0) {
+        return [UIScreen mainScreen].bounds.size.width*2/3+50;
+    }else{
+        return 150;
+    }
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
