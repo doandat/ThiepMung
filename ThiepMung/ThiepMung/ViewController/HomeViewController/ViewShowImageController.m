@@ -17,7 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    [self.imageViewContent setImage:[UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://thiepmung.com/images/frame/frame_demo/khung-anh-qua-cau-thuy-tinh56d4ebe89152b.jpg"]]]];
+//    [self.imageViewContent setImage:[UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://thiepmung.com/images/frame/frame_demo/khung-anh-qua-cau-thuy-tinh56d4ebe89152b.jpg"]]]];
 }
 
 - (void)didReceiveMemoryWarning {

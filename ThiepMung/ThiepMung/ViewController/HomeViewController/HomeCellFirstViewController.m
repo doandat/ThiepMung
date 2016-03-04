@@ -36,6 +36,13 @@
     NSLog(@"viewContainPage:%lu",(unsigned long)_viewContainPage.subviews.count);
     [self.pageController didMoveToParentViewController:self];
 
+    UIView *viewTitle = [[UIView alloc]initWithFrame:CGRectMake(0, self.viewContainPage.frame.size.height-55, 200, 35)];
+    [viewTitle setBackgroundColor:[UIColor yellowColor]];
+    viewTitle.autoresizingMask = (UIViewAutoresizingFlexibleTopMargin|UIViewAutoresizingFlexibleBottomMargin |UIViewAutoresizingFlexibleLeftMargin|UIViewAutoresizingFlexibleRightMargin|UIViewAutoresizingFlexibleWidth|
+                                             UIViewAutoresizingFlexibleHeight);
+
+    [self.viewContainPage addSubview:viewTitle];
+
     // Do any additional setup after loading the view from its nib.
 }
 - (void)viewWillAppear:(BOOL)animated{

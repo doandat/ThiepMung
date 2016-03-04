@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B009F1711C89DB6E00B6D197 /* imgCell1.png in Resources */ = {isa = PBXBuildFile; fileRef = B009F1701C89DB6E00B6D197 /* imgCell1.png */; };
+		B009F1721C89DB6E00B6D197 /* imgCell1.png in Resources */ = {isa = PBXBuildFile; fileRef = B009F1701C89DB6E00B6D197 /* imgCell1.png */; };
 		D90797981C89250F0088F3C5 /* HomeTableViewCellSecond.m in Sources */ = {isa = PBXBuildFile; fileRef = D90797961C89250F0088F3C5 /* HomeTableViewCellSecond.m */; };
 		D90797991C89250F0088F3C5 /* HomeTableViewCellSecond.m in Sources */ = {isa = PBXBuildFile; fileRef = D90797961C89250F0088F3C5 /* HomeTableViewCellSecond.m */; };
 		D907979A1C89250F0088F3C5 /* HomeTableViewCellSecond.xib in Resources */ = {isa = PBXBuildFile; fileRef = D90797971C89250F0088F3C5 /* HomeTableViewCellSecond.xib */; };
@@ -121,6 +123,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B009F1701C89DB6E00B6D197 /* imgCell1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imgCell1.png; sourceTree = "<group>"; };
 		D90797951C89250F0088F3C5 /* HomeTableViewCellSecond.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeTableViewCellSecond.h; sourceTree = "<group>"; };
 		D90797961C89250F0088F3C5 /* HomeTableViewCellSecond.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeTableViewCellSecond.m; sourceTree = "<group>"; };
 		D90797971C89250F0088F3C5 /* HomeTableViewCellSecond.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeTableViewCellSecond.xib; sourceTree = "<group>"; };
@@ -391,6 +394,7 @@
 		D974BE811C87E4B60005938A /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				B009F1701C89DB6E00B6D197 /* imgCell1.png */,
 				D90797DE1C8936BD0088F3C5 /* placeholder.png */,
 				D974BEBF1C87EAF00005938A /* btn_menu.png */,
 				D974BEC01C87EAF00005938A /* btn_menu@2x.png */,
@@ -594,6 +598,7 @@
 				D974BE661C87DFC90005938A /* LaunchScreen.xib in Resources */,
 				D974BEC71C87F3C40005938A /* SubItemCollectionView.xib in Resources */,
 				D974BEBD1C87E9610005938A /* CustomNavigationBar.xib in Resources */,
+				B009F1711C89DB6E00B6D197 /* imgCell1.png in Resources */,
 				D974BEA21C87E5420005938A /* RootViewController.xib in Resources */,
 				D974BE9B1C87E52E0005938A /* InfoViewController.xib in Resources */,
 				D90797E61C8938E70088F3C5 /* HomeTableViewCellFirst.xib in Resources */,
@@ -614,6 +619,7 @@
 				D90797E01C8936BD0088F3C5 /* placeholder.png in Resources */,
 				D974BEB61C87E8B40005938A /* MenuTableViewCell.xib in Resources */,
 				D974BE8E1C87E4E10005938A /* BaseViewController.xib in Resources */,
+				B009F1721C89DB6E00B6D197 /* imgCell1.png in Resources */,
 				D90797EE1C8939EC0088F3C5 /* HomeCellFirstViewController.xib in Resources */,
 				D974BE9C1C87E52E0005938A /* InfoViewController.xib in Resources */,
 				D974BEAA1C87E5590005938A /* SidebarViewController.xib in Resources */,

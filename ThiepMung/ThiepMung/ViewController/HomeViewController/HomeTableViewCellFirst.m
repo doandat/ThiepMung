@@ -19,6 +19,7 @@
 //    [self addChildViewController:self.homeCellFirstVC];
     [self.viewContent addSubview:homeCellFirstVC.view];
 //    [self.homeCellFirstVC didMoveToParentViewController:self];
+    
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
