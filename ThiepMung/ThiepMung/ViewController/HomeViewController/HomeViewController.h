@@ -9,7 +9,13 @@
 #import "BaseViewController.h"
 #import "CustomNavigationBar.h"
 
-@interface HomeViewController : BaseViewController<UITableViewDelegate,UITableViewDataSource>
+@protocol HomeViewControllerDelegate
+@required
+- (void) presentVC:(UIViewController *)vc;
+
+@end
+
+@interface HomeViewController : BaseViewController<UITableViewDelegate,UITableViewDataSource,HomeViewControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UIView *viewContain;
 
@@ -17,5 +23,6 @@
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
+@property (nonatomic, weak) id<HomeViewControllerDelegate> delegate;
 
 @end

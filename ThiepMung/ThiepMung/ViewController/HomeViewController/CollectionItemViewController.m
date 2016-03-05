@@ -8,6 +8,7 @@
 
 #import "CollectionItemViewController.h"
 #import "SubItemCollectionView.h"
+#import "AddImageTextViewController.h"
 
 @interface CollectionItemViewController (){
     
@@ -80,7 +81,8 @@
 }
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
-    
+    AddImageTextViewController *addImageTextVC = [[AddImageTextViewController alloc]initWithNibName:@"AddImageTextViewController" bundle:nil];;
+    [self.delegate presentVC:addImageTextVC];
     
 }
 
