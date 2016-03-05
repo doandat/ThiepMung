@@ -12,5 +12,7 @@
 
 @property (strong, nonatomic) UIPageViewController *pageController;
 @property (nonatomic) IBOutlet UIView *viewContainPage;
+@property (weak, nonatomic) IBOutlet UIPageControl *pageControl;
+@property (weak, nonatomic) IBOutlet UILabel *lbDesciption;
 
 @end

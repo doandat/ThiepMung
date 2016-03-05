@@ -9,7 +9,12 @@
 #import "HomeCellFirstViewController.h"
 #import "ViewShowImageController.h"
 
-@interface HomeCellFirstViewController ()
+@interface HomeCellFirstViewController (){
+    UIView *viewTitle;
+    UILabel *lbTitle;
+    NSInteger indexPendingView;
+    NSArray *arrTitleFake;
+}
 
 @end
 
@@ -36,14 +41,24 @@
     NSLog(@"viewContainPage:%lu",(unsigned long)_viewContainPage.subviews.count);
     [self.pageController didMoveToParentViewController:self];
 
-    UIView *viewTitle = [[UIView alloc]initWithFrame:CGRectMake(0, self.viewContainPage.frame.size.height-55, 200, 35)];
-    [viewTitle setBackgroundColor:[UIColor yellowColor]];
+    viewTitle = [[UIView alloc]initWithFrame:CGRectMake(0, self.viewContainPage.frame.size.height-60, 200, 30)];
+    
+    [viewTitle setBackgroundColor:[UIColor colorWithRed:176/255.0f green:150/255.0f blue:217/255.0f alpha:1.0f]];
+    
     viewTitle.autoresizingMask = (UIViewAutoresizingFlexibleTopMargin|UIViewAutoresizingFlexibleBottomMargin |UIViewAutoresizingFlexibleLeftMargin|UIViewAutoresizingFlexibleRightMargin|UIViewAutoresizingFlexibleWidth|
                                              UIViewAutoresizingFlexibleHeight);
+    lbTitle = [[UILabel alloc]initWithFrame:CGRectMake(10, 0, viewTitle.frame.size.width-10, viewTitle.frame.size.height)];
+    [lbTitle setText:@"Khung anh phong thuy"];
+    lbTitle.autoresizingMask = (UIViewAutoresizingFlexibleTopMargin|UIViewAutoresizingFlexibleBottomMargin |UIViewAutoresizingFlexibleLeftMargin|UIViewAutoresizingFlexibleRightMargin|UIViewAutoresizingFlexibleWidth|
+                                  UIViewAutoresizingFlexibleHeight);
+    [viewTitle addSubview:lbTitle];
 
     [self.viewContainPage addSubview:viewTitle];
 
-    // Do any additional setup after loading the view from its nib.
+    self.pageControl.numberOfPages = 5;
+    [self.viewContainPage bringSubviewToFront:self.pageControl];
+    arrTitleFake = [NSArray arrayWithObjects:@"Khung ảnh phong thuỷ",@"KHung ảnh sinh nhật màu hồng",@"Cover facebook",@"Khung ảnh giọt nước",@"Khung ảnh điện thoại", nil];
+
 }
 - (void)viewWillAppear:(BOOL)animated{
     NSLog(@"viewWillAppear HomeCellFirstViewController");
@@ -57,12 +72,12 @@
 
 - (ViewShowImageController *)viewControllerAtIndex:(NSInteger)index {
     NSLog(@"viewControllerAtIndex");
-//    if (index<0) {
-//        return nil;
-//    }
-//    if (index>=5) {
-//        return nil;
-//    }
+    if (index<0) {
+        return nil;
+    }
+    if (index>=5) {
+        return nil;
+    }
     
     // Assuming you have SomePageViewController.xib
     ViewShowImageController *newController = [[ViewShowImageController alloc] initWithNibName:@"ViewShowImageController" bundle:nil];
@@ -90,25 +105,26 @@
 
 - (void)pageViewController:(UIPageViewController *)pageViewController willTransitionToViewControllers:(NSArray *)pendingViewControllers {
     //    NSLog(@"pendingViewControllers:%ld",(long)[(DailyViewController *)[pendingViewControllers lastObject] index]);
-//    indexPendingView = [(ViewShowImageController *)[pendingViewControllers lastObject] index];
+    indexPendingView = [(ViewShowImageController *)[pendingViewControllers lastObject] index];
 }
 
 // Sent when a gesture-initiated transition ends. The 'finished' parameter indicates whether the animation finished, while the 'completed' parameter indicates whether the transition completed or bailed out (if the user let go early).
 - (void)pageViewController:(UIPageViewController *)pageViewController didFinishAnimating:(BOOL)finished previousViewControllers:(NSArray *)previousViewControllers transitionCompleted:(BOOL)completed{
     if (completed) {
-//        if (indexPendingView<[(DailyViewController *)[previousViewControllers objectAtIndex:0] index]) {
-//            [viewTabHeader setThreeLabelDay:currentDay offset:--indexDayInArr-3];
-//        }else if(indexPendingView > [(DailyViewController *)[previousViewControllers objectAtIndex:0] index]){
-//            [viewTabHeader setThreeLabelDay:currentDay offset:++indexDayInArr-3];
-//        }
+        [self.pageControl setCurrentPage:indexPendingView];
+        [lbTitle setText:[arrTitleFake objectAtIndex:indexPendingView]];
+        [_lbDesciption setText:[arrTitleFake objectAtIndex:indexPendingView]];
     }
     
 }
 
-// MAX_PAGES is the total # of pages.
-
-- (NSInteger)presentationCountForPageViewController:(UIPageViewController *)pageViewController {
-    // The number of items reflected in the page indicator.
-    return 5;
-}
+//- (NSInteger)presentationCountForPageViewController:(UIPageViewController *)pageViewController {
+//    // The number of items reflected in the page indicator.
+//    return 5;
+//}
+//
+//- (NSInteger)presentationIndexForPageViewController:(UIPageViewController *)pageViewController {
+//    // The selected item reflected in the page indicator.
+//    return 0;
+//}
 @end

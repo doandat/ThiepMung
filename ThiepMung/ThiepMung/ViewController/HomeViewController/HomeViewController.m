@@ -68,7 +68,7 @@
         }
         [self addChildViewController:cell.homeCellFirstVC];
         [cell.homeCellFirstVC didMoveToParentViewController:self];
-
+//        cell.userInteractionEnabled = NO;
         return cell;
     }else{
         HomeTableViewCellSecond *cell = [tableView dequeueReusableCellWithIdentifier:@"HomeTableViewCellSecondIdentifier"];
@@ -80,7 +80,12 @@
         return cell;
     }
 }
-
+- (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    // rows in section 0 should not be selectable
+    if ( indexPath.section == 0 ) return nil;
+    
+    return indexPath;
+}
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.section==0) {
         return [UIScreen mainScreen].bounds.size.width*2/3+50;
