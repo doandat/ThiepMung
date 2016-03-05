@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		B009F1711C89DB6E00B6D197 /* imgCell1.png in Resources */ = {isa = PBXBuildFile; fileRef = B009F1701C89DB6E00B6D197 /* imgCell1.png */; };
 		B009F1721C89DB6E00B6D197 /* imgCell1.png in Resources */ = {isa = PBXBuildFile; fileRef = B009F1701C89DB6E00B6D197 /* imgCell1.png */; };
+		D9055D0C1C8A9C3500D8FAFF /* AddImageTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9055D0A1C8A9C3500D8FAFF /* AddImageTextViewController.m */; };
+		D9055D0D1C8A9C3500D8FAFF /* AddImageTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9055D0A1C8A9C3500D8FAFF /* AddImageTextViewController.m */; };
+		D9055D0E1C8A9C3500D8FAFF /* AddImageTextViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9055D0B1C8A9C3500D8FAFF /* AddImageTextViewController.xib */; };
+		D9055D0F1C8A9C3500D8FAFF /* AddImageTextViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9055D0B1C8A9C3500D8FAFF /* AddImageTextViewController.xib */; };
 		D90797981C89250F0088F3C5 /* HomeTableViewCellSecond.m in Sources */ = {isa = PBXBuildFile; fileRef = D90797961C89250F0088F3C5 /* HomeTableViewCellSecond.m */; };
 		D90797991C89250F0088F3C5 /* HomeTableViewCellSecond.m in Sources */ = {isa = PBXBuildFile; fileRef = D90797961C89250F0088F3C5 /* HomeTableViewCellSecond.m */; };
 		D907979A1C89250F0088F3C5 /* HomeTableViewCellSecond.xib in Resources */ = {isa = PBXBuildFile; fileRef = D90797971C89250F0088F3C5 /* HomeTableViewCellSecond.xib */; };
@@ -124,6 +128,9 @@
 
 /* Begin PBXFileReference section */
 		B009F1701C89DB6E00B6D197 /* imgCell1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imgCell1.png; sourceTree = "<group>"; };
+		D9055D091C8A9C3500D8FAFF /* AddImageTextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddImageTextViewController.h; sourceTree = "<group>"; };
+		D9055D0A1C8A9C3500D8FAFF /* AddImageTextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddImageTextViewController.m; sourceTree = "<group>"; };
+		D9055D0B1C8A9C3500D8FAFF /* AddImageTextViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddImageTextViewController.xib; sourceTree = "<group>"; };
 		D90797951C89250F0088F3C5 /* HomeTableViewCellSecond.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeTableViewCellSecond.h; sourceTree = "<group>"; };
 		D90797961C89250F0088F3C5 /* HomeTableViewCellSecond.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeTableViewCellSecond.m; sourceTree = "<group>"; };
 		D90797971C89250F0088F3C5 /* HomeTableViewCellSecond.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeTableViewCellSecond.xib; sourceTree = "<group>"; };
@@ -237,6 +244,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D9055D081C8A9C1A00D8FAFF /* AddImageTextViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D9055D091C8A9C3500D8FAFF /* AddImageTextViewController.h */,
+				D9055D0A1C8A9C3500D8FAFF /* AddImageTextViewController.m */,
+				D9055D0B1C8A9C3500D8FAFF /* AddImageTextViewController.xib */,
+			);
+			path = AddImageTextViewController;
+			sourceTree = "<group>";
+		};
 		D907979C1C89361F0088F3C5 /* SDWebImage */ = {
 			isa = PBXGroup;
 			children = (
@@ -405,6 +422,7 @@
 		D974BE821C87E4B60005938A /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				D9055D081C8A9C1A00D8FAFF /* AddImageTextViewController */,
 				D974BEB71C87E9610005938A /* CustomNavigationBar */,
 				D974BE831C87E4B60005938A /* BaseViewController */,
 				D974BE841C87E4B60005938A /* HomeViewController */,
@@ -595,6 +613,7 @@
 				D907979A1C89250F0088F3C5 /* HomeTableViewCellSecond.xib in Resources */,
 				D974BE941C87E5170005938A /* HomeViewController.xib in Resources */,
 				D974BEA91C87E5590005938A /* SidebarViewController.xib in Resources */,
+				D9055D0E1C8A9C3500D8FAFF /* AddImageTextViewController.xib in Resources */,
 				D974BE661C87DFC90005938A /* LaunchScreen.xib in Resources */,
 				D974BEC71C87F3C40005938A /* SubItemCollectionView.xib in Resources */,
 				D974BEBD1C87E9610005938A /* CustomNavigationBar.xib in Resources */,
@@ -613,6 +632,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D907979B1C89250F0088F3C5 /* HomeTableViewCellSecond.xib in Resources */,
+				D9055D0F1C8A9C3500D8FAFF /* AddImageTextViewController.xib in Resources */,
 				D974BEC81C87F3C40005938A /* SubItemCollectionView.xib in Resources */,
 				D974BEC41C87EAF00005938A /* btn_menu@2x.png in Resources */,
 				D90797E71C8938E70088F3C5 /* HomeTableViewCellFirst.xib in Resources */,
@@ -649,6 +669,7 @@
 				D90797C21C89361F0088F3C5 /* SDImageCache.m in Sources */,
 				D90797BE1C89361F0088F3C5 /* MKAnnotationView+WebCache.m in Sources */,
 				D90797E41C8938E70088F3C5 /* HomeTableViewCellFirst.m in Sources */,
+				D9055D0C1C8A9C3500D8FAFF /* AddImageTextViewController.m in Sources */,
 				D974BEA01C87E5420005938A /* RootViewController.m in Sources */,
 				D90797D41C89361F0088F3C5 /* UIImage+MultiFormat.m in Sources */,
 				D974BEB31C87E8B40005938A /* MenuTableViewCell.m in Sources */,
@@ -683,6 +704,7 @@
 				D974BEAF1C87E59C0005938A /* SWRevealViewController.m in Sources */,
 				D90797D71C89361F0088F3C5 /* UIImage+WebP.m in Sources */,
 				D974BEBC1C87E9610005938A /* CustomNavigationBar.m in Sources */,
+				D9055D0D1C8A9C3500D8FAFF /* AddImageTextViewController.m in Sources */,
 				D90797EC1C8939EC0088F3C5 /* HomeCellFirstViewController.m in Sources */,
 				D974BE721C87DFC90005938A /* ThiepMungTests.m in Sources */,
 				D974BE8C1C87E4E10005938A /* BaseViewController.m in Sources */,

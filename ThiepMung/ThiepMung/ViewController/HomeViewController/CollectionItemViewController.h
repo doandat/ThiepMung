@@ -7,6 +7,7 @@
 //
 
 #import "BaseViewController.h"
+#import "HomeViewController.h"
 
 @interface CollectionItemViewController : BaseViewController<UICollectionViewDataSource, UICollectionViewDelegate>
 
@@ -14,6 +15,7 @@
 
 @property (nonatomic) NSMutableArray *arrData;
 
+@property (nonatomic, weak) id<HomeViewControllerDelegate> delegate;
 
 
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;

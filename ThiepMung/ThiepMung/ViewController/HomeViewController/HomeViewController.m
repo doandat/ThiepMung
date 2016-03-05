@@ -21,6 +21,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.delegate = self;
     [self.navigationController setNavigationBarHidden:YES];
     SWRevealViewController *revealController = [self revealViewController];
     
@@ -77,6 +78,7 @@
             cell = [topLevelObjects objectAtIndex:0];
         }
         [cell.btnTitle setTitle:@"Viet Thu Phap" forState:UIControlStateNormal];
+        cell.collectionItemVC.delegate = self;
         return cell;
     }
 }
@@ -98,24 +100,9 @@
     
 }
 
-//- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
-//    UIView *viewHeader = [[UIView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 45)];
-//    UILabel *lbTitle = [[UILabel alloc]initWithFrame:CGRectMake(25, 5, self.view.frame.size.width -20, 34)];
-//    [lbTitle setText:@"Menu"];
-//    [lbTitle setFont:[UIFont fontWithName:@"Helvetica-Bold" size:30]];
-//    [lbTitle setTextColor:[UIColor whiteColor]];
-//    
-//    [viewHeader addSubview:lbTitle];
-//    [viewHeader setBackgroundColor:[UIColor colorWithRed:23/255.0f green:137/255.0f blue:206/255.0f alpha:1.0f]];
-//    UIView *viewSeparator = [[UIView alloc]initWithFrame:CGRectMake(0, 44, 375, 1)];
-//    [viewSeparator setBackgroundColor:[UIColor colorWithRed:27/255.0f green:156/255.0f blue:222/255.0f alpha:1.0f]];
-//    [viewHeader addSubview:viewSeparator];
-//    
-//    return viewHeader;
-//}
-//
-//- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-//    return 45;
-//}
+#pragma mark implement protocol
+- (void)presentVC:(UIViewController *)VC{
+    [self presentViewController:VC animated:YES completion:nil];
+}
 
 @end
