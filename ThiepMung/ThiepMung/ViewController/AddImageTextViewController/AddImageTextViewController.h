@@ -10,4 +10,8 @@
 
 @interface AddImageTextViewController : BaseViewController
 
+@property (weak, nonatomic) IBOutlet UIView *viewContent;
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+
+@property (weak, nonatomic) IBOutlet UIButton *btnBack;
 @end
