@@ -4,9 +4,9 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddTextViewController">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DialogViewController">
             <connections>
-                <outlet property="tableView" destination="vaZ-rz-e6y" id="JOn-vc-OuV"/>
+                <outlet property="tableView" destination="CI2-vj-Ksz" id="9RV-j5-bZC"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -15,18 +15,19 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="vaZ-rz-e6y">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="CI2-vj-Ksz">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                    <color key="backgroundColor" red="0.26274509800000001" green="0.65490196079999996" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </tableView>
             </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="vaZ-rz-e6y" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="43X-in-n09"/>
-                <constraint firstAttribute="trailing" secondItem="vaZ-rz-e6y" secondAttribute="trailing" id="7pk-aT-XEg"/>
-                <constraint firstItem="vaZ-rz-e6y" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="WVt-7m-qni"/>
-                <constraint firstAttribute="bottom" secondItem="vaZ-rz-e6y" secondAttribute="bottom" id="qZa-pf-YK0"/>
+                <constraint firstAttribute="bottom" secondItem="CI2-vj-Ksz" secondAttribute="bottom" id="6EB-0U-TqD"/>
+                <constraint firstItem="CI2-vj-Ksz" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="GC9-sY-N1R"/>
+                <constraint firstItem="CI2-vj-Ksz" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="UOf-7A-zXN"/>
+                <constraint firstAttribute="trailing" secondItem="CI2-vj-Ksz" secondAttribute="trailing" id="iK1-QE-Lbc"/>
             </constraints>
-            <point key="canvasLocation" x="236" y="268"/>
+            <point key="canvasLocation" x="317" y="94"/>
         </view>
     </objects>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

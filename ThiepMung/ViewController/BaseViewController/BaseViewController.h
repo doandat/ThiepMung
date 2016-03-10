@@ -10,6 +10,7 @@
 #import "MacroUtilities.h"
 #import "ItemCollection.h"
 #import "UIImageView+WebCache.h"
+#import "Helper.h"
 
 @interface BaseViewController : UIViewController
 

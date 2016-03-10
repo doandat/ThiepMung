@@ -7,15 +7,26 @@
 //
 
 #import "AddImageTextViewController.h"
-#import "ShowImageView.h"
 #import "AddTextTableViewCell.h"
+#import "WYPopoverController.h"
+#import "DialogViewController.h"
+#import "CropImageViewController.h"
 
-@interface AddImageTextViewController ()<UICollectionViewDataSource,UICollectionViewDelegate,UITableViewDataSource,UITableViewDelegate>{
+
+@interface AddImageTextViewController ()<UICollectionViewDataSource,UICollectionViewDelegate,UITableViewDataSource,UITableViewDelegate,UITextViewDelegate,WYPopoverControllerDelegate,DialogViewDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate,CropImageDelegate>{
     UIImageView *imageView;
     UILabel *lbDes;
     UILabel *lbTitleViewAddImage;
     UIButton *btnOk;
+    WYPopoverController *btnAddImagePopoverController;
+    NSInteger indexSelectDialog;
+    CropImageViewController *cropImageVC;
+
 }
+@property (strong, nonatomic) UIImagePickerController *imagePickerController;
+@property (strong, nonatomic) UIImage *image;
+@property (nonatomic) BOOL *check;
+
 @property (nonatomic) NSInteger numberInputText;
 @property (nonatomic) NSInteger numberInputImg;
 @property (nonatomic) CGFloat heightImgAdd;
@@ -28,7 +39,7 @@
 @synthesize heightImgAdd;
 @synthesize collectionViewAddImage;
 @synthesize tableViewAddText;
-
+@synthesize image;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -45,15 +56,12 @@
     [lbDes setBackgroundColor:[UIColor redColor]];
     lbDes.translatesAutoresizingMaskIntoConstraints = NO;
     
-    [self.scrollView setBackgroundColor:[UIColor greenColor]];
     [self.scrollView addSubview:lbDes];
-    [self.scrollView setContentSize:CGSizeMake(375, 2000)];
-    
     
     
     numberInputImg = 10;
     heightImgAdd = 60;
-    numberInputText = 5;
+    numberInputText = 10;
     
     lbTitleViewAddImage = [[UILabel alloc]init];
     lbTitleViewAddImage.text = @"Chọn ảnh ghép";
@@ -80,7 +88,8 @@
     btnOk.translatesAutoresizingMaskIntoConstraints = NO;
     [self.scrollView addSubview:btnOk];
     
-    
+    [self.scrollView setContentSize:CGSizeMake(375, 2000)];
+
     [self updateViewConstraints];
     
     /*config collection view*/
@@ -286,8 +295,8 @@
 
 
 -(void)btnOK:(id) sender{
-//    AddTextTableViewCell *cell =(AddTextTableViewCell *) [addTextVC.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
-//    NSLog(@"AddTextTableViewCell:%@",cell.tvMessage.text);
+    AddTextTableViewCell *cell =(AddTextTableViewCell *) [self.tableViewAddText cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
+    NSLog(@"AddTextTableViewCell:%@",cell.tvMessage.text);
 }
 
 -(CGFloat)hightOfAddImageVCWithTotalImage:(NSInteger)totalImg{
@@ -318,14 +327,15 @@
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     UICollectionViewCell *cell=[collectionView dequeueReusableCellWithReuseIdentifier:@"cellIdentifier" forIndexPath:indexPath];
-    //    [cell setBackgroundColor:[UIColor colorWithRed:19/255.0f green:19/255.0f blue:19/255.0f alpha:1.0f]];
-    //    [cell setBackgroundColor:[UIColor redColor]];
-    UIImageView *imageViewBackground = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, heightImgAdd, heightImgAdd)];
-    //    [imageViewBackground setBackgroundColor:[UIColor colorWithRed:19/255.0f green:19/255.0f blue:19/255.0f alpha:1.0f]];
-    imageViewBackground.contentMode = UIViewContentModeScaleToFill;
-    [imageViewBackground setImage:[UIImage imageNamed:@"addpicture.png"]];
-    
-    [cell addSubview:imageViewBackground];
+    UIButton *btnAddImage = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, heightImgAdd, heightImgAdd)];
+    [btnAddImage setBackgroundImage:[UIImage imageNamed:@"addpicture.png"] forState:UIControlStateNormal];
+    [btnAddImage addTarget:self action:@selector(btnAddImage:) forControlEvents:UIControlEventTouchUpInside];
+    [cell addSubview:btnAddImage];
+////    UIImageView *imageViewBackground = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, heightImgAdd, heightImgAdd)];
+////    //    [imageViewBackground setBackgroundColor:[UIColor colorWithRed:19/255.0f green:19/255.0f blue:19/255.0f alpha:1.0f]];
+////    imageViewBackground.contentMode = UIViewContentModeScaleToFill;
+////    [imageViewBackground setImage:[UIImage imageNamed:@"addpicture.png"]];
+//    [cell addSubview:imageViewBackground];
     
     return cell;
     
@@ -333,7 +343,6 @@
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     NSLog(@"didDeselectItemAtIndexPath:%tu",indexPath.row);
-    
     
 }
 
@@ -362,7 +371,7 @@
         cell = [[AddTextTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     cell.lbMessage.text = [NSString stringWithFormat:@"Thông điệp %tu:",indexPath.row+1];
-    //    NSLog(@"cell:%@",cell);
+    cell.tvMessage.delegate = self;
     
     return cell;
 }
@@ -376,4 +385,154 @@
     return 75.0f;
 }
 
+#pragma mark config keyboard
+
+- (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text {
+    
+    if([text isEqualToString:@"\n"]) {
+        [textView resignFirstResponder];
+        return NO;
+    }
+    
+    return YES;
+}
+
+- (void)btnAddImage:(id)sender{
+    if (btnAddImagePopoverController == nil)
+    {
+        UIView *btn = (UIView *)sender;
+        
+        DialogViewController *dialogVC = [[DialogViewController alloc]initWithNibName:@"DialogViewController" bundle:nil];
+        dialogVC.preferredContentSize = CGSizeMake(100, 80);
+        dialogVC.delegate = self;
+        dialogVC.arrDataSource = [NSArray arrayWithObjects:@"Camera",@"Library", nil];
+        dialogVC.modalInPopover = NO;
+        
+        UINavigationController *contentViewController = [[UINavigationController alloc] initWithRootViewController:dialogVC];
+        
+        btnAddImagePopoverController = [[WYPopoverController alloc] initWithContentViewController:contentViewController];
+        btnAddImagePopoverController.delegate = self;
+        btnAddImagePopoverController.passthroughViews = @[btn];
+        btnAddImagePopoverController.popoverLayoutMargins = UIEdgeInsetsMake(10, 10, 10, 10);
+        btnAddImagePopoverController.wantsDefaultContentAppearance = NO;
+        
+        [btnAddImagePopoverController presentPopoverFromRect:btn.bounds
+                                                  inView:btn
+                                permittedArrowDirections:WYPopoverArrowDirectionAny
+                                                animated:YES
+                                                 options:WYPopoverAnimationOptionFadeWithScale];
+    }
+    else
+    {
+        [self close:nil];
+    }
+}
+
+#pragma mark implement WYPopoverControllerDelegate
+- (void)close:(id)sender
+{
+    
+    [btnAddImagePopoverController dismissPopoverAnimated:YES completion:^{
+        [self popoverControllerDidDismissPopover:btnAddImagePopoverController];
+    }];
+}
+#pragma mark - WYPopoverControllerDelegate
+
+- (void)popoverControllerDidPresentPopover:(WYPopoverController *)controller
+{
+    NSLog(@"popoverControllerDidPresentPopover");
+}
+
+- (BOOL)popoverControllerShouldDismissPopover:(WYPopoverController *)controller
+{
+    return YES;
+}
+
+- (void)popoverControllerDidDismissPopover:(WYPopoverController *)controller
+{
+    //    if (controller == anotherPopoverController)
+    //    {
+    //        anotherPopoverController.delegate = nil;
+    //        anotherPopoverController = nil;
+    //    }
+    //    else
+    if (controller == btnAddImagePopoverController)
+    {
+        btnAddImagePopoverController.delegate = nil;
+        btnAddImagePopoverController = nil;
+    }
+}
+
+- (BOOL)popoverControllerShouldIgnoreKeyboardBounds:(WYPopoverController *)popoverController
+{
+    return YES;
+}
+
+- (void)popoverController:(WYPopoverController *)popoverController willTranslatePopoverWithYOffset:(float *)value
+{
+    // keyboard is shown and the popover will be moved up by 163 pixels for example ( *value = 163 )
+    *value = 0; // set value to 0 if you want to avoid the popover to be moved
+}
+
+#pragma mark implement dialogDelegate
+-(void)dialogViewController:(DialogViewController *)dialogVC selectIndex:(NSInteger)index{
+    [self close:nil];
+    indexSelectDialog = index;
+    NSLog(@"indexSelectDialog:%tu",index);
+    if (index==0) {
+        if (![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+            
+            UIAlertView *myAlertView = [[UIAlertView alloc] initWithTitle:@"Error"
+                                                                  message:@"Device has no camera"
+                                                                 delegate:nil
+                                                        cancelButtonTitle:@"OK"
+                                                        otherButtonTitles: nil];
+            
+            [myAlertView show];
+            
+        }else{
+            _imagePickerController = [[UIImagePickerController alloc] init];
+            _imagePickerController.delegate = self;
+            _imagePickerController.sourceType = UIImagePickerControllerSourceTypeCamera;
+            [self presentViewController:_imagePickerController animated:YES completion:nil];
+            //                _indexOfPicture = [button tag];
+        }
+    }else if(index == 1){
+        
+        _imagePickerController = [[UIImagePickerController alloc] init];
+        _imagePickerController.delegate = self;
+        _imagePickerController.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+        [self presentViewController:_imagePickerController animated:YES completion:nil];
+    }
+}
+
+#pragma mark implement pickerImage
+- (void) imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+    image = (UIImage *) [info objectForKey:UIImagePickerControllerOriginalImage];
+    if (!image) {
+        NSLog(@"Không lấy được ảnh");
+    }else{
+        [self dismissViewControllerAnimated:YES completion:^{
+            NSLog(@"đã lấy được ảnh");
+            cropImageVC = [[CropImageViewController alloc]initWithNibName:@"CropImageViewController" bundle:nil];
+            cropImageVC.imageTest = image;
+            cropImageVC.sizeWidth = 100.0f;
+            cropImageVC.sizeHeight = 100.0f;
+            cropImageVC.tagImage = 2;
+            cropImageVC.delegate = self;
+            [self.navigationController presentViewController:cropImageVC animated:YES completion:nil];
+        }];
+    }
+    
+    
+}
+
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
+{
+    //    [[self navigationController] dismissViewControllerAnimated:NO completion:nil];
+    [picker dismissViewControllerAnimated:YES completion:nil];
+    self.check = false;
+    
+}
 @end

@@ -13,10 +13,6 @@
 		D904C92B1C8D128300E349E6 /* btn_back.png in Resources */ = {isa = PBXBuildFile; fileRef = D904C9281C8D128300E349E6 /* btn_back.png */; };
 		D904C92C1C8D128300E349E6 /* btn_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D904C9291C8D128300E349E6 /* btn_back@2x.png */; };
 		D904C92D1C8D128300E349E6 /* btn_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D904C9291C8D128300E349E6 /* btn_back@2x.png */; };
-		D904C92F1C8D180400E349E6 /* ShowImageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D904C92E1C8D180400E349E6 /* ShowImageView.xib */; };
-		D904C9301C8D180400E349E6 /* ShowImageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D904C92E1C8D180400E349E6 /* ShowImageView.xib */; };
-		D904C9331C8D182700E349E6 /* ShowImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = D904C9321C8D182700E349E6 /* ShowImageView.m */; };
-		D904C9341C8D182700E349E6 /* ShowImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = D904C9321C8D182700E349E6 /* ShowImageView.m */; };
 		D904C9491C8D1E5800E349E6 /* addpicture.png in Resources */ = {isa = PBXBuildFile; fileRef = D904C9461C8D1E5800E349E6 /* addpicture.png */; };
 		D904C94A1C8D1E5800E349E6 /* addpicture.png in Resources */ = {isa = PBXBuildFile; fileRef = D904C9461C8D1E5800E349E6 /* addpicture.png */; };
 		D904C94B1C8D1E5800E349E6 /* addpicture@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D904C9471C8D1E5800E349E6 /* addpicture@2x.png */; };
@@ -79,18 +75,30 @@
 		D90797F31C89412E0088F3C5 /* ViewShowImageController.m in Sources */ = {isa = PBXBuildFile; fileRef = D90797F01C89412E0088F3C5 /* ViewShowImageController.m */; };
 		D90797F41C89412E0088F3C5 /* ViewShowImageController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D90797F11C89412E0088F3C5 /* ViewShowImageController.xib */; };
 		D90797F51C89412E0088F3C5 /* ViewShowImageController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D90797F11C89412E0088F3C5 /* ViewShowImageController.xib */; };
-		D93AF7541C8FBCB6004D9F2D /* AddImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D93AF74E1C8FBCB6004D9F2D /* AddImageViewController.m */; };
-		D93AF7551C8FBCB6004D9F2D /* AddImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D93AF74E1C8FBCB6004D9F2D /* AddImageViewController.m */; };
-		D93AF7561C8FBCB6004D9F2D /* AddImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D93AF74F1C8FBCB6004D9F2D /* AddImageViewController.xib */; };
-		D93AF7571C8FBCB6004D9F2D /* AddImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D93AF74F1C8FBCB6004D9F2D /* AddImageViewController.xib */; };
-		D93AF7581C8FBCB6004D9F2D /* AddTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D93AF7521C8FBCB6004D9F2D /* AddTextViewController.m */; };
-		D93AF7591C8FBCB6004D9F2D /* AddTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D93AF7521C8FBCB6004D9F2D /* AddTextViewController.m */; };
-		D93AF75A1C8FBCB6004D9F2D /* AddTextViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D93AF7531C8FBCB6004D9F2D /* AddTextViewController.xib */; };
-		D93AF75B1C8FBCB6004D9F2D /* AddTextViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D93AF7531C8FBCB6004D9F2D /* AddTextViewController.xib */; };
 		D93AF75F1C8FBCD0004D9F2D /* AddTextTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D93AF75D1C8FBCD0004D9F2D /* AddTextTableViewCell.m */; };
 		D93AF7601C8FBCD0004D9F2D /* AddTextTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D93AF75D1C8FBCD0004D9F2D /* AddTextTableViewCell.m */; };
 		D93AF7611C8FBCD0004D9F2D /* AddTextTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D93AF75E1C8FBCD0004D9F2D /* AddTextTableViewCell.xib */; };
 		D93AF7621C8FBCD0004D9F2D /* AddTextTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D93AF75E1C8FBCD0004D9F2D /* AddTextTableViewCell.xib */; };
+		D97174161C91251100A76CEE /* WYPopoverController.m in Sources */ = {isa = PBXBuildFile; fileRef = D97174131C91251100A76CEE /* WYPopoverController.m */; };
+		D97174171C91251100A76CEE /* WYPopoverController.m in Sources */ = {isa = PBXBuildFile; fileRef = D97174131C91251100A76CEE /* WYPopoverController.m */; };
+		D97174181C91251100A76CEE /* WYStoryboardPopoverSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = D97174151C91251100A76CEE /* WYStoryboardPopoverSegue.m */; };
+		D97174191C91251100A76CEE /* WYStoryboardPopoverSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = D97174151C91251100A76CEE /* WYStoryboardPopoverSegue.m */; };
+		D971741C1C91253500A76CEE /* Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = D971741B1C91253500A76CEE /* Helper.m */; };
+		D971741D1C91253500A76CEE /* Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = D971741B1C91253500A76CEE /* Helper.m */; };
+		D97174291C91260200A76CEE /* DialogViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D97174271C91260200A76CEE /* DialogViewController.m */; };
+		D971742A1C91260200A76CEE /* DialogViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D97174271C91260200A76CEE /* DialogViewController.m */; };
+		D971742B1C91260200A76CEE /* DialogViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D97174281C91260200A76CEE /* DialogViewController.xib */; };
+		D971742C1C91260200A76CEE /* DialogViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D97174281C91260200A76CEE /* DialogViewController.xib */; };
+		D97174301C912AEF00A76CEE /* DiaLogTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D971742E1C912AEF00A76CEE /* DiaLogTableViewCell.m */; };
+		D97174311C912AEF00A76CEE /* DiaLogTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D971742E1C912AEF00A76CEE /* DiaLogTableViewCell.m */; };
+		D97174321C912AEF00A76CEE /* DiaLogTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D971742F1C912AEF00A76CEE /* DiaLogTableViewCell.xib */; };
+		D97174331C912AEF00A76CEE /* DiaLogTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D971742F1C912AEF00A76CEE /* DiaLogTableViewCell.xib */; };
+		D97174381C9131DF00A76CEE /* CropImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D97174361C9131DF00A76CEE /* CropImageViewController.m */; };
+		D97174391C9131DF00A76CEE /* CropImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D97174361C9131DF00A76CEE /* CropImageViewController.m */; };
+		D971743A1C9131DF00A76CEE /* CropImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D97174371C9131DF00A76CEE /* CropImageViewController.xib */; };
+		D971743B1C9131DF00A76CEE /* CropImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D97174371C9131DF00A76CEE /* CropImageViewController.xib */; };
+		D971743F1C91329A00A76CEE /* Cropper.m in Sources */ = {isa = PBXBuildFile; fileRef = D971743E1C91329A00A76CEE /* Cropper.m */; };
+		D97174401C91329A00A76CEE /* Cropper.m in Sources */ = {isa = PBXBuildFile; fileRef = D971743E1C91329A00A76CEE /* Cropper.m */; };
 		D974BE581C87DFC90005938A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D974BE571C87DFC90005938A /* main.m */; };
 		D974BE5B1C87DFC90005938A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D974BE5A1C87DFC90005938A /* AppDelegate.m */; };
 		D974BE5E1C87DFC90005938A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D974BE5D1C87DFC90005938A /* ViewController.m */; };
@@ -158,9 +166,6 @@
 		B009F1701C89DB6E00B6D197 /* imgCell1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imgCell1.png; sourceTree = "<group>"; };
 		D904C9281C8D128300E349E6 /* btn_back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_back.png; sourceTree = "<group>"; };
 		D904C9291C8D128300E349E6 /* btn_back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_back@2x.png"; sourceTree = "<group>"; };
-		D904C92E1C8D180400E349E6 /* ShowImageView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShowImageView.xib; sourceTree = "<group>"; };
-		D904C9311C8D182700E349E6 /* ShowImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowImageView.h; sourceTree = "<group>"; };
-		D904C9321C8D182700E349E6 /* ShowImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowImageView.m; sourceTree = "<group>"; };
 		D904C9461C8D1E5800E349E6 /* addpicture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = addpicture.png; sourceTree = "<group>"; };
 		D904C9471C8D1E5800E349E6 /* addpicture@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "addpicture@2x.png"; sourceTree = "<group>"; };
 		D904C9481C8D1E5800E349E6 /* addpicture@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "addpicture@3x.png"; sourceTree = "<group>"; };
@@ -214,15 +219,26 @@
 		D90797EF1C89412E0088F3C5 /* ViewShowImageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewShowImageController.h; sourceTree = "<group>"; };
 		D90797F01C89412E0088F3C5 /* ViewShowImageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewShowImageController.m; sourceTree = "<group>"; };
 		D90797F11C89412E0088F3C5 /* ViewShowImageController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewShowImageController.xib; sourceTree = "<group>"; };
-		D93AF74D1C8FBCB6004D9F2D /* AddImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddImageViewController.h; sourceTree = "<group>"; };
-		D93AF74E1C8FBCB6004D9F2D /* AddImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddImageViewController.m; sourceTree = "<group>"; };
-		D93AF74F1C8FBCB6004D9F2D /* AddImageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddImageViewController.xib; sourceTree = "<group>"; };
-		D93AF7511C8FBCB6004D9F2D /* AddTextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddTextViewController.h; sourceTree = "<group>"; };
-		D93AF7521C8FBCB6004D9F2D /* AddTextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddTextViewController.m; sourceTree = "<group>"; };
-		D93AF7531C8FBCB6004D9F2D /* AddTextViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddTextViewController.xib; sourceTree = "<group>"; };
-		D93AF75C1C8FBCD0004D9F2D /* AddTextTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddTextTableViewCell.h; sourceTree = "<group>"; };
-		D93AF75D1C8FBCD0004D9F2D /* AddTextTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddTextTableViewCell.m; sourceTree = "<group>"; };
-		D93AF75E1C8FBCD0004D9F2D /* AddTextTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddTextTableViewCell.xib; sourceTree = "<group>"; };
+		D93AF75C1C8FBCD0004D9F2D /* AddTextTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddTextTableViewCell.h; path = AddTextViewController/AddTextTableViewCell.h; sourceTree = "<group>"; };
+		D93AF75D1C8FBCD0004D9F2D /* AddTextTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddTextTableViewCell.m; path = AddTextViewController/AddTextTableViewCell.m; sourceTree = "<group>"; };
+		D93AF75E1C8FBCD0004D9F2D /* AddTextTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AddTextTableViewCell.xib; path = AddTextViewController/AddTextTableViewCell.xib; sourceTree = "<group>"; };
+		D97174121C91251100A76CEE /* WYPopoverController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYPopoverController.h; sourceTree = "<group>"; };
+		D97174131C91251100A76CEE /* WYPopoverController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYPopoverController.m; sourceTree = "<group>"; };
+		D97174141C91251100A76CEE /* WYStoryboardPopoverSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYStoryboardPopoverSegue.h; sourceTree = "<group>"; };
+		D97174151C91251100A76CEE /* WYStoryboardPopoverSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYStoryboardPopoverSegue.m; sourceTree = "<group>"; };
+		D971741A1C91253500A76CEE /* Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Helper.h; sourceTree = "<group>"; };
+		D971741B1C91253500A76CEE /* Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Helper.m; sourceTree = "<group>"; };
+		D97174261C91260200A76CEE /* DialogViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DialogViewController.h; sourceTree = "<group>"; };
+		D97174271C91260200A76CEE /* DialogViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DialogViewController.m; sourceTree = "<group>"; };
+		D97174281C91260200A76CEE /* DialogViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DialogViewController.xib; sourceTree = "<group>"; };
+		D971742D1C912AEF00A76CEE /* DiaLogTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiaLogTableViewCell.h; sourceTree = "<group>"; };
+		D971742E1C912AEF00A76CEE /* DiaLogTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiaLogTableViewCell.m; sourceTree = "<group>"; };
+		D971742F1C912AEF00A76CEE /* DiaLogTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DiaLogTableViewCell.xib; sourceTree = "<group>"; };
+		D97174351C9131DF00A76CEE /* CropImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CropImageViewController.h; sourceTree = "<group>"; };
+		D97174361C9131DF00A76CEE /* CropImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CropImageViewController.m; sourceTree = "<group>"; };
+		D97174371C9131DF00A76CEE /* CropImageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CropImageViewController.xib; sourceTree = "<group>"; };
+		D971743D1C91329A00A76CEE /* Cropper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cropper.h; sourceTree = "<group>"; };
+		D971743E1C91329A00A76CEE /* Cropper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cropper.m; sourceTree = "<group>"; };
 		D974BE521C87DFC90005938A /* ThiepMung.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThiepMung.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D974BE561C87DFC90005938A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D974BE571C87DFC90005938A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -293,14 +309,12 @@
 		D9055D081C8A9C1A00D8FAFF /* AddImageTextViewController */ = {
 			isa = PBXGroup;
 			children = (
-				D93AF74C1C8FBCB6004D9F2D /* AddImageViewController */,
-				D93AF7501C8FBCB6004D9F2D /* AddTextViewController */,
 				D9055D091C8A9C3500D8FAFF /* AddImageTextViewController.h */,
 				D9055D0A1C8A9C3500D8FAFF /* AddImageTextViewController.m */,
 				D9055D0B1C8A9C3500D8FAFF /* AddImageTextViewController.xib */,
-				D904C9311C8D182700E349E6 /* ShowImageView.h */,
-				D904C9321C8D182700E349E6 /* ShowImageView.m */,
-				D904C92E1C8D180400E349E6 /* ShowImageView.xib */,
+				D93AF75C1C8FBCD0004D9F2D /* AddTextTableViewCell.h */,
+				D93AF75D1C8FBCD0004D9F2D /* AddTextTableViewCell.m */,
+				D93AF75E1C8FBCD0004D9F2D /* AddTextTableViewCell.xib */,
 			);
 			path = AddImageTextViewController;
 			sourceTree = "<group>";
@@ -345,27 +359,47 @@
 			path = SDWebImage;
 			sourceTree = "<group>";
 		};
-		D93AF74C1C8FBCB6004D9F2D /* AddImageViewController */ = {
+		D97174111C91251100A76CEE /* WYPopoverController */ = {
 			isa = PBXGroup;
 			children = (
-				D93AF74D1C8FBCB6004D9F2D /* AddImageViewController.h */,
-				D93AF74E1C8FBCB6004D9F2D /* AddImageViewController.m */,
-				D93AF74F1C8FBCB6004D9F2D /* AddImageViewController.xib */,
+				D97174121C91251100A76CEE /* WYPopoverController.h */,
+				D97174131C91251100A76CEE /* WYPopoverController.m */,
+				D97174141C91251100A76CEE /* WYStoryboardPopoverSegue.h */,
+				D97174151C91251100A76CEE /* WYStoryboardPopoverSegue.m */,
 			);
-			path = AddImageViewController;
+			path = WYPopoverController;
 			sourceTree = "<group>";
 		};
-		D93AF7501C8FBCB6004D9F2D /* AddTextViewController */ = {
+		D97174251C91260200A76CEE /* DialogViewController */ = {
 			isa = PBXGroup;
 			children = (
-				D93AF7511C8FBCB6004D9F2D /* AddTextViewController.h */,
-				D93AF7521C8FBCB6004D9F2D /* AddTextViewController.m */,
-				D93AF7531C8FBCB6004D9F2D /* AddTextViewController.xib */,
-				D93AF75C1C8FBCD0004D9F2D /* AddTextTableViewCell.h */,
-				D93AF75D1C8FBCD0004D9F2D /* AddTextTableViewCell.m */,
-				D93AF75E1C8FBCD0004D9F2D /* AddTextTableViewCell.xib */,
+				D97174261C91260200A76CEE /* DialogViewController.h */,
+				D97174271C91260200A76CEE /* DialogViewController.m */,
+				D97174281C91260200A76CEE /* DialogViewController.xib */,
+				D971742D1C912AEF00A76CEE /* DiaLogTableViewCell.h */,
+				D971742E1C912AEF00A76CEE /* DiaLogTableViewCell.m */,
+				D971742F1C912AEF00A76CEE /* DiaLogTableViewCell.xib */,
 			);
-			path = AddTextViewController;
+			path = DialogViewController;
+			sourceTree = "<group>";
+		};
+		D97174341C9131C300A76CEE /* CropImageViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D97174351C9131DF00A76CEE /* CropImageViewController.h */,
+				D97174361C9131DF00A76CEE /* CropImageViewController.m */,
+				D97174371C9131DF00A76CEE /* CropImageViewController.xib */,
+			);
+			path = CropImageViewController;
+			sourceTree = "<group>";
+		};
+		D971743C1C91329A00A76CEE /* Cropper */ = {
+			isa = PBXGroup;
+			children = (
+				D971743D1C91329A00A76CEE /* Cropper.h */,
+				D971743E1C91329A00A76CEE /* Cropper.m */,
+			);
+			path = Cropper;
 			sourceTree = "<group>";
 		};
 		D974BE491C87DFC90005938A = {
@@ -443,6 +477,8 @@
 		D974BE7C1C87E4B60005938A /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				D971741A1C91253500A76CEE /* Helper.h */,
+				D971741B1C91253500A76CEE /* Helper.m */,
 				D974BEC51C87EB5D0005938A /* MacroUtilities.h */,
 			);
 			path = Helper;
@@ -459,6 +495,8 @@
 		D974BE7E1C87E4B60005938A /* ThirdpartyResource */ = {
 			isa = PBXGroup;
 			children = (
+				D971743C1C91329A00A76CEE /* Cropper */,
+				D97174111C91251100A76CEE /* WYPopoverController */,
 				D907979C1C89361F0088F3C5 /* SDWebImage */,
 				D974BEAB1C87E59C0005938A /* SWRevealViewController */,
 			);
@@ -502,6 +540,8 @@
 		D974BE821C87E4B60005938A /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				D97174341C9131C300A76CEE /* CropImageViewController */,
+				D97174251C91260200A76CEE /* DialogViewController */,
 				D9055D081C8A9C1A00D8FAFF /* AddImageTextViewController */,
 				D974BEB71C87E9610005938A /* CustomNavigationBar */,
 				D974BE831C87E4B60005938A /* BaseViewController */,
@@ -686,20 +726,18 @@
 				D974BED21C87F67A0005938A /* CollectionItemViewController.xib in Resources */,
 				D904C92A1C8D128300E349E6 /* btn_back.png in Resources */,
 				D904C92C1C8D128300E349E6 /* btn_back@2x.png in Resources */,
-				D93AF75A1C8FBCB6004D9F2D /* AddTextViewController.xib in Resources */,
 				D974BEC31C87EAF00005938A /* btn_menu@2x.png in Resources */,
 				D974BEB51C87E8B40005938A /* MenuTableViewCell.xib in Resources */,
 				D974BEC11C87EAF00005938A /* btn_menu.png in Resources */,
 				D974BE611C87DFC90005938A /* Main.storyboard in Resources */,
+				D97174321C912AEF00A76CEE /* DiaLogTableViewCell.xib in Resources */,
 				D90797DF1C8936BD0088F3C5 /* placeholder.png in Resources */,
 				D974BE8D1C87E4E10005938A /* BaseViewController.xib in Resources */,
-				D904C92F1C8D180400E349E6 /* ShowImageView.xib in Resources */,
 				D907979A1C89250F0088F3C5 /* HomeTableViewCellSecond.xib in Resources */,
 				D93AF7611C8FBCD0004D9F2D /* AddTextTableViewCell.xib in Resources */,
 				D904C9491C8D1E5800E349E6 /* addpicture.png in Resources */,
 				D904C94D1C8D1E5800E349E6 /* addpicture@3x.png in Resources */,
 				D974BE941C87E5170005938A /* HomeViewController.xib in Resources */,
-				D93AF7561C8FBCB6004D9F2D /* AddImageViewController.xib in Resources */,
 				D974BEA91C87E5590005938A /* SidebarViewController.xib in Resources */,
 				D9055D0E1C8A9C3500D8FAFF /* AddImageTextViewController.xib in Resources */,
 				D904C94B1C8D1E5800E349E6 /* addpicture@2x.png in Resources */,
@@ -710,10 +748,12 @@
 				D974BEA21C87E5420005938A /* RootViewController.xib in Resources */,
 				D974BE9B1C87E52E0005938A /* InfoViewController.xib in Resources */,
 				D90797E61C8938E70088F3C5 /* HomeTableViewCellFirst.xib in Resources */,
+				D971743A1C9131DF00A76CEE /* CropImageViewController.xib in Resources */,
 				D90797ED1C8939EC0088F3C5 /* HomeCellFirstViewController.xib in Resources */,
 				D904C9571C8D3E9200E349E6 /* khunganhmua.png in Resources */,
 				D974BE631C87DFC90005938A /* Images.xcassets in Resources */,
 				D90797F41C89412E0088F3C5 /* ViewShowImageController.xib in Resources */,
+				D971742B1C91260200A76CEE /* DialogViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -724,15 +764,14 @@
 				D904C92D1C8D128300E349E6 /* btn_back@2x.png in Resources */,
 				D907979B1C89250F0088F3C5 /* HomeTableViewCellSecond.xib in Resources */,
 				D9055D0F1C8A9C3500D8FAFF /* AddImageTextViewController.xib in Resources */,
-				D93AF75B1C8FBCB6004D9F2D /* AddTextViewController.xib in Resources */,
-				D904C9301C8D180400E349E6 /* ShowImageView.xib in Resources */,
 				D904C94E1C8D1E5800E349E6 /* addpicture@3x.png in Resources */,
 				D93AF7621C8FBCD0004D9F2D /* AddTextTableViewCell.xib in Resources */,
 				D974BEC81C87F3C40005938A /* SubItemCollectionView.xib in Resources */,
 				D974BEC41C87EAF00005938A /* btn_menu@2x.png in Resources */,
 				D904C9581C8D3E9200E349E6 /* khunganhmua.png in Resources */,
-				D93AF7571C8FBCB6004D9F2D /* AddImageViewController.xib in Resources */,
+				D971742C1C91260200A76CEE /* DialogViewController.xib in Resources */,
 				D90797E71C8938E70088F3C5 /* HomeTableViewCellFirst.xib in Resources */,
+				D971743B1C9131DF00A76CEE /* CropImageViewController.xib in Resources */,
 				D904C92B1C8D128300E349E6 /* btn_back.png in Resources */,
 				D90797E01C8936BD0088F3C5 /* placeholder.png in Resources */,
 				D974BEB61C87E8B40005938A /* MenuTableViewCell.xib in Resources */,
@@ -742,6 +781,7 @@
 				D904C94A1C8D1E5800E349E6 /* addpicture.png in Resources */,
 				D90797EE1C8939EC0088F3C5 /* HomeCellFirstViewController.xib in Resources */,
 				D974BE9C1C87E52E0005938A /* InfoViewController.xib in Resources */,
+				D97174331C912AEF00A76CEE /* DiaLogTableViewCell.xib in Resources */,
 				D974BEAA1C87E5590005938A /* SidebarViewController.xib in Resources */,
 				D974BEA31C87E5420005938A /* RootViewController.xib in Resources */,
 				D974BEBE1C87E9610005938A /* CustomNavigationBar.xib in Resources */,
@@ -760,35 +800,39 @@
 			buildActionMask = 2147483647;
 			files = (
 				D90797D21C89361F0088F3C5 /* UIImage+GIF.m in Sources */,
-				D904C9331C8D182700E349E6 /* ShowImageView.m in Sources */,
 				D90797EB1C8939EC0088F3C5 /* HomeCellFirstViewController.m in Sources */,
 				D90797CC1C89361F0088F3C5 /* SDWebImageManager.m in Sources */,
 				D90797F21C89412E0088F3C5 /* ViewShowImageController.m in Sources */,
-				D93AF7581C8FBCB6004D9F2D /* AddTextViewController.m in Sources */,
 				D90797DA1C89361F0088F3C5 /* UIImageView+WebCache.m in Sources */,
 				D90797CA1C89361F0088F3C5 /* SDWebImageDownloaderOperation.m in Sources */,
 				D974BE5E1C87DFC90005938A /* ViewController.m in Sources */,
 				D90797C21C89361F0088F3C5 /* SDImageCache.m in Sources */,
 				D90797BE1C89361F0088F3C5 /* MKAnnotationView+WebCache.m in Sources */,
 				D90797E41C8938E70088F3C5 /* HomeTableViewCellFirst.m in Sources */,
+				D971743F1C91329A00A76CEE /* Cropper.m in Sources */,
 				D9055D0C1C8A9C3500D8FAFF /* AddImageTextViewController.m in Sources */,
 				D974BEA01C87E5420005938A /* RootViewController.m in Sources */,
+				D97174381C9131DF00A76CEE /* CropImageViewController.m in Sources */,
 				D90797D41C89361F0088F3C5 /* UIImage+MultiFormat.m in Sources */,
 				D974BEB31C87E8B40005938A /* MenuTableViewCell.m in Sources */,
 				D93AF75F1C8FBCD0004D9F2D /* AddTextTableViewCell.m in Sources */,
+				D97174301C912AEF00A76CEE /* DiaLogTableViewCell.m in Sources */,
 				D974BE8B1C87E4E10005938A /* BaseViewController.m in Sources */,
+				D97174291C91260200A76CEE /* DialogViewController.m in Sources */,
 				D90797DC1C89361F0088F3C5 /* UIView+WebCacheOperation.m in Sources */,
 				D974BEA71C87E5590005938A /* SidebarViewController.m in Sources */,
 				D90797D61C89361F0088F3C5 /* UIImage+WebP.m in Sources */,
 				D90797CE1C89361F0088F3C5 /* SDWebImagePrefetcher.m in Sources */,
+				D97174181C91251100A76CEE /* WYStoryboardPopoverSegue.m in Sources */,
 				D974BE991C87E52E0005938A /* InfoViewController.m in Sources */,
+				D97174161C91251100A76CEE /* WYPopoverController.m in Sources */,
 				D974BEAE1C87E59C0005938A /* SWRevealViewController.m in Sources */,
 				D974BEBB1C87E9610005938A /* CustomNavigationBar.m in Sources */,
+				D971741C1C91253500A76CEE /* Helper.m in Sources */,
 				D90797C41C89361F0088F3C5 /* SDWebImageCompat.m in Sources */,
 				D90797C01C89361F0088F3C5 /* NSData+ImageContentType.m in Sources */,
 				D90797C61C89361F0088F3C5 /* SDWebImageDecoder.m in Sources */,
 				D974BED01C87F67A0005938A /* CollectionItemViewController.m in Sources */,
-				D93AF7541C8FBCB6004D9F2D /* AddImageViewController.m in Sources */,
 				D90797D81C89361F0088F3C5 /* UIImageView+HighlightedWebCache.m in Sources */,
 				D90797D01C89361F0088F3C5 /* UIButton+WebCache.m in Sources */,
 				D974BE5B1C87DFC90005938A /* AppDelegate.m in Sources */,
@@ -806,8 +850,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				D974BEAF1C87E59C0005938A /* SWRevealViewController.m in Sources */,
+				D971741D1C91253500A76CEE /* Helper.m in Sources */,
 				D90797D71C89361F0088F3C5 /* UIImage+WebP.m in Sources */,
 				D974BEBC1C87E9610005938A /* CustomNavigationBar.m in Sources */,
+				D97174401C91329A00A76CEE /* Cropper.m in Sources */,
+				D97174171C91251100A76CEE /* WYPopoverController.m in Sources */,
 				D9055D0D1C8A9C3500D8FAFF /* AddImageTextViewController.m in Sources */,
 				D90797EC1C8939EC0088F3C5 /* HomeCellFirstViewController.m in Sources */,
 				D974BE721C87DFC90005938A /* ThiepMungTests.m in Sources */,
@@ -817,13 +864,12 @@
 				D90797CB1C89361F0088F3C5 /* SDWebImageDownloaderOperation.m in Sources */,
 				D974BED71C87FAD90005938A /* ItemCollection.m in Sources */,
 				D90797C31C89361F0088F3C5 /* SDImageCache.m in Sources */,
+				D97174311C912AEF00A76CEE /* DiaLogTableViewCell.m in Sources */,
 				D974BE931C87E5170005938A /* HomeViewController.m in Sources */,
 				D90797991C89250F0088F3C5 /* HomeTableViewCellSecond.m in Sources */,
 				D974BEB41C87E8B40005938A /* MenuTableViewCell.m in Sources */,
 				D90797E51C8938E70088F3C5 /* HomeTableViewCellFirst.m in Sources */,
 				D90797C51C89361F0088F3C5 /* SDWebImageCompat.m in Sources */,
-				D93AF7551C8FBCB6004D9F2D /* AddImageViewController.m in Sources */,
-				D904C9341C8D182700E349E6 /* ShowImageView.m in Sources */,
 				D90797C11C89361F0088F3C5 /* NSData+ImageContentType.m in Sources */,
 				D974BECC1C87F3DA0005938A /* SubItemCollectionView.m in Sources */,
 				D90797CD1C89361F0088F3C5 /* SDWebImageManager.m in Sources */,
@@ -832,12 +878,14 @@
 				D90797D91C89361F0088F3C5 /* UIImageView+HighlightedWebCache.m in Sources */,
 				D90797BF1C89361F0088F3C5 /* MKAnnotationView+WebCache.m in Sources */,
 				D90797F31C89412E0088F3C5 /* ViewShowImageController.m in Sources */,
+				D97174191C91251100A76CEE /* WYStoryboardPopoverSegue.m in Sources */,
 				D90797D31C89361F0088F3C5 /* UIImage+GIF.m in Sources */,
 				D974BEA11C87E5420005938A /* RootViewController.m in Sources */,
 				D90797CF1C89361F0088F3C5 /* SDWebImagePrefetcher.m in Sources */,
 				D90797D11C89361F0088F3C5 /* UIButton+WebCache.m in Sources */,
+				D971742A1C91260200A76CEE /* DialogViewController.m in Sources */,
+				D97174391C9131DF00A76CEE /* CropImageViewController.m in Sources */,
 				D93AF7601C8FBCD0004D9F2D /* AddTextTableViewCell.m in Sources */,
-				D93AF7591C8FBCB6004D9F2D /* AddTextViewController.m in Sources */,
 				D90797D51C89361F0088F3C5 /* UIImage+MultiFormat.m in Sources */,
 				D90797C71C89361F0088F3C5 /* SDWebImageDecoder.m in Sources */,
 				D90797DD1C89361F0088F3C5 /* UIView+WebCacheOperation.m in Sources */,
