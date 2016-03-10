@@ -6,8 +6,12 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddImageTextViewController">
             <connections>
+                <outlet property="addImageView" destination="RFY-Fy-5yK" id="uko-Qs-FgN"/>
+                <outlet property="addTextView" destination="Fod-or-ltl" id="sGp-Nq-CVy"/>
                 <outlet property="btnBack" destination="C3B-7I-erH" id="FWY-aD-9lF"/>
+                <outlet property="collectionViewAddImage" destination="9nQ-sz-293" id="i96-Lk-C1l"/>
                 <outlet property="scrollView" destination="C8v-x4-TNW" id="yEM-E1-Lad"/>
+                <outlet property="tableViewAddText" destination="anM-8O-sg1" id="x5y-5b-gPN"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="viewContent" destination="7Li-1d-3et" id="OXd-wg-dkP"/>
             </connections>
@@ -77,6 +81,46 @@
                 <constraint firstItem="7Li-1d-3et" firstAttribute="top" secondItem="bAB-9P-O2M" secondAttribute="bottom" id="fwq-xc-bt3"/>
             </constraints>
             <point key="canvasLocation" x="140" y="276"/>
+        </view>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="RFY-Fy-5yK">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="70"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="9nQ-sz-293">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="70"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="XUY-vH-b1c">
+                        <size key="itemSize" width="70" height="70"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+            </subviews>
+            <constraints>
+                <constraint firstItem="9nQ-sz-293" firstAttribute="top" secondItem="RFY-Fy-5yK" secondAttribute="top" id="8dQ-ox-Hc9"/>
+                <constraint firstAttribute="trailing" secondItem="9nQ-sz-293" secondAttribute="trailing" id="Yb6-h8-ZRP"/>
+                <constraint firstAttribute="bottom" secondItem="9nQ-sz-293" secondAttribute="bottom" id="Zxk-So-8X6"/>
+                <constraint firstItem="9nQ-sz-293" firstAttribute="leading" secondItem="RFY-Fy-5yK" secondAttribute="leading" id="nCC-HP-Av8"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="542" y="127"/>
+        </view>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="Fod-or-ltl">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="anM-8O-sg1">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <color key="backgroundColor" red="0.26274509800000001" green="0.65490196079999996" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
+                </tableView>
+            </subviews>
+            <constraints>
+                <constraint firstItem="anM-8O-sg1" firstAttribute="top" secondItem="Fod-or-ltl" secondAttribute="top" id="FWk-Lk-d8O"/>
+                <constraint firstAttribute="trailing" secondItem="anM-8O-sg1" secondAttribute="trailing" id="MPX-7k-mKA"/>
+                <constraint firstItem="anM-8O-sg1" firstAttribute="leading" secondItem="Fod-or-ltl" secondAttribute="leading" id="lTk-zV-4lt"/>
+                <constraint firstAttribute="bottom" secondItem="anM-8O-sg1" secondAttribute="bottom" id="ufw-LW-pr1"/>
+            </constraints>
+            <point key="canvasLocation" x="972" y="276"/>
         </view>
     </objects>
     <resources>
