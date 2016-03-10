@@ -8,10 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+@class CropImageViewController;
 @protocol CropImageDelegate <NSObject>
 
 @required
-- (void)dataFromController:(UIImage *)data tag:(int)tag;
+- (void)imageFromController:(CropImageViewController*)cropImageVC image:(UIImage *)image tag:(int)tag;
 
 @end
 
@@ -24,5 +25,6 @@
 @property (strong, nonatomic) UIView *bar;
 
 @property (nonatomic, weak) id<CropImageDelegate> delegate;
++(CropImageViewController *)cropImageVC;
 
 @end

@@ -528,6 +528,7 @@
     
 }
 
+#pragma mark implement cropImageVC
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
 {
     //    [[self navigationController] dismissViewControllerAnimated:NO completion:nil];
@@ -535,4 +536,9 @@
     self.check = false;
     
 }
+
+- (void)imageFromController:(CropImageViewController*)cropImageVC image:(UIImage *)image tag:(int)tag{
+    
+}
+
 @end

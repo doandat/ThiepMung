@@ -23,6 +23,12 @@
 
 @implementation CropImageViewController
 
++(CropImageViewController *)cropImageVC{
+    return [[CropImageViewController alloc] initWithNibName:@"CropImageViewController" bundle:[NSBundle bundleForClass:self.class]];
+    
+}
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -152,7 +158,7 @@
             NSData *imageData = UIImageJPEGRepresentation(img, 0.5);
             UIGraphicsEndImageContext();
             UIImage *image11 = [UIImage imageWithData:imageData];
-            [[_self delegate] dataFromController:image11 tag:_tagImage];
+            [[_self delegate] imageFromController:self image:image11 tag:_tagImage];
             [_self.navigationController popViewControllerAnimated:YES];
         }
         ////////NSLog(@"aaa 2");
