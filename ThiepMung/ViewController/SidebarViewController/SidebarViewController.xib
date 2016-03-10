@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SidebarViewController">
+            <connections>
+                <outlet property="tableView" destination="FXi-ce-ohk" id="v3h-fc-HKR"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="viewContain" destination="zaK-nu-DbC" id="bSp-PL-5NL"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zaK-nu-DbC">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <subviews>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="FXi-ce-ohk">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </tableView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="FXi-ce-ohk" firstAttribute="leading" secondItem="zaK-nu-DbC" secondAttribute="leading" id="ShI-0j-dx2"/>
+                        <constraint firstAttribute="bottom" secondItem="FXi-ce-ohk" secondAttribute="bottom" id="clR-Dt-B4F"/>
+                        <constraint firstItem="FXi-ce-ohk" firstAttribute="top" secondItem="zaK-nu-DbC" secondAttribute="top" id="eqY-fp-2TI"/>
+                        <constraint firstAttribute="trailing" secondItem="FXi-ce-ohk" secondAttribute="trailing" id="vd7-3K-dpv"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="zaK-nu-DbC" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="2xo-ty-mfB"/>
+                <constraint firstAttribute="trailing" secondItem="zaK-nu-DbC" secondAttribute="trailing" id="8T8-hq-pTx"/>
+                <constraint firstAttribute="bottom" secondItem="zaK-nu-DbC" secondAttribute="bottom" id="9q6-Dp-Euz"/>
+                <constraint firstItem="zaK-nu-DbC" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Cvo-86-Ie1"/>
+            </constraints>
+            <point key="canvasLocation" x="143" y="341"/>
+        </view>
+    </objects>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

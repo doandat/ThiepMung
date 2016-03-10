@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>51FD7053-CACC-4046-B6A3-6822850903E8</string>
+	<key>IDESourceControlProjectName</key>
+	<string>ThiepMung</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>ECFE731FA01E1EF9860E1333F4CF3B442B7DD852</key>
+		<string>https://github.com/doandat/ThiepMung.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>ThiepMung/ThiepMung.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>ECFE731FA01E1EF9860E1333F4CF3B442B7DD852</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/doandat/ThiepMung.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>ECFE731FA01E1EF9860E1333F4CF3B442B7DD852</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>ECFE731FA01E1EF9860E1333F4CF3B442B7DD852</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ThiepMung</string>
+		</dict>
+	</array>
+</dict>
+</plist>
