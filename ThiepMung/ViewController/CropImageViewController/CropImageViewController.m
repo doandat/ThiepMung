@@ -10,8 +10,6 @@
 #import "Cropper.h"
 
 @interface CropImageViewController (){
-    CGFloat sizeWidth1;
-    CGFloat sizeHeight1;
     UIImageView *uiViewCrop;
     CGFloat widthBounds;
     CGFloat heightBounds;
@@ -37,16 +35,12 @@
     //    lbNavTitle.textAlignment = UITextAlignmentLeft;
     [lbNavTitle setText:@"Frame Effects"];
     [lbNavTitle setTextColor:[UIColor colorWithRed:255/255.0f green:255/255.0f blue:255/255.0f alpha:0.7f]];
-    //    lbNavTitle.text = NSLocalizedString(@"Hiệu Ứng Khung Ảnh",@"");
     self.navigationItem.titleView = lbNavTitle;
     
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"back"] style:UIBarButtonItemStyleDone target:self action:@selector(itemBack:) ];
-    //    [self.navigationItem.leftBarButtonItem setImage: [UIImage imageNamed:@"back"]];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"btn_back.png"] style:UIBarButtonItemStyleDone target:self action:@selector(itemBack:) ];
     
-    
-    widthBounds = CGRectGetWidth(self.view.frame);
-    heightBounds = CGRectGetHeight(self.view.frame);
-    //    NSLog(@"width height: %f %f",widthBounds,heightBounds);
+    widthBounds = [UIScreen mainScreen].bounds.size.width;
+    heightBounds = [UIScreen mainScreen].bounds.size.height;
     
     // Do any additional setup after loading the view.
     UIButton *crop1 = [[UIButton alloc]init];
@@ -77,8 +71,6 @@
     
     [self.view setBackgroundColor:[UIColor colorWithRed:255/255.0f green:255/255.0f blue:255/255.0f alpha:0.8f]];
     
-    //NSLog(@"widthBounds: %f, %f",widthBounds,heightBounds);
-    //NSLog(@"widthBounds: %@",_imageTest);
     uiViewCrop = [[UIImageView alloc] initWithImage:_imageTest];
     float ratioWidthHeight = _imageTest.size.width/_imageTest.size.height;
     float ratioHeightWidth = _imageTest.size.height/_imageTest.size.width;
@@ -91,26 +83,16 @@
         
     }
     
-    //    [self.view addSubview:uiScrollView];
     [self.view addSubview:uiViewCrop];
     [self.view addSubview:crop1];
     [self.view addSubview:cancel];
     
+    CGFloat sizeWidth1;
+    CGFloat sizeHeight1;
     
-    
-    //    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Cắt"
-    //                                                            style:UIBarButtonItemStylePlain target:self action:@selector(cropit:)];
-    ////////NSLog(@"width: :%f",_sizeWidth);
-    ////////NSLog(@"height: :%f",_sizeHeight);
     if ((_sizeWidth ==0) || (_sizeHeight == 0)) {
         _sizeWidth = _sizeHeight = 300;
     }
-    ////////NSLog(@"width: :%f",_sizeWidth);
-    ////////NSLog(@"height: :%f",_sizeHeight);
-    //    [self.btncrop setEnabled:NO];
-    
-    //    [self.view setBackgroundColor:[UIColor whiteColor]];
-    //////////////////////////////
     
     if (widthBounds<768) {
         NSLog(@"widthBounds>=768 ipad");
@@ -135,11 +117,9 @@
             sizeHeight1 = sizeWidth1*ratio;
         }
     }
-    //    self.cropper = [[Cropper alloc] initWithImageView:self.imageView];
-    //    [self.btncrop setEnabled:NO];
-    //    [self addButtonsBar];
-    //    self.cropper = [[Cropper alloc] initWithImageView:self.imageView InitialCroppingRect:50 y:50 w:sizeWidth1 h:sizeHeight1];
+    
     self.cropper = [[Cropper alloc] initWithImageView:uiViewCrop InitialCroppingRect:70 y:70 w:sizeWidth1 h:sizeHeight1];
+    NSInteger tagInput = _tagImage;
     __weak CropImageViewController *_self = self;
     _cropper.cropAction = ^(CropperAction action, UIImage *image){
         //        [_self.cropper removeFromSuperview];
@@ -151,15 +131,17 @@
             
             /////////////////
             //            CGRect rect = CGRectMake(0.0, 0.0, _sizeWidth, _sizeHeight);
-            CGRect rect = CGRectMake(0.0, 0.0, _sizeWidth, _sizeHeight);
+            CGRect rect = CGRectMake(0.0, 0.0, sizeWidth1, sizeHeight1);
             UIGraphicsBeginImageContext(rect.size);
             [image drawInRect:rect];
             UIImage *img = UIGraphicsGetImageFromCurrentImageContext();
             NSData *imageData = UIImageJPEGRepresentation(img, 0.5);
             UIGraphicsEndImageContext();
             UIImage *image11 = [UIImage imageWithData:imageData];
-            [[_self delegate] imageFromController:self image:image11 tag:_tagImage];
-            [_self.navigationController popViewControllerAnimated:YES];
+            [[_self delegate] cropImageButtonDonePress:_self image:image11 tag:tagInput];
+            [_self.navigationController dismissViewControllerAnimated:YES completion:nil];
+        }else{
+            
         }
         ////////NSLog(@"aaa 2");
         
@@ -167,11 +149,10 @@
     };
     //        [self.navigationController popViewControllerAnimated:YES];
     ////////NSLog(@"aaa 3");
-    //    [self.cropButton setEnabled:NO];
-    
-    
-    ////////////////////////////
 }
+
+
+
 - (UIImage *)imageWithColor:(UIColor *)color {
     CGRect rect = CGRectMake(0.0f, 0.0f, 1.0f, 1.0f);
     UIGraphicsBeginImageContext(rect.size);
@@ -185,7 +166,7 @@
     
     return image;
 }
-- (IBAction)crop1:(id)sender
+- (void)crop1:(id)sender
 {
     if( self.cropper.cropAction )
     {
@@ -195,9 +176,9 @@
     }
 }
 
-- (IBAction)cancel1:(id)sender
+- (void)cancel1:(id)sender
 {
-    [self.navigationController popViewControllerAnimated:YES];
+    [self.navigationController dismissViewControllerAnimated:YES completion:nil];
 }
 
 
@@ -217,6 +198,7 @@
  */
 
 - (void)itemBack:(UIButton*)button {
-    [self.navigationController popViewControllerAnimated:YES];
+    [self.navigationController dismissViewControllerAnimated:YES
+ completion:nil];
 }
 @end

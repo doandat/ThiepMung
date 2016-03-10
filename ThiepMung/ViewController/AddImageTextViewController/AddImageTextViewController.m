@@ -21,10 +21,14 @@
     WYPopoverController *btnAddImagePopoverController;
     NSInteger indexSelectDialog;
     CropImageViewController *cropImageVC;
+    NSInteger tagSelected;
+    NSMutableArray *arrImage;
+    
+    NSInteger indexTextViewChanging;
 
 }
 @property (strong, nonatomic) UIImagePickerController *imagePickerController;
-@property (strong, nonatomic) UIImage *image;
+@property (strong, nonatomic) UIImage *imagePicker;
 @property (nonatomic) BOOL *check;
 
 @property (nonatomic) NSInteger numberInputText;
@@ -39,7 +43,7 @@
 @synthesize heightImgAdd;
 @synthesize collectionViewAddImage;
 @synthesize tableViewAddText;
-@synthesize image;
+@synthesize imagePicker;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -59,9 +63,9 @@
     [self.scrollView addSubview:lbDes];
     
     
-    numberInputImg = 10;
+    numberInputImg = 7;
     heightImgAdd = 60;
-    numberInputText = 10;
+    numberInputText = 3;
     
     lbTitleViewAddImage = [[UILabel alloc]init];
     lbTitleViewAddImage.text = @"Chọn ảnh ghép";
@@ -104,6 +108,15 @@
     [self.tableViewAddText reloadData];
     [self.tableViewAddText registerNib:[UINib nibWithNibName:@"AddTextTableViewCell" bundle:nil] forCellReuseIdentifier:@"AddTextTableViewCellIdentifier"];
     self.tableViewAddText.allowsSelection = NO;
+    
+    arrImage = [[NSMutableArray alloc] initWithCapacity:numberInputImg];
+    for (int i = 0; i < numberInputImg; i++) {
+        [arrImage insertObject:[NSNull null] atIndex:i];
+    }
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(_keyboardWillShowNotification:) name:UIKeyboardWillShowNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(_keyboardWillHideNotification:) name:UIKeyboardWillHideNotification object:nil];
+    [self.view layoutIfNeeded];
 
 }
 
@@ -297,6 +310,9 @@
 -(void)btnOK:(id) sender{
     AddTextTableViewCell *cell =(AddTextTableViewCell *) [self.tableViewAddText cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
     NSLog(@"AddTextTableViewCell:%@",cell.tvMessage.text);
+    for (int k=0; k<numberInputImg; k++) {
+        NSLog(@"btnOK:%@",[arrImage objectAtIndex:k]);
+    }
 }
 
 -(CGFloat)hightOfAddImageVCWithTotalImage:(NSInteger)totalImg{
@@ -308,7 +324,7 @@
     return heightView;
 }
 - (void)viewDidAppear:(BOOL)animated{
-    [self.scrollView setContentSize:CGSizeMake(self.viewContent.frame.size.width, 2000)];
+    [self.scrollView setContentSize:CGSizeMake(self.viewContent.frame.size.width, 600+numberInputText*80)];
 }
 
 - (void)btnBack:(id) sender{
@@ -329,8 +345,11 @@
     UICollectionViewCell *cell=[collectionView dequeueReusableCellWithReuseIdentifier:@"cellIdentifier" forIndexPath:indexPath];
     UIButton *btnAddImage = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, heightImgAdd, heightImgAdd)];
     [btnAddImage setBackgroundImage:[UIImage imageNamed:@"addpicture.png"] forState:UIControlStateNormal];
+
     [btnAddImage addTarget:self action:@selector(btnAddImage:) forControlEvents:UIControlEventTouchUpInside];
+    [btnAddImage setTag:(2000+indexPath.row)];
     [cell addSubview:btnAddImage];
+    
 ////    UIImageView *imageViewBackground = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, heightImgAdd, heightImgAdd)];
 ////    //    [imageViewBackground setBackgroundColor:[UIColor colorWithRed:19/255.0f green:19/255.0f blue:19/255.0f alpha:1.0f]];
 ////    imageViewBackground.contentMode = UIViewContentModeScaleToFill;
@@ -372,6 +391,7 @@
     }
     cell.lbMessage.text = [NSString stringWithFormat:@"Thông điệp %tu:",indexPath.row+1];
     cell.tvMessage.delegate = self;
+    [cell.tvMessage setTag:(3000+indexPath.row)];
     
     return cell;
 }
@@ -401,7 +421,7 @@
     if (btnAddImagePopoverController == nil)
     {
         UIView *btn = (UIView *)sender;
-        
+        tagSelected = [sender tag];
         DialogViewController *dialogVC = [[DialogViewController alloc]initWithNibName:@"DialogViewController" bundle:nil];
         dialogVC.preferredContentSize = CGSizeMake(100, 80);
         dialogVC.delegate = self;
@@ -509,19 +529,20 @@
 #pragma mark implement pickerImage
 - (void) imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
-    image = (UIImage *) [info objectForKey:UIImagePickerControllerOriginalImage];
-    if (!image) {
+    imagePicker = (UIImage *) [info objectForKey:UIImagePickerControllerOriginalImage];
+    if (!imagePicker) {
         NSLog(@"Không lấy được ảnh");
     }else{
         [self dismissViewControllerAnimated:YES completion:^{
             NSLog(@"đã lấy được ảnh");
             cropImageVC = [[CropImageViewController alloc]initWithNibName:@"CropImageViewController" bundle:nil];
-            cropImageVC.imageTest = image;
-            cropImageVC.sizeWidth = 100.0f;
+            cropImageVC.imageTest = imagePicker;
+            cropImageVC.sizeWidth = 80.0f;
             cropImageVC.sizeHeight = 100.0f;
-            cropImageVC.tagImage = 2;
+            cropImageVC.tagImage = tagSelected;
             cropImageVC.delegate = self;
-            [self.navigationController presentViewController:cropImageVC animated:YES completion:nil];
+            UINavigationController *navigationCropImg = [[UINavigationController alloc]initWithRootViewController:cropImageVC];
+            [self.navigationController presentViewController:navigationCropImg animated:YES completion:nil];
         }];
     }
     
@@ -537,8 +558,28 @@
     
 }
 
-- (void)imageFromController:(CropImageViewController*)cropImageVC image:(UIImage *)image tag:(int)tag{
-    
+- (void)cropImageButtonDonePress:(CropImageViewController*)cropImageVC image:(UIImage *)image tag:(NSInteger)tag{
+    NSLog(@"cropImageButtonDonePress in addImageTextVC %tu : %@",tag,image);
+    [arrImage replaceObjectAtIndex:tag-2000 withObject:image];
+    UIButton *button = (UIButton *) [self.collectionViewAddImage viewWithTag:tag];
+    [button setBackgroundImage:image forState:UIControlStateNormal];
+//    [self.collectionViewAddImage reloadData];
 }
 
+//
+- (void)_keyboardWillShowNotification:(NSNotification*)notification{
+    CGFloat hightOfset  = imageView.frame.size.height+120+self.addImageView.frame.size.height+indexTextViewChanging*75;
+    [self.scrollView setContentOffset:CGPointMake(0, hightOfset) animated:YES];
+    [self.scrollView setContentSize:CGSizeMake([UIScreen mainScreen].bounds.size.width, 600+numberInputText*80+215)];
+    NSLog(@"_keyboardWillShowNotification:%f",hightOfset);
+}
+
+- (void)_keyboardWillHideNotification:(NSNotification*)notification{
+    [self.scrollView setContentSize:CGSizeMake([UIScreen mainScreen].bounds.size.width, 600+numberInputText*80)];
+}
+- (BOOL)textViewShouldBeginEditing:(UITextView *)textView{
+    indexTextViewChanging = textView.tag-3000;
+    NSLog(@"textViewShouldBeginEditing:%@:%tu",textView,indexTextViewChanging);
+    return YES;
+}
 @end

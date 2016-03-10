@@ -12,7 +12,7 @@
 @protocol CropImageDelegate <NSObject>
 
 @required
-- (void)imageFromController:(CropImageViewController*)cropImageVC image:(UIImage *)image tag:(int)tag;
+- (void)cropImageButtonDonePress:(CropImageViewController*)cropImageVC image:(UIImage *)image tag:(NSInteger)tag;
 
 @end
 
@@ -20,9 +20,7 @@
 @property (weak, nonatomic) UIImage *imageTest;
 @property (nonatomic) CGFloat sizeWidth;
 @property (nonatomic) CGFloat sizeHeight;
-@property (nonatomic) int tagImage;
-
-@property (strong, nonatomic) UIView *bar;
+@property (nonatomic) NSInteger tagImage;
 
 @property (nonatomic, weak) id<CropImageDelegate> delegate;
 +(CropImageViewController *)cropImageVC;
