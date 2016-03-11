@@ -20,6 +20,7 @@
 +(DialogViewController *)dialogVC;
 @property (weak, nonatomic) id<DialogViewDelegate> delegate;
 @property (nonatomic) NSArray *arrDataSource;
+@property (nonatomic) NSArray *arrImageDes;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 

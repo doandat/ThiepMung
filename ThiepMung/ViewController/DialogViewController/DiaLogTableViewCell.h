@@ -10,5 +10,6 @@
 
 @interface DiaLogTableViewCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UILabel *lbTitle;
+@property (weak, nonatomic) IBOutlet UIImageView *imageDes;
 
 @end

@@ -423,9 +423,11 @@
         UIView *btn = (UIView *)sender;
         tagSelected = [sender tag];
         DialogViewController *dialogVC = [[DialogViewController alloc]initWithNibName:@"DialogViewController" bundle:nil];
-        dialogVC.preferredContentSize = CGSizeMake(100, 80);
+        dialogVC.preferredContentSize = CGSizeMake(130, 88);
         dialogVC.delegate = self;
         dialogVC.arrDataSource = [NSArray arrayWithObjects:@"Camera",@"Library", nil];
+        dialogVC.arrImageDes = [NSArray arrayWithObjects:@"camera.png",@"library.png", nil];
+
         dialogVC.modalInPopover = NO;
         
         UINavigationController *contentViewController = [[UINavigationController alloc] initWithRootViewController:dialogVC];
@@ -579,7 +581,12 @@
 }
 - (BOOL)textViewShouldBeginEditing:(UITextView *)textView{
     indexTextViewChanging = textView.tag-3000;
+    CGFloat hightOfset  = imageView.frame.size.height+120+self.addImageView.frame.size.height+indexTextViewChanging*75;
+
     NSLog(@"textViewShouldBeginEditing:%@:%tu",textView,indexTextViewChanging);
+    [self.scrollView setContentOffset:CGPointMake(0, hightOfset) animated:YES];
+    [self.scrollView setContentSize:CGSizeMake([UIScreen mainScreen].bounds.size.width, 600+numberInputText*80+215)];
+
     return YES;
 }
 @end

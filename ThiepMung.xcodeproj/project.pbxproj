@@ -150,6 +150,14 @@
 		D974BED31C87F67A0005938A /* CollectionItemViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D974BECF1C87F67A0005938A /* CollectionItemViewController.xib */; };
 		D974BED61C87FAD90005938A /* ItemCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = D974BED51C87FAD90005938A /* ItemCollection.m */; };
 		D974BED71C87FAD90005938A /* ItemCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = D974BED51C87FAD90005938A /* ItemCollection.m */; };
+		D9E788F61C925F7F008A81D9 /* camera.png in Resources */ = {isa = PBXBuildFile; fileRef = D9E788F21C925F7F008A81D9 /* camera.png */; };
+		D9E788F71C925F7F008A81D9 /* camera.png in Resources */ = {isa = PBXBuildFile; fileRef = D9E788F21C925F7F008A81D9 /* camera.png */; };
+		D9E788F81C925F7F008A81D9 /* camera@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D9E788F31C925F7F008A81D9 /* camera@2x.png */; };
+		D9E788F91C925F7F008A81D9 /* camera@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D9E788F31C925F7F008A81D9 /* camera@2x.png */; };
+		D9E788FA1C925F7F008A81D9 /* library.png in Resources */ = {isa = PBXBuildFile; fileRef = D9E788F41C925F7F008A81D9 /* library.png */; };
+		D9E788FB1C925F7F008A81D9 /* library.png in Resources */ = {isa = PBXBuildFile; fileRef = D9E788F41C925F7F008A81D9 /* library.png */; };
+		D9E788FC1C925F7F008A81D9 /* library@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D9E788F51C925F7F008A81D9 /* library@2x.png */; };
+		D9E788FD1C925F7F008A81D9 /* library@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D9E788F51C925F7F008A81D9 /* library@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -286,6 +294,10 @@
 		D974BECF1C87F67A0005938A /* CollectionItemViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionItemViewController.xib; sourceTree = "<group>"; };
 		D974BED41C87FAD90005938A /* ItemCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemCollection.h; sourceTree = "<group>"; };
 		D974BED51C87FAD90005938A /* ItemCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemCollection.m; sourceTree = "<group>"; };
+		D9E788F21C925F7F008A81D9 /* camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camera.png; sourceTree = "<group>"; };
+		D9E788F31C925F7F008A81D9 /* camera@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camera@2x.png"; sourceTree = "<group>"; };
+		D9E788F41C925F7F008A81D9 /* library.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = library.png; sourceTree = "<group>"; };
+		D9E788F51C925F7F008A81D9 /* library@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "library@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -523,6 +535,10 @@
 		D974BE811C87E4B60005938A /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				D9E788F21C925F7F008A81D9 /* camera.png */,
+				D9E788F31C925F7F008A81D9 /* camera@2x.png */,
+				D9E788F41C925F7F008A81D9 /* library.png */,
+				D9E788F51C925F7F008A81D9 /* library@2x.png */,
 				D904C9561C8D3E9200E349E6 /* khunganhmua.png */,
 				D904C9281C8D128300E349E6 /* btn_back.png */,
 				D904C9291C8D128300E349E6 /* btn_back@2x.png */,
@@ -729,10 +745,12 @@
 				D974BEC31C87EAF00005938A /* btn_menu@2x.png in Resources */,
 				D974BEB51C87E8B40005938A /* MenuTableViewCell.xib in Resources */,
 				D974BEC11C87EAF00005938A /* btn_menu.png in Resources */,
+				D9E788F61C925F7F008A81D9 /* camera.png in Resources */,
 				D974BE611C87DFC90005938A /* Main.storyboard in Resources */,
 				D97174321C912AEF00A76CEE /* DiaLogTableViewCell.xib in Resources */,
 				D90797DF1C8936BD0088F3C5 /* placeholder.png in Resources */,
 				D974BE8D1C87E4E10005938A /* BaseViewController.xib in Resources */,
+				D9E788F81C925F7F008A81D9 /* camera@2x.png in Resources */,
 				D907979A1C89250F0088F3C5 /* HomeTableViewCellSecond.xib in Resources */,
 				D93AF7611C8FBCD0004D9F2D /* AddTextTableViewCell.xib in Resources */,
 				D904C9491C8D1E5800E349E6 /* addpicture.png in Resources */,
@@ -744,6 +762,7 @@
 				D974BE661C87DFC90005938A /* LaunchScreen.xib in Resources */,
 				D974BEC71C87F3C40005938A /* SubItemCollectionView.xib in Resources */,
 				D974BEBD1C87E9610005938A /* CustomNavigationBar.xib in Resources */,
+				D9E788FA1C925F7F008A81D9 /* library.png in Resources */,
 				B009F1711C89DB6E00B6D197 /* imgCell1.png in Resources */,
 				D974BEA21C87E5420005938A /* RootViewController.xib in Resources */,
 				D974BE9B1C87E52E0005938A /* InfoViewController.xib in Resources */,
@@ -754,6 +773,7 @@
 				D974BE631C87DFC90005938A /* Images.xcassets in Resources */,
 				D90797F41C89412E0088F3C5 /* ViewShowImageController.xib in Resources */,
 				D971742B1C91260200A76CEE /* DialogViewController.xib in Resources */,
+				D9E788FC1C925F7F008A81D9 /* library@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -761,6 +781,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9E788FD1C925F7F008A81D9 /* library@2x.png in Resources */,
 				D904C92D1C8D128300E349E6 /* btn_back@2x.png in Resources */,
 				D907979B1C89250F0088F3C5 /* HomeTableViewCellSecond.xib in Resources */,
 				D9055D0F1C8A9C3500D8FAFF /* AddImageTextViewController.xib in Resources */,
@@ -772,6 +793,8 @@
 				D971742C1C91260200A76CEE /* DialogViewController.xib in Resources */,
 				D90797E71C8938E70088F3C5 /* HomeTableViewCellFirst.xib in Resources */,
 				D971743B1C9131DF00A76CEE /* CropImageViewController.xib in Resources */,
+				D9E788FB1C925F7F008A81D9 /* library.png in Resources */,
+				D9E788F91C925F7F008A81D9 /* camera@2x.png in Resources */,
 				D904C92B1C8D128300E349E6 /* btn_back.png in Resources */,
 				D90797E01C8936BD0088F3C5 /* placeholder.png in Resources */,
 				D974BEB61C87E8B40005938A /* MenuTableViewCell.xib in Resources */,
@@ -782,6 +805,7 @@
 				D90797EE1C8939EC0088F3C5 /* HomeCellFirstViewController.xib in Resources */,
 				D974BE9C1C87E52E0005938A /* InfoViewController.xib in Resources */,
 				D97174331C912AEF00A76CEE /* DiaLogTableViewCell.xib in Resources */,
+				D9E788F71C925F7F008A81D9 /* camera.png in Resources */,
 				D974BEAA1C87E5590005938A /* SidebarViewController.xib in Resources */,
 				D974BEA31C87E5420005938A /* RootViewController.xib in Resources */,
 				D974BEBE1C87E9610005938A /* CustomNavigationBar.xib in Resources */,

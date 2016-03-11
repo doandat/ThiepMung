@@ -25,7 +25,7 @@
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
     [self.tableView registerNib:[UINib nibWithNibName:@"DiaLogTableViewCell" bundle:nil] forCellReuseIdentifier:@"DiaLogTableViewCellIdentifier"];
-
+    self.tableView.scrollEnabled = NO;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -53,17 +53,26 @@
         cell = [[DiaLogTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     [cell.lbTitle setText:[_arrDataSource objectAtIndex:indexPath.row]];
+    [cell.imageDes setImage:[UIImage imageNamed:[_arrImageDes objectAtIndex:indexPath.row]]];
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
     return cell;
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    [[tableView cellForRowAtIndexPath:indexPath] setBackgroundColor:[UIColor redColor]];
     [self.delegate dialogViewController:self selectIndex:indexPath.row];
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 40.0f;
+    return 44.0f;
+}
+- (BOOL)tableView:(UITableView *)tableView shouldHighlightRowAtIndexPath:(NSIndexPath *)indexPath {
+    [[[self.tableView cellForRowAtIndexPath:indexPath] contentView] setBackgroundColor:[UIColor colorWithRed:72/255.0f green:5/255.0f blue:148/255.0f alpha:1.0f]];
+    DiaLogTableViewCell *cell = (DiaLogTableViewCell *)[self.tableView cellForRowAtIndexPath:indexPath];
+    [cell.lbTitle setTextColor:[UIColor whiteColor]];
+    return YES;
 }
 
 

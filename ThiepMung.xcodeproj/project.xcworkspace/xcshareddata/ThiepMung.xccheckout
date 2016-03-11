@@ -10,14 +10,14 @@
 	<string>ThiepMung</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>08B0B16DA2B16F9C72E1485F71F6E2D02BFCF885</key>
+		<key>ECFE731FA01E1EF9860E1333F4CF3B442B7DD852</key>
 		<string>https://github.com/doandat/ThiepMung.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>ThiepMung.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>08B0B16DA2B16F9C72E1485F71F6E2D02BFCF885</key>
+		<key>ECFE731FA01E1EF9860E1333F4CF3B442B7DD852</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
@@ -25,14 +25,14 @@
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>08B0B16DA2B16F9C72E1485F71F6E2D02BFCF885</string>
+	<string>ECFE731FA01E1EF9860E1333F4CF3B442B7DD852</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>08B0B16DA2B16F9C72E1485F71F6E2D02BFCF885</string>
+			<string>ECFE731FA01E1EF9860E1333F4CF3B442B7DD852</string>
 			<key>IDESourceControlWCCName</key>
 			<string>ThiepMung</string>
 		</dict>
