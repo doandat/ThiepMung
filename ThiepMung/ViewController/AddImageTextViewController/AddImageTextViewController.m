@@ -11,9 +11,9 @@
 #import "WYPopoverController.h"
 #import "DialogViewController.h"
 #import "CropImageViewController.h"
+#import "MessageViewController.h"
 
-
-@interface AddImageTextViewController ()<UICollectionViewDataSource,UICollectionViewDelegate,UITableViewDataSource,UITableViewDelegate,UITextViewDelegate,WYPopoverControllerDelegate,DialogViewDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate,CropImageDelegate>{
+@interface AddImageTextViewController ()<UICollectionViewDataSource,UICollectionViewDelegate,UITableViewDataSource,UITableViewDelegate,UITextViewDelegate,WYPopoverControllerDelegate,DialogViewDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate,CropImageDelegate,MessageDelegate>{
     UIImageView *imageView;
     UILabel *lbDes;
     UILabel *lbTitleViewAddImage;
@@ -57,13 +57,13 @@
     
     lbDes = [[UILabel alloc]initWithFrame:CGRectMake(0, 500, 325, 100)];
     [lbDes setText:@"Description Description Description Description"];
-    [lbDes setBackgroundColor:[UIColor redColor]];
+    [lbDes setBackgroundColor:[UIColor colorWithRed:180/255.0f green:155/255.0f blue:216/255.0f alpha:1.0f]];
     lbDes.translatesAutoresizingMaskIntoConstraints = NO;
     
     [self.scrollView addSubview:lbDes];
     
     
-    numberInputImg = 7;
+    numberInputImg = 3;
     heightImgAdd = 60;
     numberInputText = 3;
     
@@ -92,7 +92,6 @@
     btnOk.translatesAutoresizingMaskIntoConstraints = NO;
     [self.scrollView addSubview:btnOk];
     
-    [self.scrollView setContentSize:CGSizeMake(375, 2000)];
 
     [self updateViewConstraints];
     
@@ -119,7 +118,19 @@
     [self.view layoutIfNeeded];
 
 }
+-(void)viewWillAppear:(BOOL)animated{
+    [self.scrollView setContentSize:CGSizeMake([UIScreen mainScreen].bounds.size.width, 600+numberInputText*80+215)];
 
+}
+-(void)viewWillDisappear:(BOOL)animated{
+    [[NSNotificationCenter defaultCenter] removeObserver:self
+                                                    name:UIKeyboardDidHideNotification
+                                                  object:nil];
+    
+    [[NSNotificationCenter defaultCenter] removeObserver:self
+                                                    name:UIKeyboardWillShowNotification
+                                                  object:nil];
+}
 -(void)updateViewConstraints{
     [super updateViewConstraints];
     [self.view addConstraint:[NSLayoutConstraint constraintWithItem:imageView
@@ -309,10 +320,23 @@
 
 -(void)btnOK:(id) sender{
     AddTextTableViewCell *cell =(AddTextTableViewCell *) [self.tableViewAddText cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
+    bool checkRequirement = true;
     NSLog(@"AddTextTableViewCell:%@",cell.tvMessage.text);
     for (int k=0; k<numberInputImg; k++) {
         NSLog(@"btnOK:%@",[arrImage objectAtIndex:k]);
+        if ([[arrImage objectAtIndex:k] isEqual:[NSNull null]]) {
+            checkRequirement = false;
+            break;
+        }
     }
+    if (!checkRequirement) {
+        MessageViewController *messageVC = [[MessageViewController alloc]initWithNibName:@"MessageViewController" bundle:nil];
+        messageVC.titleText = @"Message";
+        messageVC.message = @"You have to select a sufficient number of photographs. Please pick now";
+        messageVC.delegate = self;
+        [Helper showViewController:messageVC inViewController:self withSize:CGSizeMake(300, 200)];
+    }
+    
 }
 
 -(CGFloat)hightOfAddImageVCWithTotalImage:(NSInteger)totalImg{
@@ -320,7 +344,6 @@
 
     CGFloat heightView = numRow*heightImgAdd+(numRow-1)*10;
     
-    NSLog(@"hightOfAddImageVCWithTotalImage:%tu,%f",numRow,heightView);
     return heightView;
 }
 - (void)viewDidAppear:(BOOL)animated{
@@ -500,7 +523,6 @@
 -(void)dialogViewController:(DialogViewController *)dialogVC selectIndex:(NSInteger)index{
     [self close:nil];
     indexSelectDialog = index;
-    NSLog(@"indexSelectDialog:%tu",index);
     if (index==0) {
         if (![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
             
@@ -561,11 +583,9 @@
 }
 
 - (void)cropImageButtonDonePress:(CropImageViewController*)cropImageVC image:(UIImage *)image tag:(NSInteger)tag{
-    NSLog(@"cropImageButtonDonePress in addImageTextVC %tu : %@",tag,image);
     [arrImage replaceObjectAtIndex:tag-2000 withObject:image];
     UIButton *button = (UIButton *) [self.collectionViewAddImage viewWithTag:tag];
     [button setBackgroundImage:image forState:UIControlStateNormal];
-//    [self.collectionViewAddImage reloadData];
 }
 
 //
@@ -573,7 +593,6 @@
     CGFloat hightOfset  = imageView.frame.size.height+120+self.addImageView.frame.size.height+indexTextViewChanging*75;
     [self.scrollView setContentOffset:CGPointMake(0, hightOfset) animated:YES];
     [self.scrollView setContentSize:CGSizeMake([UIScreen mainScreen].bounds.size.width, 600+numberInputText*80+215)];
-    NSLog(@"_keyboardWillShowNotification:%f",hightOfset);
 }
 
 - (void)_keyboardWillHideNotification:(NSNotification*)notification{
@@ -583,10 +602,16 @@
     indexTextViewChanging = textView.tag-3000;
     CGFloat hightOfset  = imageView.frame.size.height+120+self.addImageView.frame.size.height+indexTextViewChanging*75;
 
-    NSLog(@"textViewShouldBeginEditing:%@:%tu",textView,indexTextViewChanging);
     [self.scrollView setContentOffset:CGPointMake(0, hightOfset) animated:YES];
     [self.scrollView setContentSize:CGSizeMake([UIScreen mainScreen].bounds.size.width, 600+numberInputText*80+215)];
 
     return YES;
 }
+
+
+#pragma mark implement MessageDelegate
+-(void)messageOkPress:(MessageViewController *)messageVC{
+    [Helper removeDialogViewController:self];
+}
+
 @end

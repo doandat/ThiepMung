@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface Helper : NSObject
 
@@ -24,5 +25,17 @@
 
 + (NSDate *)beginOfWeekWithDate:(NSDate *)date;
 + (NSDate *)endOfWeekWithDate:(NSDate *)date;
+
++ (void)showViewController:(UIViewController *)dialogViewController inViewController:(UIViewController *)aViewController withSize:(CGSize)size;
++ (void)showViewController:(UIViewController *)dialogViewController inViewController:(UIViewController *)aViewController withFrame:(CGRect )frame;
++ (void)showViewController:(UIViewController *)dialogViewController withTag:(NSInteger)tag inViewController:(UIViewController *)aViewController withFrame:(CGRect )frame;
+
+
++ (void)showViewController:(UIViewController *)dialogViewController inViewController:(UIViewController *)aViewController;
++ (void)showViewController:(UIViewController*)dialogViewController inViewController:(UIViewController*)aViewController marginX:(int)margin_x marginY:(int)margin_y;
++ (void)removeDialogViewController:(UIViewController*)superViewController;
++ (void)removeDialogViewController:(UIViewController*)superViewController withTagDialogViewController:(NSInteger)tagDialogVC;
+
++ (void)showViewControllerNoMargrinY:(UIViewController*)dialogViewController inViewController:(UIViewController*)aViewController marginX:(int)margin_x ;
 
 @end

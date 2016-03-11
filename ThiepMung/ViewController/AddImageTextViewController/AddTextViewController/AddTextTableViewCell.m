@@ -12,7 +12,6 @@
 
 - (void)awakeFromNib {
     // Initialization code
-    NSLog(@"AddTextTableViewCell awakeFromNib");\
     self.viewMessage.layer.borderColor = [UIColor grayColor].CGColor;
     self.viewMessage.layer.borderWidth = 1.0f;
 }

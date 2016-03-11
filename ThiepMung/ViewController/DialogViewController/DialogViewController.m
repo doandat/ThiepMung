@@ -69,7 +69,7 @@
     return 44.0f;
 }
 - (BOOL)tableView:(UITableView *)tableView shouldHighlightRowAtIndexPath:(NSIndexPath *)indexPath {
-    [[[self.tableView cellForRowAtIndexPath:indexPath] contentView] setBackgroundColor:[UIColor colorWithRed:72/255.0f green:5/255.0f blue:148/255.0f alpha:1.0f]];
+    [[[self.tableView cellForRowAtIndexPath:indexPath] contentView] setBackgroundColor:[UIColor colorWithRed:108/255.0f green:46/255.0f blue:184/255.0f alpha:1.0f]];
     DiaLogTableViewCell *cell = (DiaLogTableViewCell *)[self.tableView cellForRowAtIndexPath:indexPath];
     [cell.lbTitle setTextColor:[UIColor whiteColor]];
     return YES;

@@ -30,21 +30,34 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    UILabel* lbNavTitle = [[UILabel alloc] initWithFrame:CGRectMake(0,40,CGRectGetWidth(self.view.frame)-40,40)];
-    lbNavTitle.textAlignment = NSTextAlignmentCenter;
-    //    lbNavTitle.textAlignment = UITextAlignmentLeft;
-    [lbNavTitle setText:@"Frame Effects"];
-    [lbNavTitle setTextColor:[UIColor colorWithRed:255/255.0f green:255/255.0f blue:255/255.0f alpha:0.7f]];
-    self.navigationItem.titleView = lbNavTitle;
-    
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"btn_back.png"] style:UIBarButtonItemStyleDone target:self action:@selector(itemBack:) ];
+    [self.navigationController setNavigationBarHidden:NO];
+    [self.navigationController.navigationBar setBarTintColor:[UIColor colorWithRed:108/255.0f green:46/255.0f blue:184/255.0f alpha:1.0f]];
+    [self.navigationController.navigationBar setTintColor:[UIColor whiteColor]];
+    self.navigationController.navigationBar.titleTextAttributes = [NSDictionary dictionaryWithObject:[UIColor whiteColor] forKey:NSForegroundColorAttributeName];
+    UIBarButtonItem *btnBack = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"btn_back.png"] style:UIBarButtonItemStylePlain target:self action:@selector(itemBack:)];
+    self.navigationItem.leftBarButtonItem = btnBack;
+    self.navigationItem.title = @"Crop Image";
     
     widthBounds = [UIScreen mainScreen].bounds.size.width;
     heightBounds = [UIScreen mainScreen].bounds.size.height;
     
-    // Do any additional setup after loading the view.
+    
+    uiViewCrop = [[UIImageView alloc] initWithImage:_imageTest];
+    float ratioWidthHeight = _imageTest.size.width/_imageTest.size.height;
+    float ratioHeightWidth = _imageTest.size.height/_imageTest.size.width;
+    float originYButonCrop;
+    //NSLog(@"widthBounds: %f, %f",ratioWidthHeight,ratioHeightWidth);
+    if (ratioHeightWidth< (heightBounds-115-70)/widthBounds) {
+        [uiViewCrop setFrame:CGRectMake(0, 65+(heightBounds-65-ratioHeightWidth*widthBounds)/2, widthBounds, ratioHeightWidth*widthBounds)];
+        originYButonCrop = uiViewCrop.frame.origin.y+uiViewCrop.frame.size.height+20;
+    }else{
+        
+        [uiViewCrop setFrame:CGRectMake((widthBounds-ratioWidthHeight*(heightBounds-115))/2, 65, ratioWidthHeight*(heightBounds-115), heightBounds-115)];
+        originYButonCrop = uiViewCrop.frame.origin.y+uiViewCrop.frame.size.height+5;
+    }
+
     UIButton *crop1 = [[UIButton alloc]init];
-    [crop1 setFrame:CGRectMake(widthBounds/2-110, heightBounds-45,100 , 40)];
+    [crop1 setFrame:CGRectMake(widthBounds/2-110, originYButonCrop,100 , 40)];
     [crop1 addTarget:self action:@selector(crop1:) forControlEvents:UIControlEventTouchUpInside];
     [crop1 setTitle:@"Crop" forState:UIControlStateNormal];
     [crop1 setBackgroundColor:[UIColor colorWithRed:0/255.0f green:122/255.0f blue:204/255.0f alpha:0.7f]];
@@ -58,7 +71,7 @@
     
     UIButton *cancel = [[UIButton alloc]init];
     [cancel setTitle:@"Cancel" forState:UIControlStateNormal];
-    [cancel setFrame:CGRectMake(widthBounds/2+10, heightBounds-45, 100 , 40)];
+    [cancel setFrame:CGRectMake(widthBounds/2+10, originYButonCrop, 100 , 40)];
     [cancel addTarget:self action:@selector(cancel1:) forControlEvents:UIControlEventTouchUpInside];
     [cancel setBackgroundColor:[UIColor colorWithRed:0/255.0f green:122/255.0f blue:204/255.0f alpha:0.7f]];
     [cancel setBackgroundImage:[self imageWithColor:[UIColor blackColor]] forState:UIControlStateHighlighted];
@@ -70,18 +83,6 @@
     [cancel.titleLabel setFont:[UIFont systemFontOfSize:20]];
     
     [self.view setBackgroundColor:[UIColor colorWithRed:255/255.0f green:255/255.0f blue:255/255.0f alpha:0.8f]];
-    
-    uiViewCrop = [[UIImageView alloc] initWithImage:_imageTest];
-    float ratioWidthHeight = _imageTest.size.width/_imageTest.size.height;
-    float ratioHeightWidth = _imageTest.size.height/_imageTest.size.width;
-    //NSLog(@"widthBounds: %f, %f",ratioWidthHeight,ratioHeightWidth);
-    if (ratioHeightWidth< (heightBounds-115-70)/widthBounds) {
-        [uiViewCrop setFrame:CGRectMake(0, 65+(heightBounds-65-ratioHeightWidth*widthBounds)/2, widthBounds, ratioHeightWidth*widthBounds)];
-    }else{
-        
-        [uiViewCrop setFrame:CGRectMake((widthBounds-ratioWidthHeight*(heightBounds-115))/2, 65, ratioWidthHeight*(heightBounds-115), heightBounds-115)];
-        
-    }
     
     [self.view addSubview:uiViewCrop];
     [self.view addSubview:crop1];

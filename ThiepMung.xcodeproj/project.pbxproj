@@ -158,6 +158,10 @@
 		D9E788FB1C925F7F008A81D9 /* library.png in Resources */ = {isa = PBXBuildFile; fileRef = D9E788F41C925F7F008A81D9 /* library.png */; };
 		D9E788FC1C925F7F008A81D9 /* library@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D9E788F51C925F7F008A81D9 /* library@2x.png */; };
 		D9E788FD1C925F7F008A81D9 /* library@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D9E788F51C925F7F008A81D9 /* library@2x.png */; };
+		D9E789021C926C37008A81D9 /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9E789001C926C37008A81D9 /* MessageViewController.m */; };
+		D9E789031C926C37008A81D9 /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9E789001C926C37008A81D9 /* MessageViewController.m */; };
+		D9E789041C926C37008A81D9 /* MessageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9E789011C926C37008A81D9 /* MessageViewController.xib */; };
+		D9E789051C926C37008A81D9 /* MessageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9E789011C926C37008A81D9 /* MessageViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -298,6 +302,9 @@
 		D9E788F31C925F7F008A81D9 /* camera@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camera@2x.png"; sourceTree = "<group>"; };
 		D9E788F41C925F7F008A81D9 /* library.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = library.png; sourceTree = "<group>"; };
 		D9E788F51C925F7F008A81D9 /* library@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "library@2x.png"; sourceTree = "<group>"; };
+		D9E788FF1C926C37008A81D9 /* MessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageViewController.h; sourceTree = "<group>"; };
+		D9E789001C926C37008A81D9 /* MessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageViewController.m; sourceTree = "<group>"; };
+		D9E789011C926C37008A81D9 /* MessageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -556,6 +563,7 @@
 		D974BE821C87E4B60005938A /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				D9E788FE1C926C28008A81D9 /* MessageViewController */,
 				D97174341C9131C300A76CEE /* CropImageViewController */,
 				D97174251C91260200A76CEE /* DialogViewController */,
 				D9055D081C8A9C1A00D8FAFF /* AddImageTextViewController */,
@@ -657,6 +665,16 @@
 				D974BEBA1C87E9610005938A /* CustomNavigationBar.xib */,
 			);
 			path = CustomNavigationBar;
+			sourceTree = "<group>";
+		};
+		D9E788FE1C926C28008A81D9 /* MessageViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D9E788FF1C926C37008A81D9 /* MessageViewController.h */,
+				D9E789001C926C37008A81D9 /* MessageViewController.m */,
+				D9E789011C926C37008A81D9 /* MessageViewController.xib */,
+			);
+			path = MessageViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -765,6 +783,7 @@
 				D9E788FA1C925F7F008A81D9 /* library.png in Resources */,
 				B009F1711C89DB6E00B6D197 /* imgCell1.png in Resources */,
 				D974BEA21C87E5420005938A /* RootViewController.xib in Resources */,
+				D9E789041C926C37008A81D9 /* MessageViewController.xib in Resources */,
 				D974BE9B1C87E52E0005938A /* InfoViewController.xib in Resources */,
 				D90797E61C8938E70088F3C5 /* HomeTableViewCellFirst.xib in Resources */,
 				D971743A1C9131DF00A76CEE /* CropImageViewController.xib in Resources */,
@@ -789,6 +808,7 @@
 				D93AF7621C8FBCD0004D9F2D /* AddTextTableViewCell.xib in Resources */,
 				D974BEC81C87F3C40005938A /* SubItemCollectionView.xib in Resources */,
 				D974BEC41C87EAF00005938A /* btn_menu@2x.png in Resources */,
+				D9E789051C926C37008A81D9 /* MessageViewController.xib in Resources */,
 				D904C9581C8D3E9200E349E6 /* khunganhmua.png in Resources */,
 				D971742C1C91260200A76CEE /* DialogViewController.xib in Resources */,
 				D90797E71C8938E70088F3C5 /* HomeTableViewCellFirst.xib in Resources */,
@@ -857,6 +877,7 @@
 				D90797C01C89361F0088F3C5 /* NSData+ImageContentType.m in Sources */,
 				D90797C61C89361F0088F3C5 /* SDWebImageDecoder.m in Sources */,
 				D974BED01C87F67A0005938A /* CollectionItemViewController.m in Sources */,
+				D9E789021C926C37008A81D9 /* MessageViewController.m in Sources */,
 				D90797D81C89361F0088F3C5 /* UIImageView+HighlightedWebCache.m in Sources */,
 				D90797D01C89361F0088F3C5 /* UIButton+WebCache.m in Sources */,
 				D974BE5B1C87DFC90005938A /* AppDelegate.m in Sources */,
@@ -879,6 +900,7 @@
 				D974BEBC1C87E9610005938A /* CustomNavigationBar.m in Sources */,
 				D97174401C91329A00A76CEE /* Cropper.m in Sources */,
 				D97174171C91251100A76CEE /* WYPopoverController.m in Sources */,
+				D9E789031C926C37008A81D9 /* MessageViewController.m in Sources */,
 				D9055D0D1C8A9C3500D8FAFF /* AddImageTextViewController.m in Sources */,
 				D90797EC1C8939EC0088F3C5 /* HomeCellFirstViewController.m in Sources */,
 				D974BE721C87DFC90005938A /* ThiepMungTests.m in Sources */,
