@@ -11,6 +11,8 @@
 #import "ItemCollection.h"
 #import "UIImageView+WebCache.h"
 #import "Helper.h"
+#import "config.h"
+#import "AppService.h"
 
 @interface BaseViewController : UIViewController
 - (UIImage *)imageWithColor:(UIColor *)color;

@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "Global.h"
 
 @interface AppDelegate ()
 
@@ -16,6 +17,7 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    [Global share];
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     RootViewController *rootVC = [[RootViewController alloc]initWithNibName:@"RootViewController" bundle:nil];
     self.window.rootViewController = rootVC;

@@ -12,8 +12,9 @@
 @interface CollectionItemViewController : BaseViewController<UICollectionViewDataSource, UICollectionViewDelegate>
 
 @property (nonatomic) CGFloat heightCollectionCell;
+@property (nonatomic) DCategory *dCategory;
 
-@property (nonatomic) NSMutableArray *arrData;
+//@property (nonatomic) NSMutableArray *arrData;
 
 @property (nonatomic, weak) id<HomeViewControllerDelegate> delegate;
 

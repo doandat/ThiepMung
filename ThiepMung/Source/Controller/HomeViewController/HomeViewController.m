@@ -13,6 +13,7 @@
 
 @interface HomeViewController (){
     NSMutableArray *arrDataSource;
+    NSArray *arrDCategory;
 }
 
 @end
@@ -36,6 +37,11 @@
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
 //    [self.tableView registerClass:[HomeTableViewCellSecond class] forCellReuseIdentifier:@"HomeTableViewCellSecondIdentifier"];
+    arrDCategory = [AppService getDCategoryFromUrlString:URL_GET_CATEGORY];
+    for (DCategory *dCategory in arrDCategory) {
+        NSLog(@"dCategory:%@:%@",dCategory.dCategory_name,dCategory.dCategory_id);
+    }
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -57,7 +63,7 @@
     if (section==0) {
         return 1;
     }else
-    return 4;
+    return arrDCategory.count;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -72,13 +78,17 @@
 //        cell.userInteractionEnabled = NO;
         return cell;
     }else{
+        DCategory *dCategory1 = [arrDCategory objectAtIndex:indexPath.row];
         HomeTableViewCellSecond *cell = [tableView dequeueReusableCellWithIdentifier:@"HomeTableViewCellSecondIdentifier"];
         if (cell == nil) {
             NSArray *topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"HomeTableViewCellSecond" owner:self options:nil];
             cell = [topLevelObjects objectAtIndex:0];
         }
-        [cell.btnTitle setTitle:@"Viet Thu Phap" forState:UIControlStateNormal];
+        [cell.btnTitle setTitle:dCategory1.dCategory_name forState:UIControlStateNormal];
+//        cell.dCategory = dCategory1;
+        NSLog(@"cell.dCategory:%@",cell.dCategory);
         cell.collectionItemVC.delegate = self;
+        cell.collectionItemVC.dCategory = dCategory1;
         return cell;
     }
 }

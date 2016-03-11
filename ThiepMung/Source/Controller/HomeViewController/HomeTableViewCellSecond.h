@@ -8,13 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import "CollectionItemViewController.h"
+#import "DCategory.h"
 
 @interface HomeTableViewCellSecond : UITableViewCell
 
 
 @property (nonatomic) CollectionItemViewController *collectionItemVC;
 
-
+@property (strong, nonatomic) DCategory *dCategory;
 
 @property (weak, nonatomic) IBOutlet UIButton *btnTitle;
 @property (weak, nonatomic) IBOutlet UIView *viewContent;
