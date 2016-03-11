@@ -76,7 +76,7 @@
     [lbTitle setTextColor:[UIColor whiteColor]];
     
     [viewHeader addSubview:lbTitle];
-    [viewHeader setBackgroundColor:[UIColor colorWithRed:23/255.0f green:137/255.0f blue:206/255.0f alpha:1.0f]];
+    [viewHeader setBackgroundColor:[UIColor colorWithRed:108/255.0f green:46/255.0f blue:184/255.0f alpha:1.0f]];
     UIView *viewSeparator = [[UIView alloc]initWithFrame:CGRectMake(0, 44, 375, 1)];
     [viewSeparator setBackgroundColor:[UIColor colorWithRed:27/255.0f green:156/255.0f blue:222/255.0f alpha:1.0f]];
     [viewHeader addSubview:viewSeparator];

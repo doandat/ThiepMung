@@ -13,5 +13,6 @@
 #import "Helper.h"
 
 @interface BaseViewController : UIViewController
+- (UIImage *)imageWithColor:(UIColor *)color;
 
 @end

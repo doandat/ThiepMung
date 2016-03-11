@@ -12,6 +12,7 @@
 #import "DialogViewController.h"
 #import "CropImageViewController.h"
 #import "MessageViewController.h"
+#import "ResultViewController.h"
 
 @interface AddImageTextViewController ()<UICollectionViewDataSource,UICollectionViewDelegate,UITableViewDataSource,UITableViewDelegate,UITextViewDelegate,WYPopoverControllerDelegate,DialogViewDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate,CropImageDelegate,MessageDelegate>{
     UIImageView *imageView;
@@ -47,8 +48,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.navigationController setNavigationBarHidden:YES];
-    [_btnBack addTarget:self action:@selector(btnBack:) forControlEvents:UIControlEventTouchUpInside];
     imageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, self.scrollView.frame.size.width, self.scrollView.frame.size.width*2/3)];
     [imageView setImage:[UIImage imageNamed:@"khunganhmua.png"]];
     imageView.translatesAutoresizingMaskIntoConstraints = NO;
@@ -63,7 +62,7 @@
     [self.scrollView addSubview:lbDes];
     
     
-    numberInputImg = 3;
+    numberInputImg = 1;
     heightImgAdd = 60;
     numberInputText = 3;
     
@@ -119,6 +118,9 @@
 
 }
 -(void)viewWillAppear:(BOOL)animated{
+    [self.navigationController setNavigationBarHidden:YES];
+    [_btnBack addTarget:self action:@selector(btnBack:) forControlEvents:UIControlEventTouchUpInside];
+
     [self.scrollView setContentSize:CGSizeMake([UIScreen mainScreen].bounds.size.width, 600+numberInputText*80+215)];
 
 }
@@ -335,6 +337,10 @@
         messageVC.message = @"You have to select a sufficient number of photographs. Please pick now";
         messageVC.delegate = self;
         [Helper showViewController:messageVC inViewController:self withSize:CGSizeMake(300, 200)];
+    }else{
+        ResultViewController *resultVC = [[ResultViewController alloc]initWithNibName:@"ResultViewController" bundle:nil];
+        resultVC.imageResult = [arrImage objectAtIndex:0];
+        [self.navigationController pushViewController:resultVC animated:YES];
     }
     
 }
@@ -561,7 +567,7 @@
             NSLog(@"đã lấy được ảnh");
             cropImageVC = [[CropImageViewController alloc]initWithNibName:@"CropImageViewController" bundle:nil];
             cropImageVC.imageTest = imagePicker;
-            cropImageVC.sizeWidth = 80.0f;
+            cropImageVC.sizeWidth = 100.0f;
             cropImageVC.sizeHeight = 100.0f;
             cropImageVC.tagImage = tagSelected;
             cropImageVC.delegate = self;

@@ -162,6 +162,16 @@
 		D9E789031C926C37008A81D9 /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9E789001C926C37008A81D9 /* MessageViewController.m */; };
 		D9E789041C926C37008A81D9 /* MessageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9E789011C926C37008A81D9 /* MessageViewController.xib */; };
 		D9E789051C926C37008A81D9 /* MessageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9E789011C926C37008A81D9 /* MessageViewController.xib */; };
+		D9E7890A1C9279A1008A81D9 /* ResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9E789081C9279A1008A81D9 /* ResultViewController.m */; };
+		D9E7890B1C9279A1008A81D9 /* ResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9E789081C9279A1008A81D9 /* ResultViewController.m */; };
+		D9E7890C1C9279A1008A81D9 /* ResultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9E789091C9279A1008A81D9 /* ResultViewController.xib */; };
+		D9E7890D1C9279A1008A81D9 /* ResultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9E789091C9279A1008A81D9 /* ResultViewController.xib */; };
+		D9E7891A1C927EF6008A81D9 /* close.png in Resources */ = {isa = PBXBuildFile; fileRef = D9E789171C927EF6008A81D9 /* close.png */; };
+		D9E7891B1C927EF6008A81D9 /* close.png in Resources */ = {isa = PBXBuildFile; fileRef = D9E789171C927EF6008A81D9 /* close.png */; };
+		D9E7891C1C927EF6008A81D9 /* close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D9E789181C927EF6008A81D9 /* close@2x.png */; };
+		D9E7891D1C927EF6008A81D9 /* close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D9E789181C927EF6008A81D9 /* close@2x.png */; };
+		D9E7891E1C927EF6008A81D9 /* close@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D9E789191C927EF6008A81D9 /* close@3x.png */; };
+		D9E7891F1C927EF6008A81D9 /* close@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D9E789191C927EF6008A81D9 /* close@3x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -305,6 +315,12 @@
 		D9E788FF1C926C37008A81D9 /* MessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageViewController.h; sourceTree = "<group>"; };
 		D9E789001C926C37008A81D9 /* MessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageViewController.m; sourceTree = "<group>"; };
 		D9E789011C926C37008A81D9 /* MessageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageViewController.xib; sourceTree = "<group>"; };
+		D9E789071C9279A1008A81D9 /* ResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultViewController.h; sourceTree = "<group>"; };
+		D9E789081C9279A1008A81D9 /* ResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultViewController.m; sourceTree = "<group>"; };
+		D9E789091C9279A1008A81D9 /* ResultViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ResultViewController.xib; sourceTree = "<group>"; };
+		D9E789171C927EF6008A81D9 /* close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = close.png; sourceTree = "<group>"; };
+		D9E789181C927EF6008A81D9 /* close@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "close@2x.png"; sourceTree = "<group>"; };
+		D9E789191C927EF6008A81D9 /* close@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "close@3x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -542,6 +558,9 @@
 		D974BE811C87E4B60005938A /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				D9E789171C927EF6008A81D9 /* close.png */,
+				D9E789181C927EF6008A81D9 /* close@2x.png */,
+				D9E789191C927EF6008A81D9 /* close@3x.png */,
 				D9E788F21C925F7F008A81D9 /* camera.png */,
 				D9E788F31C925F7F008A81D9 /* camera@2x.png */,
 				D9E788F41C925F7F008A81D9 /* library.png */,
@@ -563,6 +582,7 @@
 		D974BE821C87E4B60005938A /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				D9E789061C927991008A81D9 /* ResultViewController */,
 				D9E788FE1C926C28008A81D9 /* MessageViewController */,
 				D97174341C9131C300A76CEE /* CropImageViewController */,
 				D97174251C91260200A76CEE /* DialogViewController */,
@@ -677,6 +697,16 @@
 			path = MessageViewController;
 			sourceTree = "<group>";
 		};
+		D9E789061C927991008A81D9 /* ResultViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D9E789071C9279A1008A81D9 /* ResultViewController.h */,
+				D9E789081C9279A1008A81D9 /* ResultViewController.m */,
+				D9E789091C9279A1008A81D9 /* ResultViewController.xib */,
+			);
+			path = ResultViewController;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -757,6 +787,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9E7891E1C927EF6008A81D9 /* close@3x.png in Resources */,
 				D974BED21C87F67A0005938A /* CollectionItemViewController.xib in Resources */,
 				D904C92A1C8D128300E349E6 /* btn_back.png in Resources */,
 				D904C92C1C8D128300E349E6 /* btn_back@2x.png in Resources */,
@@ -766,7 +797,10 @@
 				D9E788F61C925F7F008A81D9 /* camera.png in Resources */,
 				D974BE611C87DFC90005938A /* Main.storyboard in Resources */,
 				D97174321C912AEF00A76CEE /* DiaLogTableViewCell.xib in Resources */,
+				D9E7891C1C927EF6008A81D9 /* close@2x.png in Resources */,
 				D90797DF1C8936BD0088F3C5 /* placeholder.png in Resources */,
+				D9E7891A1C927EF6008A81D9 /* close.png in Resources */,
+				D9E7890C1C9279A1008A81D9 /* ResultViewController.xib in Resources */,
 				D974BE8D1C87E4E10005938A /* BaseViewController.xib in Resources */,
 				D9E788F81C925F7F008A81D9 /* camera@2x.png in Resources */,
 				D907979A1C89250F0088F3C5 /* HomeTableViewCellSecond.xib in Resources */,
@@ -811,12 +845,15 @@
 				D9E789051C926C37008A81D9 /* MessageViewController.xib in Resources */,
 				D904C9581C8D3E9200E349E6 /* khunganhmua.png in Resources */,
 				D971742C1C91260200A76CEE /* DialogViewController.xib in Resources */,
+				D9E7891F1C927EF6008A81D9 /* close@3x.png in Resources */,
+				D9E7890D1C9279A1008A81D9 /* ResultViewController.xib in Resources */,
 				D90797E71C8938E70088F3C5 /* HomeTableViewCellFirst.xib in Resources */,
 				D971743B1C9131DF00A76CEE /* CropImageViewController.xib in Resources */,
 				D9E788FB1C925F7F008A81D9 /* library.png in Resources */,
 				D9E788F91C925F7F008A81D9 /* camera@2x.png in Resources */,
 				D904C92B1C8D128300E349E6 /* btn_back.png in Resources */,
 				D90797E01C8936BD0088F3C5 /* placeholder.png in Resources */,
+				D9E7891B1C927EF6008A81D9 /* close.png in Resources */,
 				D974BEB61C87E8B40005938A /* MenuTableViewCell.xib in Resources */,
 				D974BE8E1C87E4E10005938A /* BaseViewController.xib in Resources */,
 				D904C94C1C8D1E5800E349E6 /* addpicture@2x.png in Resources */,
@@ -825,6 +862,7 @@
 				D90797EE1C8939EC0088F3C5 /* HomeCellFirstViewController.xib in Resources */,
 				D974BE9C1C87E52E0005938A /* InfoViewController.xib in Resources */,
 				D97174331C912AEF00A76CEE /* DiaLogTableViewCell.xib in Resources */,
+				D9E7891D1C927EF6008A81D9 /* close@2x.png in Resources */,
 				D9E788F71C925F7F008A81D9 /* camera.png in Resources */,
 				D974BEAA1C87E5590005938A /* SidebarViewController.xib in Resources */,
 				D974BEA31C87E5420005938A /* RootViewController.xib in Resources */,
@@ -851,6 +889,7 @@
 				D90797CA1C89361F0088F3C5 /* SDWebImageDownloaderOperation.m in Sources */,
 				D974BE5E1C87DFC90005938A /* ViewController.m in Sources */,
 				D90797C21C89361F0088F3C5 /* SDImageCache.m in Sources */,
+				D9E7890A1C9279A1008A81D9 /* ResultViewController.m in Sources */,
 				D90797BE1C89361F0088F3C5 /* MKAnnotationView+WebCache.m in Sources */,
 				D90797E41C8938E70088F3C5 /* HomeTableViewCellFirst.m in Sources */,
 				D971743F1C91329A00A76CEE /* Cropper.m in Sources */,
@@ -897,6 +936,7 @@
 				D974BEAF1C87E59C0005938A /* SWRevealViewController.m in Sources */,
 				D971741D1C91253500A76CEE /* Helper.m in Sources */,
 				D90797D71C89361F0088F3C5 /* UIImage+WebP.m in Sources */,
+				D9E7890B1C9279A1008A81D9 /* ResultViewController.m in Sources */,
 				D974BEBC1C87E9610005938A /* CustomNavigationBar.m in Sources */,
 				D97174401C91329A00A76CEE /* Cropper.m in Sources */,
 				D97174171C91251100A76CEE /* WYPopoverController.m in Sources */,
