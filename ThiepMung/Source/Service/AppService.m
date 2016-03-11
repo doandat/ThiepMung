@@ -56,7 +56,7 @@
                 DEffect *dEffect = [DEffect new];
                 NSDictionary *dicInputLine = [dicDEffect1 objectForKey:k_input_line];
                 NSDictionary *dicInputPic = [dicDEffect1 objectForKey:k_input_picture];
-                
+                NSLog(@"dicInputPic:%@",dicInputPic);
                 dEffect.dEffect_id = [dicDEffect1 objectForKey:k_id];
                 dEffect.label = [dicDEffect1 objectForKey:k_label];
                 dEffect.effectDescription = [dicDEffect1 objectForKey:k_description];
@@ -67,6 +67,9 @@
                     for (NSDictionary *dicInputLine1 in dicInputLine) {
                         DInputLine *dInputLine = [DInputLine new];
                         dInputLine.type = [dicInputLine1 objectForKey:k_type];
+                        if ([dInputLine.type isEqualToString:@""]) {
+                            continue;
+                        }
                         dInputLine.title = [dicInputLine1 objectForKey:k_title];
                         dInputLine.require = [dicInputLine1 objectForKey:k_require];
                         [arrInputLine addObject:dInputLine];
@@ -76,9 +79,14 @@
                 
                 if (dicInputPic) {
                     NSMutableArray *arrInputPic = [[NSMutableArray alloc]init];
-                    for (NSDictionary *dicInputPic1 in dicInputLine) {
+                    for (NSDictionary *dicInputPic1 in dicInputPic) {
                         DInputPic *dInputPic = [DInputPic new];
                         dInputPic.type = [dicInputPic1 objectForKey:k_type];
+                        NSLog(@"");
+                        if ([dInputPic.type isEqualToString:@""]) {
+                            continue;
+                        }
+
                         dInputPic.require = [dicInputPic1 objectForKey:k_require];
                         dInputPic.width = [dicInputPic1 objectForKey:k_width];
                         dInputPic.height = [dicInputPic1 objectForKey:k_height];

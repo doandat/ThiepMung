@@ -7,8 +7,11 @@
 //
 
 #import "BaseViewController.h"
+#import "DEffect.h"
 
 @interface AddImageTextViewController : BaseViewController
+
+@property (nonatomic) DEffect *dEffect;
 
 @property (weak, nonatomic) IBOutlet UIView *viewContent;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;

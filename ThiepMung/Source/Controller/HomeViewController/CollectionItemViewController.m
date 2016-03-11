@@ -83,8 +83,10 @@
 }
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    DEffect *dEffect = [arrDataSource objectAtIndex:indexPath.row];
     AddImageTextViewController *addImageTextVC = [[AddImageTextViewController alloc]initWithNibName:@"AddImageTextViewController" bundle:nil];
     UINavigationController *navigationAddImageText = [[UINavigationController alloc]initWithRootViewController:addImageTextVC];;
+    addImageTextVC.dEffect = dEffect;
     [self.delegate presentVC:navigationAddImageText];
     
 }

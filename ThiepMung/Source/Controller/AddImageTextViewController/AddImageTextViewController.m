@@ -48,26 +48,29 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    imageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, self.scrollView.frame.size.width, self.scrollView.frame.size.width*2/3)];
-    [imageView setImage:[UIImage imageNamed:@"khunganhmua.png"]];
+    imageView = [[UIImageView alloc]init];
+    [imageView sd_setImageWithURL:[NSURL URLWithString:_dEffect.avatar ] placeholderImage:[UIImage imageNamed:@"placeholder.png"]];
     imageView.translatesAutoresizingMaskIntoConstraints = NO;
     
     [self.scrollView addSubview:imageView];
     
-    lbDes = [[UILabel alloc]initWithFrame:CGRectMake(0, 500, 325, 100)];
-    [lbDes setText:@"Description Description Description Description"];
+    lbDes = [[UILabel alloc]init];
+    [lbDes setText:_dEffect.effectDescription];
+    [lbDes setNumberOfLines:0];
     [lbDes setBackgroundColor:[UIColor colorWithRed:180/255.0f green:155/255.0f blue:216/255.0f alpha:1.0f]];
     lbDes.translatesAutoresizingMaskIntoConstraints = NO;
     
     [self.scrollView addSubview:lbDes];
     
     
-    numberInputImg = 1;
+    numberInputImg = _dEffect.input_pic.count;
     heightImgAdd = 60;
-    numberInputText = 3;
+    numberInputText = _dEffect.input_line.count;
     
     lbTitleViewAddImage = [[UILabel alloc]init];
-    lbTitleViewAddImage.text = @"Chọn ảnh ghép";
+    if (numberInputImg) {
+        lbTitleViewAddImage.text = @"Chọn ảnh ghép";
+    }
     lbTitleViewAddImage.textColor = [UIColor colorWithRed:70/255.0f green:6/255.0f blue:143/255.0f alpha:1.0];
     lbTitleViewAddImage.translatesAutoresizingMaskIntoConstraints = NO;
 
@@ -122,7 +125,7 @@
     [_btnBack addTarget:self action:@selector(btnBack:) forControlEvents:UIControlEventTouchUpInside];
 
     [self.scrollView setContentSize:CGSizeMake([UIScreen mainScreen].bounds.size.width, 600+numberInputText*80+215)];
-
+    NSLog(@"viewWillAppear dEffect:%@",_dEffect);
 }
 -(void)viewWillDisappear:(BOOL)animated{
     [[NSNotificationCenter defaultCenter] removeObserver:self
@@ -193,7 +196,7 @@
                                                              toItem:self.scrollView
                                                           attribute:NSLayoutAttributeLeading
                                                          multiplier:1.0
-                                                           constant:0.0]];
+                                                           constant:10.0]];
     
     [self.view addConstraint:[NSLayoutConstraint constraintWithItem:lbDes
                                                           attribute:NSLayoutAttributeTrailing
@@ -201,7 +204,7 @@
                                                              toItem:self.scrollView
                                                           attribute:NSLayoutAttributeTrailing
                                                          multiplier:1.0
-                                                           constant:0.0]];
+                                                           constant:-10.0]];
     
     
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[lbDes(==70)]"
@@ -229,12 +232,12 @@
                                                           attribute:NSLayoutAttributeTrailing
                                                          multiplier:1.0
                                                            constant:0.0]];
-    
-    
+
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[lbTitleViewAddImage(==30)]"
                                                                       options:0
                                                                       metrics:nil
                                                                         views:NSDictionaryOfVariableBindings(lbTitleViewAddImage)]];
+
     
     
     
@@ -346,9 +349,15 @@
 }
 
 -(CGFloat)hightOfAddImageVCWithTotalImage:(NSInteger)totalImg{
-    NSInteger numRow = (int)ceilf((totalImg/ ((int)([UIScreen mainScreen].bounds.size.width-20)/(heightImgAdd+10))));
-
-    CGFloat heightView = numRow*heightImgAdd+(numRow-1)*10;
+    CGFloat heightView ;
+    if (totalImg) {
+        NSInteger numRow = (int)ceilf((totalImg/ ((int)([UIScreen mainScreen].bounds.size.width-20)/(heightImgAdd+10))));
+        
+        heightView = numRow*heightImgAdd+(numRow-1)*10;
+    }else{
+        heightView = 0;
+    }
+    
     
     return heightView;
 }
