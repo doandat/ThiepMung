@@ -324,29 +324,176 @@
 
 
 -(void)btnOK:(id) sender{
-    AddTextTableViewCell *cell =(AddTextTableViewCell *) [self.tableViewAddText cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
-    bool checkRequirement = true;
-    NSLog(@"AddTextTableViewCell:%@",cell.tvMessage.text);
-    for (int k=0; k<numberInputImg; k++) {
-        NSLog(@"btnOK:%@",[arrImage objectAtIndex:k]);
-        if ([[arrImage objectAtIndex:k] isEqual:[NSNull null]]) {
-            checkRequirement = false;
-            break;
+    [self.view endEditing:YES];
+
+//    AddTextTableViewCell *cell =(AddTextTableViewCell *) [self.tableViewAddText cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
+//    bool checkRequirement = true;
+//    NSLog(@"AddTextTableViewCell:%@",cell.tvMessage.text);
+//    for (int k=0; k<numberInputImg; k++) {
+//        NSLog(@"btnOK:%@",[arrImage objectAtIndex:k]);
+//        if ([[arrImage objectAtIndex:k] isEqual:[NSNull null]]) {
+//            checkRequirement = false;
+//            break;
+//        }
+//    }
+//    if (!checkRequirement) {
+//        MessageViewController *messageVC = [[MessageViewController alloc]initWithNibName:@"MessageViewController" bundle:nil];
+//        messageVC.titleText = @"Message";
+//        messageVC.message = @"You have to select a sufficient number of photographs. Please pick now";
+//        messageVC.delegate = self;
+//        [Helper showViewController:messageVC inViewController:self withSize:CGSizeMake(300, 200)];
+//    }else{
+//        ResultViewController *resultVC = [[ResultViewController alloc]initWithNibName:@"ResultViewController" bundle:nil];
+//        resultVC.imageResult = [arrImage objectAtIndex:0];
+//        [self.navigationController pushViewController:resultVC animated:YES];
+//    }
+//    
+    
+    //////////////////////
+    NSString *text;
+    NSArray *arrLine = [NSArray arrayWithObjects:@"line_1", @"line_2", @"line_3", @"line_4", @"line_5", @"line_6", @"line_7", @"line_8", @"line_9", @"line_10", nil];
+    NSArray *arrPic = [NSArray arrayWithObjects: @"picture_1", @"picture_2", @"picture_3", @"picture_4", @"picture_5", @"picture_6", @"picture_7", @"picture_8", @"picture_9", @"picture_10", nil];
+    // Dictionary that holds post parameters.
+    NSMutableDictionary* _params = [[NSMutableDictionary alloc] init];
+    [_params setObject:_dEffect.function forKey:@"function"];
+    //set text cho các dòng
+    for (int i = 0; i< numberInputText; i++) {
+        AddTextTableViewCell *cell =(AddTextTableViewCell *) [self.tableViewAddText cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
+//        NSLog(@"AddTextTableViewCell:%@",cell.tvMessage.text);
+        if (([[(DInputLine*)[_dEffect.input_line objectAtIndex:i] require] isEqualToString:@"true"])&& ([cell.tvMessage.text isEqual: @""])){
+            MessageViewController *messageVC = [[MessageViewController alloc]initWithNibName:@"MessageViewController" bundle:nil];
+            messageVC.titleText = @"Message";
+            messageVC.message = @"You must fill input line. Please fill now";
+            messageVC.delegate = self;
+            [Helper showViewController:messageVC inViewController:self withSize:CGSizeMake(300, 200)];
+
+            return;
+        }else{
+            [_params setObject:cell.tvMessage.text forKey:arrLine[i]];
         }
     }
-    if (!checkRequirement) {
-        MessageViewController *messageVC = [[MessageViewController alloc]initWithNibName:@"MessageViewController" bundle:nil];
-        messageVC.titleText = @"Message";
-        messageVC.message = @"You have to select a sufficient number of photographs. Please pick now";
-        messageVC.delegate = self;
-        [Helper showViewController:messageVC inViewController:self withSize:CGSizeMake(300, 200)];
-    }else{
-        ResultViewController *resultVC = [[ResultViewController alloc]initWithNibName:@"ResultViewController" bundle:nil];
-        resultVC.imageResult = [arrImage objectAtIndex:0];
-        [self.navigationController pushViewController:resultVC animated:YES];
+    
+    //set các picture
+    for (int i = 0; i< numberInputImg; i++) {
+        //NSLog(@"countPic");
+        
+        if (([[(DInputPic*)[_dEffect.input_pic objectAtIndex:i] require] isEqualToString:@"true"])&& ([[arrImage objectAtIndex:i] isEqual:[NSNull null]])){
+            MessageViewController *messageVC = [[MessageViewController alloc]initWithNibName:@"MessageViewController" bundle:nil];
+            messageVC.titleText = @"Message";
+            messageVC.message = @"You have to select a sufficient number of photographs. Please pick now";
+            messageVC.delegate = self;
+            [Helper showViewController:messageVC inViewController:self withSize:CGSizeMake(300, 200)];
+            return;
+        }else{
+            
+            text = [self encodeToBase64String:[arrImage objectAtIndex:i]];
+            [_params setObject: text forKey:arrPic[i]];
+            
+        }
     }
     
+    //encode dữ liệu trước khi gửi server
+    NSMutableArray *parts = [[NSMutableArray alloc] init];
+    for (NSString *key in _params) {
+        
+        NSString *encodedValue = [_params objectForKey:key];
+        NSString *encodedString1 = (NSString *)CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(
+                                                                                                         NULL,
+                                                                                                         (CFStringRef)encodedValue,
+                                                                                                         NULL,
+                                                                                                         (CFStringRef)@"!*'&();:@+$,/?%#[]",
+                                                                                                         kCFStringEncodingUTF8 ));
+        NSString *encodedKey = key;
+        NSString *encodedString2 = (NSString *)CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(
+                                                                                                         NULL,
+                                                                                                         (CFStringRef)encodedKey,
+                                                                                                         NULL,
+                                                                                                         (CFStringRef)@"!*'&();:@+$,/?%#[]",
+                                                                                                         kCFStringEncodingUTF8 ));
+        NSString *part = [NSString stringWithFormat: @"%@=%@", encodedString2, encodedString1];
+        [parts addObject:part];
+    }
+    NSString *encodedDictionary = [parts componentsJoinedByString:@"&"];
+    NSData *bodyEncodedString = [encodedDictionary dataUsingEncoding:NSUTF8StringEncoding];
+    
+    dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        
+        NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:@"http://apipic.yome.vn/api/picture-v2/create-picture?"] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:15];
+        //        [request setURL:[NSURL URLWithString:@"http://apipic.yome.vn/api/picture-v2/create-picture?"]];
+        //    [request setURL:[NSURL URLWithString:@"http://apipic.yome.vn/api/picture-v2/test"]];
+        
+        [request setHTTPBody:bodyEncodedString];
+        
+        [request setHTTPMethod:@"POST"];
+        
+        NSURLResponse *response;
+        NSError *err;
+        UIImage *imageResult;
+        NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&err];
+        if (!err) {
+            
+            NSDictionary *JSON = [NSJSONSerialization JSONObjectWithData:responseData options: NSJSONReadingMutableContainers error: &err];
+            ////NSLog(@"Ket qua tra ve: %@",JSON);
+            NSString *urlImageJson = [JSON objectForKey:@"image"];
+            
+            NSMutableString *urlImage = [[NSMutableString alloc] init];
+            [urlImage appendString:@"http://apipic.yome.vn"];
+            [urlImage appendString:[NSString stringWithFormat:@"%@",urlImageJson]];
+            //
+            NSURL *urlImgaeResult = [NSURL URLWithString:urlImage];
+            NSURLResponse* urlResponseImage;
+            NSError* error;
+            NSMutableURLRequest* urlRequestImage = [NSMutableURLRequest requestWithURL:urlImgaeResult cachePolicy:NSURLRequestReloadIgnoringCacheData timeoutInterval:15];
+            NSData* dataImageResult = [NSURLConnection sendSynchronousRequest:urlRequestImage returningResponse:&urlResponseImage error:&error];
+            imageResult = [[UIImage alloc] initWithData:dataImageResult];
+            
+            
+            
+        }
+        
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            //đặt lại dữ liệu
+            for (int i = 1; i<= numberInputImg; i++) {
+//                UIButton* aButton = (UIButton*) [viewScroll viewWithTag:i];
+//                UIImage *imageBtn = [UIImage imageNamed:@"image_add_icon"];
+//                [aButton setBackgroundImage:imageBtn forState:UIControlStateNormal];
+                ////NSLog(@"da dat lai");
+            }
+            
+            for (int i = 0; i < numberInputImg; i++) {
+                [arrImage replaceObjectAtIndex:i withObject:[NSNull null]];
+                //NSLog(@"Dat lai du lieu");
+            }
+//            if (viewResult != NULL) {
+//                for (int i = 11; i<countLine1+11; i++) {
+//                    //                    k++;
+//                    //                    ////NSLog(@"countline = %d k = %d",countLine1, k);
+//                    UITextField* atext = (UITextField*) [viewScroll viewWithTag:i];
+//                    ////NSLog(@"atext: %@",atext.text);
+//                    
+//                    [atext setText:@""];
+//                }
+//                UILabel* aLabelError = (UILabel*) [viewImageDescription viewWithTag:103];
+//                [aLabelError setText:@""];
+//                [self.navigationController pushViewController:viewResult animated:true];
+//                [alertViewCustom setHidden:true];
+//            }else{
+//                [alertViewCustom setHidden:true];
+//                UIAlertView *alertErr = [[UIAlertView alloc] initWithTitle:@"Cellular Data is turned off" message:@"Turn on cellular data or use Wi-Fi to access data" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+//                [alertErr show];
+//            }
+            ResultViewController *resultVC = [[ResultViewController alloc]initWithNibName:@"ResultViewController" bundle:nil];
+            resultVC.imageResult = imageResult;
+            [self.navigationController pushViewController:resultVC animated:YES];
+            
+        });
+        
+    });
+    ///////////////////////
+    
 }
+
 
 -(CGFloat)hightOfAddImageVCWithTotalImage:(NSInteger)totalImg{
     CGFloat heightView ;
@@ -629,4 +776,27 @@
     [Helper removeDialogViewController:self];
 }
 
+//chuyển ảnh sang text dạng base64
+- (NSString *)encodeToBase64String:(UIImage *)imageToEncode {
+    return [UIImagePNGRepresentation(imageToEncode) base64EncodedStringWithOptions:NSDataBase64Encoding64CharacterLineLength];
+}
+- (UIImage *)decodeBase64ToImage:(NSString *)strEncodeData {
+    NSData *data = [[NSData alloc]initWithBase64EncodedString:strEncodeData options:NSDataBase64DecodingIgnoreUnknownCharacters];
+    return [UIImage imageWithData:data];
+}
+// giảm dung lượng ảnh
+- (UIImage *)compressImage:(UIImage *)imageToCompress
+{
+    int maxSize = 300000; // byte
+    NSData *data;
+    float k = 1;
+    //    do {
+    data = UIImageJPEGRepresentation(imageToCompress, k);
+    long long imageSize3   = data.length;
+    ////////////NSLog(@"size of image in KB: %f ", imageSize3/1024.0);
+    
+    k *= 0.5;
+    //    } while ([data length] > maxSize);
+    return [UIImage imageWithData:data];
+}
 @end

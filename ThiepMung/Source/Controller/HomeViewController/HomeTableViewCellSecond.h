@@ -7,17 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "CollectionItemViewController.h"
 #import "DCategory.h"
+#import "HomeViewController.h"
 
-@interface HomeTableViewCellSecond : UITableViewCell
+@interface HomeTableViewCellSecond : UITableViewCell<UICollectionViewDataSource, UICollectionViewDelegate>
 
 
-@property (nonatomic) CollectionItemViewController *collectionItemVC;
+@property (nonatomic, weak) id<HomeViewControllerDelegate> delegate;
+@property (nonatomic, weak) NSArray *arrDataSource;
 
 @property (strong, nonatomic) DCategory *dCategory;
 
 @property (weak, nonatomic) IBOutlet UIButton *btnTitle;
 @property (weak, nonatomic) IBOutlet UIView *viewContent;
+@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 
 @end

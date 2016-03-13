@@ -41,10 +41,6 @@
 		B05B07991C930A6B0063DAD2 /* DialogViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B05B070B1C930A6B0063DAD2 /* DialogViewController.m */; };
 		B05B079A1C930A6B0063DAD2 /* DialogViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B05B070C1C930A6B0063DAD2 /* DialogViewController.xib */; };
 		B05B079B1C930A6B0063DAD2 /* DialogViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B05B070C1C930A6B0063DAD2 /* DialogViewController.xib */; };
-		B05B079C1C930A6B0063DAD2 /* CollectionItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B05B070F1C930A6B0063DAD2 /* CollectionItemViewController.m */; };
-		B05B079D1C930A6B0063DAD2 /* CollectionItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B05B070F1C930A6B0063DAD2 /* CollectionItemViewController.m */; };
-		B05B079E1C930A6B0063DAD2 /* CollectionItemViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B05B07101C930A6B0063DAD2 /* CollectionItemViewController.xib */; };
-		B05B079F1C930A6B0063DAD2 /* CollectionItemViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B05B07101C930A6B0063DAD2 /* CollectionItemViewController.xib */; };
 		B05B07A01C930A6B0063DAD2 /* HomeCellFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B05B07121C930A6B0063DAD2 /* HomeCellFirstViewController.m */; };
 		B05B07A11C930A6B0063DAD2 /* HomeCellFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B05B07121C930A6B0063DAD2 /* HomeCellFirstViewController.m */; };
 		B05B07A21C930A6B0063DAD2 /* HomeCellFirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B05B07131C930A6B0063DAD2 /* HomeCellFirstViewController.xib */; };
@@ -225,9 +221,6 @@
 		B05B070A1C930A6B0063DAD2 /* DialogViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DialogViewController.h; sourceTree = "<group>"; };
 		B05B070B1C930A6B0063DAD2 /* DialogViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DialogViewController.m; sourceTree = "<group>"; };
 		B05B070C1C930A6B0063DAD2 /* DialogViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DialogViewController.xib; sourceTree = "<group>"; };
-		B05B070E1C930A6B0063DAD2 /* CollectionItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionItemViewController.h; sourceTree = "<group>"; };
-		B05B070F1C930A6B0063DAD2 /* CollectionItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionItemViewController.m; sourceTree = "<group>"; };
-		B05B07101C930A6B0063DAD2 /* CollectionItemViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionItemViewController.xib; sourceTree = "<group>"; };
 		B05B07111C930A6B0063DAD2 /* HomeCellFirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeCellFirstViewController.h; sourceTree = "<group>"; };
 		B05B07121C930A6B0063DAD2 /* HomeCellFirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeCellFirstViewController.m; sourceTree = "<group>"; };
 		B05B07131C930A6B0063DAD2 /* HomeCellFirstViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeCellFirstViewController.xib; sourceTree = "<group>"; };
@@ -474,9 +467,6 @@
 		B05B070D1C930A6B0063DAD2 /* HomeViewController */ = {
 			isa = PBXGroup;
 			children = (
-				B05B070E1C930A6B0063DAD2 /* CollectionItemViewController.h */,
-				B05B070F1C930A6B0063DAD2 /* CollectionItemViewController.m */,
-				B05B07101C930A6B0063DAD2 /* CollectionItemViewController.xib */,
 				B05B07111C930A6B0063DAD2 /* HomeCellFirstViewController.h */,
 				B05B07121C930A6B0063DAD2 /* HomeCellFirstViewController.m */,
 				B05B07131C930A6B0063DAD2 /* HomeCellFirstViewController.xib */,
@@ -851,7 +841,6 @@
 				B05B07CE1C930A6B0063DAD2 /* SidebarViewController.xib in Resources */,
 				B05B07B61C930A6B0063DAD2 /* ViewShowImageController.xib in Resources */,
 				B05B078E1C930A6B0063DAD2 /* CropImageViewController.xib in Resources */,
-				B05B079E1C930A6B0063DAD2 /* CollectionItemViewController.xib in Resources */,
 				D904C92A1C8D128300E349E6 /* btn_back.png in Resources */,
 				D904C92C1C8D128300E349E6 /* btn_back@2x.png in Resources */,
 				B05B07C21C930A6B0063DAD2 /* ResultViewController.xib in Resources */,
@@ -927,7 +916,6 @@
 				B05B07B31C930A6B0063DAD2 /* SubItemCollectionView.xib in Resources */,
 				B05B07971C930A6B0063DAD2 /* DiaLogTableViewCell.xib in Resources */,
 				D904C94A1C8D1E5800E349E6 /* addpicture.png in Resources */,
-				B05B079F1C930A6B0063DAD2 /* CollectionItemViewController.xib in Resources */,
 				D9E7891D1C927EF6008A81D9 /* close@2x.png in Resources */,
 				D9E788F71C925F7F008A81D9 /* camera.png in Resources */,
 				B05B07A31C930A6B0063DAD2 /* HomeCellFirstViewController.xib in Resources */,
@@ -971,7 +959,6 @@
 				B05B07B41C930A6B0063DAD2 /* ViewShowImageController.m in Sources */,
 				B05B07F01C930A6B0063DAD2 /* UIImage+MultiFormat.m in Sources */,
 				B05B08181C9317EB0063DAD2 /* DInputPic.m in Sources */,
-				B05B079C1C930A6B0063DAD2 /* CollectionItemViewController.m in Sources */,
 				B05B07DA1C930A6B0063DAD2 /* MKAnnotationView+WebCache.m in Sources */,
 				B05B08141C9317DC0063DAD2 /* DInputLine.m in Sources */,
 				B05B07DC1C930A6B0063DAD2 /* NSData+ImageContentType.m in Sources */,
@@ -1027,7 +1014,6 @@
 				B05B07C91C930A6B0063DAD2 /* MenuTableViewCell.m in Sources */,
 				B05B080D1C930E730063DAD2 /* DCategory.m in Sources */,
 				B05B07B51C930A6B0063DAD2 /* ViewShowImageController.m in Sources */,
-				B05B079D1C930A6B0063DAD2 /* CollectionItemViewController.m in Sources */,
 				B05B07D91C930A6B0063DAD2 /* Cropper.m in Sources */,
 				B05B07A51C930A6B0063DAD2 /* HomeTableViewCellFirst.m in Sources */,
 				B05B07A91C930A6B0063DAD2 /* HomeTableViewCellSecond.m in Sources */,

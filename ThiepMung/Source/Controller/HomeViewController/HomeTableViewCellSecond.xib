@@ -27,6 +27,24 @@
                     </button>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QYH-DB-KkZ">
                         <rect key="frame" x="0.0" y="30" width="320" height="151"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="uaE-nw-zAr">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="151"/>
+                                <color key="backgroundColor" red="0.036331018027134662" green="0.54840886780366493" blue="0.24838093959479413" alpha="1" colorSpace="calibratedRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="qK0-BA-YAg">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                            </collectionView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="uaE-nw-zAr" firstAttribute="leading" secondItem="QYH-DB-KkZ" secondAttribute="leading" id="3h2-XX-pul"/>
+                            <constraint firstAttribute="bottom" secondItem="uaE-nw-zAr" secondAttribute="bottom" id="LDX-Yv-dEl"/>
+                            <constraint firstAttribute="trailing" secondItem="uaE-nw-zAr" secondAttribute="trailing" id="o7D-Fn-L9G"/>
+                            <constraint firstItem="uaE-nw-zAr" firstAttribute="top" secondItem="QYH-DB-KkZ" secondAttribute="top" id="qNX-Qb-hAH"/>
+                        </constraints>
                     </view>
                 </subviews>
                 <constraints>
@@ -41,6 +59,7 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="btnTitle" destination="hKb-LZ-X1b" id="uZ4-bI-GoG"/>
+                <outlet property="collectionView" destination="uaE-nw-zAr" id="Yqb-J3-TcI"/>
                 <outlet property="viewContent" destination="QYH-DB-KkZ" id="6QP-gK-e4z"/>
             </connections>
             <point key="canvasLocation" x="314" y="237"/>

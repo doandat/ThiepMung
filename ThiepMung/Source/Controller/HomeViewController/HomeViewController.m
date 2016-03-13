@@ -13,7 +13,7 @@
 
 @interface HomeViewController (){
     NSMutableArray *arrDataSource;
-    NSArray *arrDCategory;
+    NSMutableArray *arrDCategory;
 }
 
 @end
@@ -37,10 +37,30 @@
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
 //    [self.tableView registerClass:[HomeTableViewCellSecond class] forCellReuseIdentifier:@"HomeTableViewCellSecondIdentifier"];
-    arrDCategory = [AppService getDCategoryFromUrlString:URL_GET_CATEGORY];
-    for (DCategory *dCategory in arrDCategory) {
-        NSLog(@"dCategory:%@:%@",dCategory.dCategory_name,dCategory.dCategory_id);
-    }
+    arrDataSource = [[NSMutableArray alloc]init];
+    arrDCategory = [[NSMutableArray alloc]init];
+
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        arrDCategory =[NSMutableArray arrayWithArray:[AppService getDCategoryFromUrlString:URL_GET_CATEGORY]];
+        for (int k = 0; k<arrDCategory.count; k++) {
+            DCategory *dCategory = [arrDCategory objectAtIndex:k];
+            NSLog(@"dCategory:%@:%@",dCategory.dCategory_name,dCategory.dCategory_id);
+            NSArray *arrDataTmp =[AppService getEffectListWithCategoryId:dCategory.dCategory_id];
+            if (arrDataTmp.count) {
+                [arrDataSource addObject:arrDataTmp];
+            }else{
+                //            [arrDCategory removeObjectAtIndex:k];
+            }
+            
+        }
+        NSLog(@"aaa:%tu",arrDataSource.count);
+        dispatch_async(dispatch_get_main_queue(), ^{
+            //            [self.collectionView reloadItemsAtIndexPaths:[self.collectionView indexPathsForVisibleItems]];
+            [self.tableView reloadData];
+        });
+    });
+    
+    
     
 }
 
@@ -59,11 +79,10 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-//    return [arrDataSource count];
     if (section==0) {
         return 1;
     }else
-    return arrDCategory.count;
+    return arrDataSource.count;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -85,10 +104,10 @@
             cell = [topLevelObjects objectAtIndex:0];
         }
         [cell.btnTitle setTitle:dCategory1.dCategory_name forState:UIControlStateNormal];
-//        cell.dCategory = dCategory1;
+        cell.dCategory = dCategory1;
+        cell.arrDataSource = [arrDataSource objectAtIndex:indexPath.row];
         NSLog(@"cell.dCategory:%@",cell.dCategory);
-        cell.collectionItemVC.delegate = self;
-        cell.collectionItemVC.dCategory = dCategory1;
+        cell.delegate = self;
         return cell;
     }
 }
@@ -102,7 +121,7 @@
     if (indexPath.section==0) {
         return [UIScreen mainScreen].bounds.size.width*2/3+50;
     }else{
-        return 150;
+        return 170;
     }
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
