@@ -11,6 +11,8 @@
 #import "HomeTableViewCellFirst.h"
 #import "HomeTableViewCellSecond.h"
 #import "SubCategoryViewController.h"
+#import "ActivityIndicatorViewController.h"
+#import "RootViewController.h"
 
 @interface HomeViewController (){
     NSMutableArray *arrDataSource;
@@ -40,7 +42,10 @@
 //    [self.tableView registerClass:[HomeTableViewCellSecond class] forCellReuseIdentifier:@"HomeTableViewCellSecondIdentifier"];
     arrDataSource = [[NSMutableArray alloc]init];
     arrDCategory = [[NSMutableArray alloc]init];
-
+    ActivityIndicatorViewController *activityVC = [[ActivityIndicatorViewController alloc]initWithNibName:@"ActivityIndicatorViewController" bundle:nil];
+    
+    [Helper showViewController:activityVC inViewController:[RootViewController sharedInstance] withSize:CGSizeMake(80, 80)];
+    
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         arrDCategory =[NSMutableArray arrayWithArray:[AppService getDCategoryFromUrlString:URL_GET_CATEGORY]];
         for (int k = 0; k<arrDCategory.count; k++) {
@@ -57,6 +62,7 @@
         NSLog(@"aaa:%tu",arrDataSource.count);
         dispatch_async(dispatch_get_main_queue(), ^{
             //            [self.collectionView reloadItemsAtIndexPaths:[self.collectionView indexPathsForVisibleItems]];
+            [Helper removeDialogViewController:[RootViewController sharedInstance]];
             [self.tableView reloadData];
         });
     });
