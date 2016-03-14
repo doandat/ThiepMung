@@ -38,4 +38,9 @@
 
 + (void)showViewControllerNoMargrinY:(UIViewController*)dialogViewController inViewController:(UIViewController*)aViewController marginX:(int)margin_x ;
 
+
++ (NSString *)encodeDataFromDictionary:(NSDictionary *)dic;
+//chuyển ảnh sang text dạng base64
++ (NSString *)encodeToBase64String:(UIImage *)imageToEncode;
++ (UIImage *)decodeBase64ToImage:(NSString *)strEncodeData;
 @end

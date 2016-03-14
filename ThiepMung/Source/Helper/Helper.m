@@ -572,4 +572,39 @@
         }
     }
 }
+
++ (NSString *)encodeDataFromDictionary:(NSDictionary *)dic{
+    NSMutableArray *parts = [[NSMutableArray alloc] init];
+    for (NSString *key in dic) {
+        
+        NSString *encodedValue = [dic objectForKey:key];
+        NSString *encodedString1 = (NSString *)CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(
+                                                                                                         NULL,
+                                                                                                         (CFStringRef)encodedValue,
+                                                                                                         NULL,
+                                                                                                         (CFStringRef)@"!*'&();:@+$,/?%#[]",
+                                                                                                         kCFStringEncodingUTF8 ));
+        NSString *encodedKey = key;
+        NSString *encodedString2 = (NSString *)CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(
+                                                                                                         NULL,
+                                                                                                         (CFStringRef)encodedKey,
+                                                                                                         NULL,
+                                                                                                         (CFStringRef)@"!*'&();:@+$,/?%#[]",
+                                                                                                         kCFStringEncodingUTF8 ));
+        NSString *part = [NSString stringWithFormat: @"%@=%@", encodedString2, encodedString1];
+        [parts addObject:part];
+    }
+    
+    return [parts componentsJoinedByString:@"&"];
+}
+
+//chuyển ảnh sang text dạng base64
++ (NSString *)encodeToBase64String:(UIImage *)imageToEncode {
+    return [UIImagePNGRepresentation(imageToEncode) base64EncodedStringWithOptions:NSDataBase64Encoding64CharacterLineLength];
+}
++ (UIImage *)decodeBase64ToImage:(NSString *)strEncodeData {
+    NSData *data = [[NSData alloc]initWithBase64EncodedString:strEncodeData options:NSDataBase64DecodingIgnoreUnknownCharacters];
+    return [UIImage imageWithData:data];
+}
+
 @end

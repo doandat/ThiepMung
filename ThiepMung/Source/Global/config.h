@@ -14,7 +14,7 @@
 #define URL_GET_NEWS_LIST @"http://apipic.yome.vn/api/picture-v2/get-new-list"
 #define URL_GET_HOT_LIST @"http://pic.yome.vn/api/picture-v2/get-hot-list"
 
-#define URL_CREATE_PICTURE_ @"http://apipic.yome.vn/api/picture-v2/create-picture"
+#define URL_CREATE_PICTURE @"http://apipic.yome.vn/api/picture-v2/create-picture?"
 #define URL_GET_CATEGORY_THEME @"http://apipic.yome.vn/api/theme/get-category-list"
 #define URL_GET_MORE_APP @"http://apipic.yome.vn/api/get-game-list/v1"
 #define URL_GET_THEME @"http://apipic.yome.vn/api/theme/get-theme-list"

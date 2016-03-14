@@ -337,30 +337,9 @@
 -(void)btnOK:(id) sender{
     ActivityIndicatorViewController *activityIndicator = [[ActivityIndicatorViewController alloc]initWithNibName:@"ActivityIndicatorViewController" bundle:nil];
     [Helper showViewController:activityIndicator inViewController:self withSize:CGSizeMake(80, 80)];
+    
     [self.view endEditing:YES];
 
-//    AddTextTableViewCell *cell =(AddTextTableViewCell *) [self.tableViewAddText cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
-//    bool checkRequirement = true;
-//    NSLog(@"AddTextTableViewCell:%@",cell.tvMessage.text);
-//    for (int k=0; k<numberInputImg; k++) {
-//        NSLog(@"btnOK:%@",[arrImage objectAtIndex:k]);
-//        if ([[arrImage objectAtIndex:k] isEqual:[NSNull null]]) {
-//            checkRequirement = false;
-//            break;
-//        }
-//    }
-//    if (!checkRequirement) {
-//        MessageViewController *messageVC = [[MessageViewController alloc]initWithNibName:@"MessageViewController" bundle:nil];
-//        messageVC.titleText = @"Message";
-//        messageVC.message = @"You have to select a sufficient number of photographs. Please pick now";
-//        messageVC.delegate = self;
-//        [Helper showViewController:messageVC inViewController:self withSize:CGSizeMake(300, 200)];
-//    }else{
-//        ResultViewController *resultVC = [[ResultViewController alloc]initWithNibName:@"ResultViewController" bundle:nil];
-//        resultVC.imageResult = [arrImage objectAtIndex:0];
-//        [self.navigationController pushViewController:resultVC animated:YES];
-//    }
-//    
     
     //////////////////////
     NSString *text;
@@ -372,7 +351,6 @@
     //set text cho các dòng
     for (int i = 0; i< numberInputText; i++) {
         AddTextTableViewCell *cell =(AddTextTableViewCell *) [self.tableViewAddText cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
-//        NSLog(@"AddTextTableViewCell:%@",cell.tvMessage.text);
         if (([[(DInputLine*)[_dEffect.input_line objectAtIndex:i] require] isEqualToString:@"true"])&& ([cell.tvMessage.text isEqual: @""])){
             MessageViewController *messageVC = [[MessageViewController alloc]initWithNibName:@"MessageViewController" bundle:nil];
             messageVC.titleText = @"Message";
@@ -399,41 +377,20 @@
             return;
         }else{
             
-            text = [self encodeToBase64String:[arrImage objectAtIndex:i]];
+            text = [Helper encodeToBase64String:[arrImage objectAtIndex:i]];
             [_params setObject: text forKey:arrPic[i]];
             
         }
     }
     
     //encode dữ liệu trước khi gửi server
-    NSMutableArray *parts = [[NSMutableArray alloc] init];
-    for (NSString *key in _params) {
-        
-        NSString *encodedValue = [_params objectForKey:key];
-        NSString *encodedString1 = (NSString *)CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(
-                                                                                                         NULL,
-                                                                                                         (CFStringRef)encodedValue,
-                                                                                                         NULL,
-                                                                                                         (CFStringRef)@"!*'&();:@+$,/?%#[]",
-                                                                                                         kCFStringEncodingUTF8 ));
-        NSString *encodedKey = key;
-        NSString *encodedString2 = (NSString *)CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(
-                                                                                                         NULL,
-                                                                                                         (CFStringRef)encodedKey,
-                                                                                                         NULL,
-                                                                                                         (CFStringRef)@"!*'&();:@+$,/?%#[]",
-                                                                                                         kCFStringEncodingUTF8 ));
-        NSString *part = [NSString stringWithFormat: @"%@=%@", encodedString2, encodedString1];
-        [parts addObject:part];
-    }
-    NSString *encodedDictionary = [parts componentsJoinedByString:@"&"];
+    NSString *encodedDictionary = [Helper encodeDataFromDictionary:_params];
+    
     NSData *bodyEncodedString = [encodedDictionary dataUsingEncoding:NSUTF8StringEncoding];
     
-    dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+    dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
         
-        NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:@"http://apipic.yome.vn/api/picture-v2/create-picture?"] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:15];
-        //        [request setURL:[NSURL URLWithString:@"http://apipic.yome.vn/api/picture-v2/create-picture?"]];
-        //    [request setURL:[NSURL URLWithString:@"http://apipic.yome.vn/api/picture-v2/test"]];
+        NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:URL_CREATE_PICTURE] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:15];
         
         [request setHTTPBody:bodyEncodedString];
         
@@ -795,14 +752,7 @@
     [Helper removeDialogViewController:self];
 }
 
-//chuyển ảnh sang text dạng base64
-- (NSString *)encodeToBase64String:(UIImage *)imageToEncode {
-    return [UIImagePNGRepresentation(imageToEncode) base64EncodedStringWithOptions:NSDataBase64Encoding64CharacterLineLength];
-}
-- (UIImage *)decodeBase64ToImage:(NSString *)strEncodeData {
-    NSData *data = [[NSData alloc]initWithBase64EncodedString:strEncodeData options:NSDataBase64DecodingIgnoreUnknownCharacters];
-    return [UIImage imageWithData:data];
-}
+
 // giảm dung lượng ảnh
 - (UIImage *)compressImage:(UIImage *)imageToCompress
 {
