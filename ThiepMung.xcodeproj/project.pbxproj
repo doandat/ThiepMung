@@ -41,30 +41,10 @@
 		B05B07991C930A6B0063DAD2 /* DialogViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B05B070B1C930A6B0063DAD2 /* DialogViewController.m */; };
 		B05B079A1C930A6B0063DAD2 /* DialogViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B05B070C1C930A6B0063DAD2 /* DialogViewController.xib */; };
 		B05B079B1C930A6B0063DAD2 /* DialogViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B05B070C1C930A6B0063DAD2 /* DialogViewController.xib */; };
-		B05B07A01C930A6B0063DAD2 /* HomeCellFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B05B07121C930A6B0063DAD2 /* HomeCellFirstViewController.m */; };
-		B05B07A11C930A6B0063DAD2 /* HomeCellFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B05B07121C930A6B0063DAD2 /* HomeCellFirstViewController.m */; };
-		B05B07A21C930A6B0063DAD2 /* HomeCellFirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B05B07131C930A6B0063DAD2 /* HomeCellFirstViewController.xib */; };
-		B05B07A31C930A6B0063DAD2 /* HomeCellFirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B05B07131C930A6B0063DAD2 /* HomeCellFirstViewController.xib */; };
-		B05B07A41C930A6B0063DAD2 /* HomeTableViewCellFirst.m in Sources */ = {isa = PBXBuildFile; fileRef = B05B07151C930A6B0063DAD2 /* HomeTableViewCellFirst.m */; };
-		B05B07A51C930A6B0063DAD2 /* HomeTableViewCellFirst.m in Sources */ = {isa = PBXBuildFile; fileRef = B05B07151C930A6B0063DAD2 /* HomeTableViewCellFirst.m */; };
-		B05B07A61C930A6B0063DAD2 /* HomeTableViewCellFirst.xib in Resources */ = {isa = PBXBuildFile; fileRef = B05B07161C930A6B0063DAD2 /* HomeTableViewCellFirst.xib */; };
-		B05B07A71C930A6B0063DAD2 /* HomeTableViewCellFirst.xib in Resources */ = {isa = PBXBuildFile; fileRef = B05B07161C930A6B0063DAD2 /* HomeTableViewCellFirst.xib */; };
-		B05B07A81C930A6B0063DAD2 /* HomeTableViewCellSecond.m in Sources */ = {isa = PBXBuildFile; fileRef = B05B07181C930A6B0063DAD2 /* HomeTableViewCellSecond.m */; };
-		B05B07A91C930A6B0063DAD2 /* HomeTableViewCellSecond.m in Sources */ = {isa = PBXBuildFile; fileRef = B05B07181C930A6B0063DAD2 /* HomeTableViewCellSecond.m */; };
-		B05B07AA1C930A6B0063DAD2 /* HomeTableViewCellSecond.xib in Resources */ = {isa = PBXBuildFile; fileRef = B05B07191C930A6B0063DAD2 /* HomeTableViewCellSecond.xib */; };
-		B05B07AB1C930A6B0063DAD2 /* HomeTableViewCellSecond.xib in Resources */ = {isa = PBXBuildFile; fileRef = B05B07191C930A6B0063DAD2 /* HomeTableViewCellSecond.xib */; };
 		B05B07AC1C930A6B0063DAD2 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B05B071B1C930A6B0063DAD2 /* HomeViewController.m */; };
 		B05B07AD1C930A6B0063DAD2 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B05B071B1C930A6B0063DAD2 /* HomeViewController.m */; };
 		B05B07AE1C930A6B0063DAD2 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B05B071C1C930A6B0063DAD2 /* HomeViewController.xib */; };
 		B05B07AF1C930A6B0063DAD2 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B05B071C1C930A6B0063DAD2 /* HomeViewController.xib */; };
-		B05B07B01C930A6B0063DAD2 /* SubItemCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = B05B071E1C930A6B0063DAD2 /* SubItemCollectionView.m */; };
-		B05B07B11C930A6B0063DAD2 /* SubItemCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = B05B071E1C930A6B0063DAD2 /* SubItemCollectionView.m */; };
-		B05B07B21C930A6B0063DAD2 /* SubItemCollectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B05B071F1C930A6B0063DAD2 /* SubItemCollectionView.xib */; };
-		B05B07B31C930A6B0063DAD2 /* SubItemCollectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B05B071F1C930A6B0063DAD2 /* SubItemCollectionView.xib */; };
-		B05B07B41C930A6B0063DAD2 /* ViewShowImageController.m in Sources */ = {isa = PBXBuildFile; fileRef = B05B07211C930A6B0063DAD2 /* ViewShowImageController.m */; };
-		B05B07B51C930A6B0063DAD2 /* ViewShowImageController.m in Sources */ = {isa = PBXBuildFile; fileRef = B05B07211C930A6B0063DAD2 /* ViewShowImageController.m */; };
-		B05B07B61C930A6B0063DAD2 /* ViewShowImageController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B05B07221C930A6B0063DAD2 /* ViewShowImageController.xib */; };
-		B05B07B71C930A6B0063DAD2 /* ViewShowImageController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B05B07221C930A6B0063DAD2 /* ViewShowImageController.xib */; };
 		B05B07B81C930A6B0063DAD2 /* InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B05B07251C930A6B0063DAD2 /* InfoViewController.m */; };
 		B05B07B91C930A6B0063DAD2 /* InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B05B07251C930A6B0063DAD2 /* InfoViewController.m */; };
 		B05B07BA1C930A6B0063DAD2 /* InfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B05B07261C930A6B0063DAD2 /* InfoViewController.xib */; };
@@ -163,6 +143,36 @@
 		D904C9581C8D3E9200E349E6 /* khunganhmua.png in Resources */ = {isa = PBXBuildFile; fileRef = D904C9561C8D3E9200E349E6 /* khunganhmua.png */; };
 		D90797DF1C8936BD0088F3C5 /* placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = D90797DE1C8936BD0088F3C5 /* placeholder.png */; };
 		D90797E01C8936BD0088F3C5 /* placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = D90797DE1C8936BD0088F3C5 /* placeholder.png */; };
+		D90B55E11C96514E000640B0 /* HomeCellFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D90B55D21C96514E000640B0 /* HomeCellFirstViewController.m */; };
+		D90B55E21C96514E000640B0 /* HomeCellFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D90B55D21C96514E000640B0 /* HomeCellFirstViewController.m */; };
+		D90B55E31C96514E000640B0 /* HomeCellFirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D90B55D31C96514E000640B0 /* HomeCellFirstViewController.xib */; };
+		D90B55E41C96514E000640B0 /* HomeCellFirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D90B55D31C96514E000640B0 /* HomeCellFirstViewController.xib */; };
+		D90B55E51C96514E000640B0 /* HomeTableViewCellFirst.m in Sources */ = {isa = PBXBuildFile; fileRef = D90B55D51C96514E000640B0 /* HomeTableViewCellFirst.m */; };
+		D90B55E61C96514E000640B0 /* HomeTableViewCellFirst.m in Sources */ = {isa = PBXBuildFile; fileRef = D90B55D51C96514E000640B0 /* HomeTableViewCellFirst.m */; };
+		D90B55E71C96514E000640B0 /* HomeTableViewCellFirst.xib in Resources */ = {isa = PBXBuildFile; fileRef = D90B55D61C96514E000640B0 /* HomeTableViewCellFirst.xib */; };
+		D90B55E81C96514E000640B0 /* HomeTableViewCellFirst.xib in Resources */ = {isa = PBXBuildFile; fileRef = D90B55D61C96514E000640B0 /* HomeTableViewCellFirst.xib */; };
+		D90B55E91C96514E000640B0 /* ViewShowImageController.m in Sources */ = {isa = PBXBuildFile; fileRef = D90B55D81C96514E000640B0 /* ViewShowImageController.m */; };
+		D90B55EA1C96514E000640B0 /* ViewShowImageController.m in Sources */ = {isa = PBXBuildFile; fileRef = D90B55D81C96514E000640B0 /* ViewShowImageController.m */; };
+		D90B55EB1C96514E000640B0 /* ViewShowImageController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D90B55D91C96514E000640B0 /* ViewShowImageController.xib */; };
+		D90B55EC1C96514E000640B0 /* ViewShowImageController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D90B55D91C96514E000640B0 /* ViewShowImageController.xib */; };
+		D90B55ED1C96514E000640B0 /* HomeTableViewCellSecond.m in Sources */ = {isa = PBXBuildFile; fileRef = D90B55DC1C96514E000640B0 /* HomeTableViewCellSecond.m */; };
+		D90B55EE1C96514E000640B0 /* HomeTableViewCellSecond.m in Sources */ = {isa = PBXBuildFile; fileRef = D90B55DC1C96514E000640B0 /* HomeTableViewCellSecond.m */; };
+		D90B55EF1C96514E000640B0 /* HomeTableViewCellSecond.xib in Resources */ = {isa = PBXBuildFile; fileRef = D90B55DD1C96514E000640B0 /* HomeTableViewCellSecond.xib */; };
+		D90B55F01C96514E000640B0 /* HomeTableViewCellSecond.xib in Resources */ = {isa = PBXBuildFile; fileRef = D90B55DD1C96514E000640B0 /* HomeTableViewCellSecond.xib */; };
+		D90B55F11C96514E000640B0 /* SubItemCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = D90B55DF1C96514E000640B0 /* SubItemCollectionView.m */; };
+		D90B55F21C96514E000640B0 /* SubItemCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = D90B55DF1C96514E000640B0 /* SubItemCollectionView.m */; };
+		D90B55F31C96514E000640B0 /* SubItemCollectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D90B55E01C96514E000640B0 /* SubItemCollectionView.xib */; };
+		D90B55F41C96514E000640B0 /* SubItemCollectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D90B55E01C96514E000640B0 /* SubItemCollectionView.xib */; };
+		D90B596B1C9669A9000640B0 /* JBWatchActivityIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = D90B596A1C9669A9000640B0 /* JBWatchActivityIndicator.m */; };
+		D90B596C1C9669A9000640B0 /* JBWatchActivityIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = D90B596A1C9669A9000640B0 /* JBWatchActivityIndicator.m */; };
+		D90B59711C9669F4000640B0 /* ActivityIndicatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D90B596F1C9669F4000640B0 /* ActivityIndicatorViewController.m */; };
+		D90B59721C9669F4000640B0 /* ActivityIndicatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D90B596F1C9669F4000640B0 /* ActivityIndicatorViewController.m */; };
+		D90B59731C9669F4000640B0 /* ActivityIndicatorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D90B59701C9669F4000640B0 /* ActivityIndicatorViewController.xib */; };
+		D90B59741C9669F4000640B0 /* ActivityIndicatorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D90B59701C9669F4000640B0 /* ActivityIndicatorViewController.xib */; };
+		D90B59791C966DFE000640B0 /* SubCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D90B59771C966DFE000640B0 /* SubCategoryViewController.m */; };
+		D90B597A1C966DFE000640B0 /* SubCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D90B59771C966DFE000640B0 /* SubCategoryViewController.m */; };
+		D90B597B1C966DFE000640B0 /* SubCategoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D90B59781C966DFE000640B0 /* SubCategoryViewController.xib */; };
+		D90B597C1C966DFE000640B0 /* SubCategoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D90B59781C966DFE000640B0 /* SubCategoryViewController.xib */; };
 		D974BE631C87DFC90005938A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D974BE621C87DFC90005938A /* Images.xcassets */; };
 		D974BE721C87DFC90005938A /* ThiepMungTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D974BE711C87DFC90005938A /* ThiepMungTests.m */; };
 		D974BEC11C87EAF00005938A /* btn_menu.png in Resources */ = {isa = PBXBuildFile; fileRef = D974BEBF1C87EAF00005938A /* btn_menu.png */; };
@@ -221,24 +231,9 @@
 		B05B070A1C930A6B0063DAD2 /* DialogViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DialogViewController.h; sourceTree = "<group>"; };
 		B05B070B1C930A6B0063DAD2 /* DialogViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DialogViewController.m; sourceTree = "<group>"; };
 		B05B070C1C930A6B0063DAD2 /* DialogViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DialogViewController.xib; sourceTree = "<group>"; };
-		B05B07111C930A6B0063DAD2 /* HomeCellFirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeCellFirstViewController.h; sourceTree = "<group>"; };
-		B05B07121C930A6B0063DAD2 /* HomeCellFirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeCellFirstViewController.m; sourceTree = "<group>"; };
-		B05B07131C930A6B0063DAD2 /* HomeCellFirstViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeCellFirstViewController.xib; sourceTree = "<group>"; };
-		B05B07141C930A6B0063DAD2 /* HomeTableViewCellFirst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeTableViewCellFirst.h; sourceTree = "<group>"; };
-		B05B07151C930A6B0063DAD2 /* HomeTableViewCellFirst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeTableViewCellFirst.m; sourceTree = "<group>"; };
-		B05B07161C930A6B0063DAD2 /* HomeTableViewCellFirst.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeTableViewCellFirst.xib; sourceTree = "<group>"; };
-		B05B07171C930A6B0063DAD2 /* HomeTableViewCellSecond.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeTableViewCellSecond.h; sourceTree = "<group>"; };
-		B05B07181C930A6B0063DAD2 /* HomeTableViewCellSecond.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeTableViewCellSecond.m; sourceTree = "<group>"; };
-		B05B07191C930A6B0063DAD2 /* HomeTableViewCellSecond.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeTableViewCellSecond.xib; sourceTree = "<group>"; };
 		B05B071A1C930A6B0063DAD2 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		B05B071B1C930A6B0063DAD2 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		B05B071C1C930A6B0063DAD2 /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
-		B05B071D1C930A6B0063DAD2 /* SubItemCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubItemCollectionView.h; sourceTree = "<group>"; };
-		B05B071E1C930A6B0063DAD2 /* SubItemCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubItemCollectionView.m; sourceTree = "<group>"; };
-		B05B071F1C930A6B0063DAD2 /* SubItemCollectionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SubItemCollectionView.xib; sourceTree = "<group>"; };
-		B05B07201C930A6B0063DAD2 /* ViewShowImageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewShowImageController.h; sourceTree = "<group>"; };
-		B05B07211C930A6B0063DAD2 /* ViewShowImageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewShowImageController.m; sourceTree = "<group>"; };
-		B05B07221C930A6B0063DAD2 /* ViewShowImageController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewShowImageController.xib; sourceTree = "<group>"; };
 		B05B07241C930A6B0063DAD2 /* InfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoViewController.h; sourceTree = "<group>"; };
 		B05B07251C930A6B0063DAD2 /* InfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoViewController.m; sourceTree = "<group>"; };
 		B05B07261C930A6B0063DAD2 /* InfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InfoViewController.xib; sourceTree = "<group>"; };
@@ -325,6 +320,29 @@
 		D904C9481C8D1E5800E349E6 /* addpicture@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "addpicture@3x.png"; sourceTree = "<group>"; };
 		D904C9561C8D3E9200E349E6 /* khunganhmua.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = khunganhmua.png; sourceTree = "<group>"; };
 		D90797DE1C8936BD0088F3C5 /* placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder.png; sourceTree = "<group>"; };
+		D90B55D11C96514E000640B0 /* HomeCellFirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeCellFirstViewController.h; sourceTree = "<group>"; };
+		D90B55D21C96514E000640B0 /* HomeCellFirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeCellFirstViewController.m; sourceTree = "<group>"; };
+		D90B55D31C96514E000640B0 /* HomeCellFirstViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeCellFirstViewController.xib; sourceTree = "<group>"; };
+		D90B55D41C96514E000640B0 /* HomeTableViewCellFirst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeTableViewCellFirst.h; sourceTree = "<group>"; };
+		D90B55D51C96514E000640B0 /* HomeTableViewCellFirst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeTableViewCellFirst.m; sourceTree = "<group>"; };
+		D90B55D61C96514E000640B0 /* HomeTableViewCellFirst.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeTableViewCellFirst.xib; sourceTree = "<group>"; };
+		D90B55D71C96514E000640B0 /* ViewShowImageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewShowImageController.h; sourceTree = "<group>"; };
+		D90B55D81C96514E000640B0 /* ViewShowImageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewShowImageController.m; sourceTree = "<group>"; };
+		D90B55D91C96514E000640B0 /* ViewShowImageController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewShowImageController.xib; sourceTree = "<group>"; };
+		D90B55DB1C96514E000640B0 /* HomeTableViewCellSecond.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeTableViewCellSecond.h; sourceTree = "<group>"; };
+		D90B55DC1C96514E000640B0 /* HomeTableViewCellSecond.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeTableViewCellSecond.m; sourceTree = "<group>"; };
+		D90B55DD1C96514E000640B0 /* HomeTableViewCellSecond.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeTableViewCellSecond.xib; sourceTree = "<group>"; };
+		D90B55DE1C96514E000640B0 /* SubItemCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubItemCollectionView.h; sourceTree = "<group>"; };
+		D90B55DF1C96514E000640B0 /* SubItemCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubItemCollectionView.m; sourceTree = "<group>"; };
+		D90B55E01C96514E000640B0 /* SubItemCollectionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SubItemCollectionView.xib; sourceTree = "<group>"; };
+		D90B59691C9669A9000640B0 /* JBWatchActivityIndicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBWatchActivityIndicator.h; sourceTree = "<group>"; };
+		D90B596A1C9669A9000640B0 /* JBWatchActivityIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBWatchActivityIndicator.m; sourceTree = "<group>"; };
+		D90B596E1C9669F4000640B0 /* ActivityIndicatorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityIndicatorViewController.h; sourceTree = "<group>"; };
+		D90B596F1C9669F4000640B0 /* ActivityIndicatorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityIndicatorViewController.m; sourceTree = "<group>"; };
+		D90B59701C9669F4000640B0 /* ActivityIndicatorViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActivityIndicatorViewController.xib; sourceTree = "<group>"; };
+		D90B59761C966DFE000640B0 /* SubCategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubCategoryViewController.h; sourceTree = "<group>"; };
+		D90B59771C966DFE000640B0 /* SubCategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubCategoryViewController.m; sourceTree = "<group>"; };
+		D90B59781C966DFE000640B0 /* SubCategoryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SubCategoryViewController.xib; sourceTree = "<group>"; };
 		D974BE521C87DFC90005938A /* ThiepMung.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThiepMung.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D974BE621C87DFC90005938A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		D974BE6B1C87DFC90005938A /* ThiepMungTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ThiepMungTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -385,6 +403,8 @@
 		B05B06F11C930A6B0063DAD2 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				D90B59751C966DE8000640B0 /* SubCategoryViewController */,
+				D90B596D1C9669D9000640B0 /* ActivityIndicatorViewController */,
 				B05B06F21C930A6B0063DAD2 /* AddImageTextViewController */,
 				B05B06FA1C930A6B0063DAD2 /* BaseViewController */,
 				B05B06FE1C930A6B0063DAD2 /* CropImageViewController */,
@@ -467,24 +487,11 @@
 		B05B070D1C930A6B0063DAD2 /* HomeViewController */ = {
 			isa = PBXGroup;
 			children = (
-				B05B07111C930A6B0063DAD2 /* HomeCellFirstViewController.h */,
-				B05B07121C930A6B0063DAD2 /* HomeCellFirstViewController.m */,
-				B05B07131C930A6B0063DAD2 /* HomeCellFirstViewController.xib */,
-				B05B07141C930A6B0063DAD2 /* HomeTableViewCellFirst.h */,
-				B05B07151C930A6B0063DAD2 /* HomeTableViewCellFirst.m */,
-				B05B07161C930A6B0063DAD2 /* HomeTableViewCellFirst.xib */,
-				B05B07171C930A6B0063DAD2 /* HomeTableViewCellSecond.h */,
-				B05B07181C930A6B0063DAD2 /* HomeTableViewCellSecond.m */,
-				B05B07191C930A6B0063DAD2 /* HomeTableViewCellSecond.xib */,
+				D90B55D01C96514E000640B0 /* TableViewCellFirst */,
+				D90B55DA1C96514E000640B0 /* TableViewCellNotFirst */,
 				B05B071A1C930A6B0063DAD2 /* HomeViewController.h */,
 				B05B071B1C930A6B0063DAD2 /* HomeViewController.m */,
 				B05B071C1C930A6B0063DAD2 /* HomeViewController.xib */,
-				B05B071D1C930A6B0063DAD2 /* SubItemCollectionView.h */,
-				B05B071E1C930A6B0063DAD2 /* SubItemCollectionView.m */,
-				B05B071F1C930A6B0063DAD2 /* SubItemCollectionView.xib */,
-				B05B07201C930A6B0063DAD2 /* ViewShowImageController.h */,
-				B05B07211C930A6B0063DAD2 /* ViewShowImageController.m */,
-				B05B07221C930A6B0063DAD2 /* ViewShowImageController.xib */,
 			);
 			path = HomeViewController;
 			sourceTree = "<group>";
@@ -591,6 +598,7 @@
 		B05B07481C930A6B0063DAD2 /* Thirdparty */ = {
 			isa = PBXGroup;
 			children = (
+				D90B59681C9669A9000640B0 /* JBWatchActivityIndicator */,
 				B05B07491C930A6B0063DAD2 /* Cropper */,
 				B05B074C1C930A6B0063DAD2 /* SDWebImage */,
 				B05B076E1C930A6B0063DAD2 /* SWRevealViewController */,
@@ -675,6 +683,64 @@
 				B05B077B1C930A6B0063DAD2 /* main.m */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D90B55D01C96514E000640B0 /* TableViewCellFirst */ = {
+			isa = PBXGroup;
+			children = (
+				D90B55D11C96514E000640B0 /* HomeCellFirstViewController.h */,
+				D90B55D21C96514E000640B0 /* HomeCellFirstViewController.m */,
+				D90B55D31C96514E000640B0 /* HomeCellFirstViewController.xib */,
+				D90B55D41C96514E000640B0 /* HomeTableViewCellFirst.h */,
+				D90B55D51C96514E000640B0 /* HomeTableViewCellFirst.m */,
+				D90B55D61C96514E000640B0 /* HomeTableViewCellFirst.xib */,
+				D90B55D71C96514E000640B0 /* ViewShowImageController.h */,
+				D90B55D81C96514E000640B0 /* ViewShowImageController.m */,
+				D90B55D91C96514E000640B0 /* ViewShowImageController.xib */,
+			);
+			path = TableViewCellFirst;
+			sourceTree = "<group>";
+		};
+		D90B55DA1C96514E000640B0 /* TableViewCellNotFirst */ = {
+			isa = PBXGroup;
+			children = (
+				D90B55DB1C96514E000640B0 /* HomeTableViewCellSecond.h */,
+				D90B55DC1C96514E000640B0 /* HomeTableViewCellSecond.m */,
+				D90B55DD1C96514E000640B0 /* HomeTableViewCellSecond.xib */,
+				D90B55DE1C96514E000640B0 /* SubItemCollectionView.h */,
+				D90B55DF1C96514E000640B0 /* SubItemCollectionView.m */,
+				D90B55E01C96514E000640B0 /* SubItemCollectionView.xib */,
+			);
+			path = TableViewCellNotFirst;
+			sourceTree = "<group>";
+		};
+		D90B59681C9669A9000640B0 /* JBWatchActivityIndicator */ = {
+			isa = PBXGroup;
+			children = (
+				D90B59691C9669A9000640B0 /* JBWatchActivityIndicator.h */,
+				D90B596A1C9669A9000640B0 /* JBWatchActivityIndicator.m */,
+			);
+			path = JBWatchActivityIndicator;
+			sourceTree = "<group>";
+		};
+		D90B596D1C9669D9000640B0 /* ActivityIndicatorViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D90B596E1C9669F4000640B0 /* ActivityIndicatorViewController.h */,
+				D90B596F1C9669F4000640B0 /* ActivityIndicatorViewController.m */,
+				D90B59701C9669F4000640B0 /* ActivityIndicatorViewController.xib */,
+			);
+			path = ActivityIndicatorViewController;
+			sourceTree = "<group>";
+		};
+		D90B59751C966DE8000640B0 /* SubCategoryViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D90B59761C966DFE000640B0 /* SubCategoryViewController.h */,
+				D90B59771C966DFE000640B0 /* SubCategoryViewController.m */,
+				D90B59781C966DFE000640B0 /* SubCategoryViewController.xib */,
+			);
+			path = SubCategoryViewController;
 			sourceTree = "<group>";
 		};
 		D974BE491C87DFC90005938A = {
@@ -839,24 +905,25 @@
 				B05B07921C930A6B0063DAD2 /* CustomNavigationBar.xib in Resources */,
 				D9E7891E1C927EF6008A81D9 /* close@3x.png in Resources */,
 				B05B07CE1C930A6B0063DAD2 /* SidebarViewController.xib in Resources */,
-				B05B07B61C930A6B0063DAD2 /* ViewShowImageController.xib in Resources */,
 				B05B078E1C930A6B0063DAD2 /* CropImageViewController.xib in Resources */,
+				D90B597B1C966DFE000640B0 /* SubCategoryViewController.xib in Resources */,
 				D904C92A1C8D128300E349E6 /* btn_back.png in Resources */,
+				D90B59731C9669F4000640B0 /* ActivityIndicatorViewController.xib in Resources */,
 				D904C92C1C8D128300E349E6 /* btn_back@2x.png in Resources */,
 				B05B07C21C930A6B0063DAD2 /* ResultViewController.xib in Resources */,
-				B05B07AA1C930A6B0063DAD2 /* HomeTableViewCellSecond.xib in Resources */,
-				B05B07A61C930A6B0063DAD2 /* HomeTableViewCellFirst.xib in Resources */,
 				B05B07821C930A6B0063DAD2 /* AddImageTextViewController.xib in Resources */,
+				D90B55F31C96514E000640B0 /* SubItemCollectionView.xib in Resources */,
 				D974BEC31C87EAF00005938A /* btn_menu@2x.png in Resources */,
-				B05B07B21C930A6B0063DAD2 /* SubItemCollectionView.xib in Resources */,
 				D974BEC11C87EAF00005938A /* btn_menu.png in Resources */,
 				B05B079A1C930A6B0063DAD2 /* DialogViewController.xib in Resources */,
 				D9E788F61C925F7F008A81D9 /* camera.png in Resources */,
 				D9E7891C1C927EF6008A81D9 /* close@2x.png in Resources */,
 				D90797DF1C8936BD0088F3C5 /* placeholder.png in Resources */,
 				D9E7891A1C927EF6008A81D9 /* close.png in Resources */,
+				D90B55E71C96514E000640B0 /* HomeTableViewCellFirst.xib in Resources */,
 				B05B08001C930A6B0063DAD2 /* LaunchScreen.xib in Resources */,
 				B05B077C1C930A6B0063DAD2 /* Info.plist in Resources */,
+				D90B55EF1C96514E000640B0 /* HomeTableViewCellSecond.xib in Resources */,
 				B05B07C61C930A6B0063DAD2 /* RootViewController.xib in Resources */,
 				D9E788F81C925F7F008A81D9 /* camera@2x.png in Resources */,
 				B05B07BA1C930A6B0063DAD2 /* InfoViewController.xib in Resources */,
@@ -865,14 +932,15 @@
 				B05B07AE1C930A6B0063DAD2 /* HomeViewController.xib in Resources */,
 				D904C94D1C8D1E5800E349E6 /* addpicture@3x.png in Resources */,
 				D904C94B1C8D1E5800E349E6 /* addpicture@2x.png in Resources */,
-				B05B07A21C930A6B0063DAD2 /* HomeCellFirstViewController.xib in Resources */,
 				D9E788FA1C925F7F008A81D9 /* library.png in Resources */,
 				B009F1711C89DB6E00B6D197 /* imgCell1.png in Resources */,
+				D90B55E31C96514E000640B0 /* HomeCellFirstViewController.xib in Resources */,
 				D904C9571C8D3E9200E349E6 /* khunganhmua.png in Resources */,
 				B05B07CA1C930A6B0063DAD2 /* MenuTableViewCell.xib in Resources */,
 				B05B078A1C930A6B0063DAD2 /* BaseViewController.xib in Resources */,
 				B05B07BE1C930A6B0063DAD2 /* MessageViewController.xib in Resources */,
 				B05B07961C930A6B0063DAD2 /* DiaLogTableViewCell.xib in Resources */,
+				D90B55EB1C96514E000640B0 /* ViewShowImageController.xib in Resources */,
 				D974BE631C87DFC90005938A /* Images.xcassets in Resources */,
 				D9E788FC1C925F7F008A81D9 /* library@2x.png in Resources */,
 			);
@@ -883,9 +951,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D9E788FD1C925F7F008A81D9 /* library@2x.png in Resources */,
+				D90B59741C9669F4000640B0 /* ActivityIndicatorViewController.xib in Resources */,
+				D90B55F01C96514E000640B0 /* HomeTableViewCellSecond.xib in Resources */,
 				B05B07931C930A6B0063DAD2 /* CustomNavigationBar.xib in Resources */,
 				D904C92D1C8D128300E349E6 /* btn_back@2x.png in Resources */,
-				B05B07A71C930A6B0063DAD2 /* HomeTableViewCellFirst.xib in Resources */,
 				B05B077D1C930A6B0063DAD2 /* Info.plist in Resources */,
 				D904C94E1C8D1E5800E349E6 /* addpicture@3x.png in Resources */,
 				D974BEC41C87EAF00005938A /* btn_menu@2x.png in Resources */,
@@ -894,31 +963,32 @@
 				B05B079B1C930A6B0063DAD2 /* DialogViewController.xib in Resources */,
 				D9E7891F1C927EF6008A81D9 /* close@3x.png in Resources */,
 				B05B078F1C930A6B0063DAD2 /* CropImageViewController.xib in Resources */,
+				D90B55EC1C96514E000640B0 /* ViewShowImageController.xib in Resources */,
 				D9E788FB1C925F7F008A81D9 /* library.png in Resources */,
+				D90B55E41C96514E000640B0 /* HomeCellFirstViewController.xib in Resources */,
 				D9E788F91C925F7F008A81D9 /* camera@2x.png in Resources */,
 				B05B07C71C930A6B0063DAD2 /* RootViewController.xib in Resources */,
 				D904C92B1C8D128300E349E6 /* btn_back.png in Resources */,
-				B05B07B71C930A6B0063DAD2 /* ViewShowImageController.xib in Resources */,
 				B05B07CB1C930A6B0063DAD2 /* MenuTableViewCell.xib in Resources */,
+				D90B55E81C96514E000640B0 /* HomeTableViewCellFirst.xib in Resources */,
+				D90B597C1C966DFE000640B0 /* SubCategoryViewController.xib in Resources */,
 				D90797E01C8936BD0088F3C5 /* placeholder.png in Resources */,
 				B05B078B1C930A6B0063DAD2 /* BaseViewController.xib in Resources */,
+				D90B55F41C96514E000640B0 /* SubItemCollectionView.xib in Resources */,
 				B05B07AF1C930A6B0063DAD2 /* HomeViewController.xib in Resources */,
 				B05B07BB1C930A6B0063DAD2 /* InfoViewController.xib in Resources */,
 				B05B08011C930A6B0063DAD2 /* LaunchScreen.xib in Resources */,
 				B05B07BF1C930A6B0063DAD2 /* MessageViewController.xib in Resources */,
 				D9E7891B1C927EF6008A81D9 /* close.png in Resources */,
-				B05B07AB1C930A6B0063DAD2 /* HomeTableViewCellSecond.xib in Resources */,
 				B05B07C31C930A6B0063DAD2 /* ResultViewController.xib in Resources */,
 				D904C94C1C8D1E5800E349E6 /* addpicture@2x.png in Resources */,
 				B05B07CF1C930A6B0063DAD2 /* SidebarViewController.xib in Resources */,
 				B009F1721C89DB6E00B6D197 /* imgCell1.png in Resources */,
 				B05B07831C930A6B0063DAD2 /* AddImageTextViewController.xib in Resources */,
-				B05B07B31C930A6B0063DAD2 /* SubItemCollectionView.xib in Resources */,
 				B05B07971C930A6B0063DAD2 /* DiaLogTableViewCell.xib in Resources */,
 				D904C94A1C8D1E5800E349E6 /* addpicture.png in Resources */,
 				D9E7891D1C927EF6008A81D9 /* close@2x.png in Resources */,
 				D9E788F71C925F7F008A81D9 /* camera.png in Resources */,
-				B05B07A31C930A6B0063DAD2 /* HomeCellFirstViewController.xib in Resources */,
 				D974BEC21C87EAF00005938A /* btn_menu.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -931,9 +1001,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				B05B07E61C930A6B0063DAD2 /* SDWebImageDownloaderOperation.m in Sources */,
+				D90B59791C966DFE000640B0 /* SubCategoryViewController.m in Sources */,
 				B05B07F21C930A6B0063DAD2 /* UIImage+WebP.m in Sources */,
 				B05B07EA1C930A6B0063DAD2 /* SDWebImagePrefetcher.m in Sources */,
 				B05B07D01C930A6B0063DAD2 /* Global.m in Sources */,
+				D90B55E11C96514E000640B0 /* HomeCellFirstViewController.m in Sources */,
 				B05B07DE1C930A6B0063DAD2 /* SDImageCache.m in Sources */,
 				B05B07E81C930A6B0063DAD2 /* SDWebImageManager.m in Sources */,
 				B05B07D81C930A6B0063DAD2 /* Cropper.m in Sources */,
@@ -944,7 +1016,9 @@
 				B05B07F81C930A6B0063DAD2 /* UIView+WebCacheOperation.m in Sources */,
 				B05B07C81C930A6B0063DAD2 /* MenuTableViewCell.m in Sources */,
 				B05B07E01C930A6B0063DAD2 /* SDWebImageCompat.m in Sources */,
+				D90B59711C9669F4000640B0 /* ActivityIndicatorViewController.m in Sources */,
 				B05B07CC1C930A6B0063DAD2 /* SidebarViewController.m in Sources */,
+				D90B596B1C9669A9000640B0 /* JBWatchActivityIndicator.m in Sources */,
 				B05B077E1C930A6B0063DAD2 /* AppDelegate.m in Sources */,
 				B05B07E21C930A6B0063DAD2 /* SDWebImageDecoder.m in Sources */,
 				B05B07D41C930A6B0063DAD2 /* ItemCollection.m in Sources */,
@@ -952,26 +1026,25 @@
 				B05B07841C930A6B0063DAD2 /* AddTextTableViewCell.m in Sources */,
 				B05B07F41C930A6B0063DAD2 /* UIImageView+HighlightedWebCache.m in Sources */,
 				B05B08101C9313D10063DAD2 /* DEffect.m in Sources */,
-				B05B07A81C930A6B0063DAD2 /* HomeTableViewCellSecond.m in Sources */,
 				B05B07D21C930A6B0063DAD2 /* Helper.m in Sources */,
-				B05B07A41C930A6B0063DAD2 /* HomeTableViewCellFirst.m in Sources */,
-				B05B07A01C930A6B0063DAD2 /* HomeCellFirstViewController.m in Sources */,
-				B05B07B41C930A6B0063DAD2 /* ViewShowImageController.m in Sources */,
 				B05B07F01C930A6B0063DAD2 /* UIImage+MultiFormat.m in Sources */,
 				B05B08181C9317EB0063DAD2 /* DInputPic.m in Sources */,
 				B05B07DA1C930A6B0063DAD2 /* MKAnnotationView+WebCache.m in Sources */,
 				B05B08141C9317DC0063DAD2 /* DInputLine.m in Sources */,
+				D90B55ED1C96514E000640B0 /* HomeTableViewCellSecond.m in Sources */,
 				B05B07DC1C930A6B0063DAD2 /* NSData+ImageContentType.m in Sources */,
 				B05B07EC1C930A6B0063DAD2 /* UIButton+WebCache.m in Sources */,
+				D90B55F11C96514E000640B0 /* SubItemCollectionView.m in Sources */,
 				B05B07F61C930A6B0063DAD2 /* UIImageView+WebCache.m in Sources */,
 				B05B07941C930A6B0063DAD2 /* DiaLogTableViewCell.m in Sources */,
 				B05B07B81C930A6B0063DAD2 /* InfoViewController.m in Sources */,
+				D90B55E51C96514E000640B0 /* HomeTableViewCellFirst.m in Sources */,
 				B05B07EE1C930A6B0063DAD2 /* UIImage+GIF.m in Sources */,
 				B05B07E41C930A6B0063DAD2 /* SDWebImageDownloader.m in Sources */,
 				B05B07801C930A6B0063DAD2 /* AddImageTextViewController.m in Sources */,
 				B05B080C1C930E730063DAD2 /* DCategory.m in Sources */,
-				B05B07B01C930A6B0063DAD2 /* SubItemCollectionView.m in Sources */,
 				B05B07901C930A6B0063DAD2 /* CustomNavigationBar.m in Sources */,
+				D90B55E91C96514E000640B0 /* ViewShowImageController.m in Sources */,
 				B05B07BC1C930A6B0063DAD2 /* MessageViewController.m in Sources */,
 				B05B07FC1C930A6B0063DAD2 /* WYPopoverController.m in Sources */,
 				B05B078C1C930A6B0063DAD2 /* CropImageViewController.m in Sources */,
@@ -989,11 +1062,11 @@
 				B05B07F91C930A6B0063DAD2 /* UIView+WebCacheOperation.m in Sources */,
 				B05B078D1C930A6B0063DAD2 /* CropImageViewController.m in Sources */,
 				B05B07D71C930A6B0063DAD2 /* AppService.m in Sources */,
-				B05B07A11C930A6B0063DAD2 /* HomeCellFirstViewController.m in Sources */,
 				B05B07FF1C930A6B0063DAD2 /* WYStoryboardPopoverSegue.m in Sources */,
 				B05B08191C9317EB0063DAD2 /* DInputPic.m in Sources */,
 				B05B08051C930A6B0063DAD2 /* main.m in Sources */,
 				B05B07811C930A6B0063DAD2 /* AddImageTextViewController.m in Sources */,
+				D90B55EA1C96514E000640B0 /* ViewShowImageController.m in Sources */,
 				B05B07D51C930A6B0063DAD2 /* ItemCollection.m in Sources */,
 				B05B07B91C930A6B0063DAD2 /* InfoViewController.m in Sources */,
 				B05B07D11C930A6B0063DAD2 /* Global.m in Sources */,
@@ -1002,23 +1075,26 @@
 				B05B07EB1C930A6B0063DAD2 /* SDWebImagePrefetcher.m in Sources */,
 				B05B07991C930A6B0063DAD2 /* DialogViewController.m in Sources */,
 				B05B08111C9313D10063DAD2 /* DEffect.m in Sources */,
+				D90B55EE1C96514E000640B0 /* HomeTableViewCellSecond.m in Sources */,
 				B05B07BD1C930A6B0063DAD2 /* MessageViewController.m in Sources */,
 				B05B07AD1C930A6B0063DAD2 /* HomeViewController.m in Sources */,
 				B05B07F11C930A6B0063DAD2 /* UIImage+MultiFormat.m in Sources */,
 				B05B07C11C930A6B0063DAD2 /* ResultViewController.m in Sources */,
 				B05B07951C930A6B0063DAD2 /* DiaLogTableViewCell.m in Sources */,
 				B05B07ED1C930A6B0063DAD2 /* UIButton+WebCache.m in Sources */,
+				D90B59721C9669F4000640B0 /* ActivityIndicatorViewController.m in Sources */,
 				B05B07FD1C930A6B0063DAD2 /* WYPopoverController.m in Sources */,
 				B05B07EF1C930A6B0063DAD2 /* UIImage+GIF.m in Sources */,
 				B05B07FB1C930A6B0063DAD2 /* SWRevealViewController.m in Sources */,
+				D90B597A1C966DFE000640B0 /* SubCategoryViewController.m in Sources */,
 				B05B07C91C930A6B0063DAD2 /* MenuTableViewCell.m in Sources */,
 				B05B080D1C930E730063DAD2 /* DCategory.m in Sources */,
-				B05B07B51C930A6B0063DAD2 /* ViewShowImageController.m in Sources */,
+				D90B596C1C9669A9000640B0 /* JBWatchActivityIndicator.m in Sources */,
+				D90B55E21C96514E000640B0 /* HomeCellFirstViewController.m in Sources */,
 				B05B07D91C930A6B0063DAD2 /* Cropper.m in Sources */,
-				B05B07A51C930A6B0063DAD2 /* HomeTableViewCellFirst.m in Sources */,
-				B05B07A91C930A6B0063DAD2 /* HomeTableViewCellSecond.m in Sources */,
 				B05B07DF1C930A6B0063DAD2 /* SDImageCache.m in Sources */,
 				B05B07C51C930A6B0063DAD2 /* RootViewController.m in Sources */,
+				D90B55E61C96514E000640B0 /* HomeTableViewCellFirst.m in Sources */,
 				B05B07E91C930A6B0063DAD2 /* SDWebImageManager.m in Sources */,
 				B05B07F31C930A6B0063DAD2 /* UIImage+WebP.m in Sources */,
 				B05B077F1C930A6B0063DAD2 /* AppDelegate.m in Sources */,
@@ -1028,13 +1104,13 @@
 				B05B07F71C930A6B0063DAD2 /* UIImageView+WebCache.m in Sources */,
 				B05B07E51C930A6B0063DAD2 /* SDWebImageDownloader.m in Sources */,
 				B05B08151C9317DC0063DAD2 /* DInputLine.m in Sources */,
-				B05B07B11C930A6B0063DAD2 /* SubItemCollectionView.m in Sources */,
 				B05B07DB1C930A6B0063DAD2 /* MKAnnotationView+WebCache.m in Sources */,
 				B05B07911C930A6B0063DAD2 /* CustomNavigationBar.m in Sources */,
 				B05B07E31C930A6B0063DAD2 /* SDWebImageDecoder.m in Sources */,
 				B05B07E11C930A6B0063DAD2 /* SDWebImageCompat.m in Sources */,
 				B05B07F51C930A6B0063DAD2 /* UIImageView+HighlightedWebCache.m in Sources */,
 				B05B07DD1C930A6B0063DAD2 /* NSData+ImageContentType.m in Sources */,
+				D90B55F21C96514E000640B0 /* SubItemCollectionView.m in Sources */,
 				B05B07CD1C930A6B0063DAD2 /* SidebarViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1150,6 +1226,7 @@
 				INFOPLIST_FILE = ThiepMung/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -1160,6 +1237,7 @@
 				INFOPLIST_FILE = ThiepMung/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

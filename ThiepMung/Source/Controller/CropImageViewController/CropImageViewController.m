@@ -87,39 +87,42 @@
     [self.view addSubview:uiViewCrop];
     [self.view addSubview:crop1];
     [self.view addSubview:cancel];
-    
-    CGFloat sizeWidth1;
-    CGFloat sizeHeight1;
+//    
+//    CGFloat sizeWidth1;
+//    CGFloat sizeHeight1;
     
     if ((_sizeWidth ==0) || (_sizeHeight == 0)) {
         _sizeWidth = _sizeHeight = 300;
     }
     
-    if (widthBounds<768) {
-        NSLog(@"widthBounds>=768 ipad");
-        if (_sizeWidth >_sizeHeight) {
-            CGFloat ratio = _sizeWidth/_sizeHeight;
-            sizeHeight1 = 200;
-            sizeWidth1 = sizeHeight1*ratio;
-        }else{
-            CGFloat ratio = _sizeHeight/_sizeWidth;
-            sizeWidth1 = 200;
-            sizeHeight1 = sizeWidth1*ratio;
-        }
-    }else{
-        NSLog(@"widthBounds>=768 iphone");
-        if (_sizeWidth >_sizeHeight) {
-            CGFloat ratio = _sizeWidth/_sizeHeight;
-            sizeHeight1 = 400;
-            sizeWidth1 = sizeHeight1*ratio;
-        }else{
-            CGFloat ratio = _sizeHeight/_sizeWidth;
-            sizeWidth1 = 400;
-            sizeHeight1 = sizeWidth1*ratio;
-        }
-    }
-    
-    self.cropper = [[Cropper alloc] initWithImageView:uiViewCrop InitialCroppingRect:70 y:70 w:sizeWidth1 h:sizeHeight1];
+//    if (widthBounds<768) {
+//        NSLog(@"widthBounds>=768 ipad");
+//        if (_sizeWidth >_sizeHeight) {
+//            CGFloat ratio = _sizeWidth/_sizeHeight;
+//            sizeHeight1 = 200;
+//            sizeWidth1 = sizeHeight1*ratio;
+//        }else{
+//            CGFloat ratio = _sizeHeight/_sizeWidth;
+//            sizeWidth1 = 200;
+//            sizeHeight1 = sizeWidth1*ratio;
+//        }
+//    }else{
+//        NSLog(@"widthBounds>=768 iphone");
+//        if (_sizeWidth >_sizeHeight) {
+//            CGFloat ratio = _sizeWidth/_sizeHeight;
+//            sizeHeight1 = 400;
+//            sizeWidth1 = sizeHeight1*ratio;
+//        }else{
+//            CGFloat ratio = _sizeHeight/_sizeWidth;
+//            sizeWidth1 = 400;
+//            sizeHeight1 = sizeWidth1*ratio;
+//        }
+//    }
+    CGFloat with = _sizeWidth;
+    CGFloat height = _sizeHeight;
+//    self.cropper = [[Cropper alloc] initWithImageView:uiViewCrop InitialCroppingRect:70 y:70 w:sizeWidth1 h:sizeHeight1];
+    self.cropper = [[Cropper alloc] initWithImageView:uiViewCrop InitialCroppingRect:70 y:70 w:with h:height];
+
     NSInteger tagInput = _tagImage;
     __weak CropImageViewController *_self = self;
     _cropper.cropAction = ^(CropperAction action, UIImage *image){
@@ -129,10 +132,7 @@
         if( action == CropperActionDidCrop )
         {
             
-            
-            /////////////////
-            //            CGRect rect = CGRectMake(0.0, 0.0, _sizeWidth, _sizeHeight);
-            CGRect rect = CGRectMake(0.0, 0.0, sizeWidth1, sizeHeight1);
+            CGRect rect = CGRectMake(0.0, 0.0, with, height);
             UIGraphicsBeginImageContext(rect.size);
             [image drawInRect:rect];
             UIImage *img = UIGraphicsGetImageFromCurrentImageContext();
@@ -188,15 +188,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
- #pragma mark - Navigation
- 
- // In a storyboard-based application, you will often want to do a little preparation before navigation
- - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
- // Get the new view controller using [segue destinationViewController].
- // Pass the selected object to the new view controller.
- }
- */
 
 - (void)itemBack:(UIButton*)button {
     [self.navigationController dismissViewControllerAnimated:YES

@@ -40,6 +40,7 @@
     float originYButonCrop;
     //NSLog(@"widthBounds: %f, %f",ratioWidthHeight,ratioHeightWidth);
     if (ratioHeightWidth< (heightBounds-115-70)/widthBounds) {
+        NSLog(@"widthBoundswidthBounds");
         [imageView setFrame:CGRectMake(0, 65+(heightBounds-65-ratioHeightWidth*widthBounds)/2, widthBounds, ratioHeightWidth*widthBounds)];
         originYButonCrop = imageView.frame.origin.y+imageView.frame.size.height+20;
     }else{

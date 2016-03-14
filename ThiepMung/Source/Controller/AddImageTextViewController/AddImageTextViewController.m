@@ -13,6 +13,7 @@
 #import "CropImageViewController.h"
 #import "MessageViewController.h"
 #import "ResultViewController.h"
+#import "ActivityIndicatorViewController.h"
 
 @interface AddImageTextViewController ()<UICollectionViewDataSource,UICollectionViewDelegate,UITableViewDataSource,UITableViewDelegate,UITextViewDelegate,WYPopoverControllerDelegate,DialogViewDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate,CropImageDelegate,MessageDelegate>{
     UIImageView *imageView;
@@ -26,6 +27,7 @@
     NSMutableArray *arrImage;
     
     NSInteger indexTextViewChanging;
+    NSInteger indexImageInputSelected;
 
 }
 @property (strong, nonatomic) UIImagePickerController *imagePickerController;
@@ -48,6 +50,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     imageView = [[UIImageView alloc]init];
     [imageView sd_setImageWithURL:[NSURL URLWithString:_dEffect.avatar ] placeholderImage:[UIImage imageNamed:@"placeholder.png"]];
     imageView.translatesAutoresizingMaskIntoConstraints = NO;
@@ -66,6 +69,7 @@
     numberInputImg = _dEffect.input_pic.count;
     heightImgAdd = 60;
     numberInputText = _dEffect.input_line.count;
+    indexImageInputSelected = 0;
     
     lbTitleViewAddImage = [[UILabel alloc]init];
     if (numberInputImg) {
@@ -128,6 +132,7 @@
     NSLog(@"viewWillAppear dEffect:%@",_dEffect);
 }
 -(void)viewWillDisappear:(BOOL)animated{
+    /*  Turn off Keyboard Notification */
     [[NSNotificationCenter defaultCenter] removeObserver:self
                                                     name:UIKeyboardDidHideNotification
                                                   object:nil];
@@ -138,6 +143,9 @@
 }
 -(void)updateViewConstraints{
     [super updateViewConstraints];
+    
+    /*add constraint for imageview with constraint Top, left, right, height(aspect ratio) */
+
     [self.view addConstraint:[NSLayoutConstraint constraintWithItem:imageView
                                                           attribute:NSLayoutAttributeTop
                                                           relatedBy:NSLayoutRelationEqual
@@ -175,15 +183,9 @@
                                                            attribute:NSLayoutAttributeWidth
                                                           multiplier:1.0
                                                             constant:0.0f]];
-    //    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:containerView
-    //                                                              attribute:NSLayoutAttributeBottom
-    //                                                              relatedBy:NSLayoutRelationEqual
-    //                                                                 toItem:self.view
-    //                                                              attribute:NSLayoutAttributeBottom
-    //                                                             multiplier:1.0
-    //                                                               constant:0.0]];
+
     
-    /*add constraint for lbDes */
+    /*add constraint for lbDes with constraint Top (imageview), left, right, height(70) */
     
     [self.view addConstraint:[NSLayoutConstraint constraintWithItem:lbDes attribute:NSLayoutAttributeTop
                                                           relatedBy:NSLayoutRelationEqual
@@ -211,7 +213,10 @@
                                                                       options:0
                                                                       metrics:nil
                                                                         views:NSDictionaryOfVariableBindings(lbDes)]];
-    /*add constraint for lbTitleAddImage */
+
+
+    /*add constraint for lbTitleViewAddImage with constraint Top (lbDes), left, right, height(30) */
+
     [self.view addConstraint:[NSLayoutConstraint constraintWithItem:lbTitleViewAddImage attribute:NSLayoutAttributeTop
                                                           relatedBy:NSLayoutRelationEqual
                                                              toItem:lbDes attribute:NSLayoutAttributeBottom
@@ -241,7 +246,9 @@
     
     
     
-    /*add constraint for view add image */
+
+    /*add constraint for collectionViewAddImage with constraint Top (lbTitleViewAddImage), left, right, height(must caculator follow total image input) */
+
     [self.view addConstraint:[NSLayoutConstraint constraintWithItem:collectionViewAddImage attribute:NSLayoutAttributeTop
                                                           relatedBy:NSLayoutRelationEqual
                                                              toItem:lbTitleViewAddImage attribute:NSLayoutAttributeBottom
@@ -268,7 +275,10 @@
                                                                       options:0
                                                                       metrics:nil
                                                                         views:NSDictionaryOfVariableBindings(collectionViewAddImage)]];
-    /*add constraint for view add text input */
+
+    
+    /*add constraint for tableViewAddText with constraint Top (collectionViewAddImage), left, right, height(must caculator follow total text input) */
+
     [self.view addConstraint:[NSLayoutConstraint constraintWithItem:tableViewAddText attribute:NSLayoutAttributeTop
                                                           relatedBy:NSLayoutRelationEqual
                                                              toItem:collectionViewAddImage attribute:NSLayoutAttributeBottom
@@ -295,7 +305,8 @@
                                                                       options:0
                                                                       metrics:nil
                                                                         views:NSDictionaryOfVariableBindings(tableViewAddText)]];
-    /*add constraint for button Ok */
+    
+    /*add constraint for btnOk with constraint Top (tableViewAddText), width(70), height (50), centerX */
     [self.view addConstraint:[NSLayoutConstraint constraintWithItem:btnOk attribute:NSLayoutAttributeTop
                                                           relatedBy:NSLayoutRelationEqual
                                                              toItem:tableViewAddText attribute:NSLayoutAttributeBottom
@@ -324,6 +335,8 @@
 
 
 -(void)btnOK:(id) sender{
+    ActivityIndicatorViewController *activityIndicator = [[ActivityIndicatorViewController alloc]initWithNibName:@"ActivityIndicatorViewController" bundle:nil];
+    [Helper showViewController:activityIndicator inViewController:self withSize:CGSizeMake(80, 80)];
     [self.view endEditing:YES];
 
 //    AddTextTableViewCell *cell =(AddTextTableViewCell *) [self.tableViewAddText cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
@@ -485,6 +498,8 @@
 //            }
             ResultViewController *resultVC = [[ResultViewController alloc]initWithNibName:@"ResultViewController" bundle:nil];
             resultVC.imageResult = imageResult;
+            [Helper removeDialogViewController:self];
+            
             [self.navigationController pushViewController:resultVC animated:YES];
             
         });
@@ -607,6 +622,7 @@
     {
         UIView *btn = (UIView *)sender;
         tagSelected = [sender tag];
+        indexImageInputSelected = tagSelected-2000;
         DialogViewController *dialogVC = [[DialogViewController alloc]initWithNibName:@"DialogViewController" bundle:nil];
         dialogVC.preferredContentSize = CGSizeMake(130, 88);
         dialogVC.delegate = self;
@@ -721,10 +737,12 @@
     }else{
         [self dismissViewControllerAnimated:YES completion:^{
             NSLog(@"đã lấy được ảnh");
+            DInputPic *dInputPic = [_dEffect.input_pic objectAtIndex:indexImageInputSelected];
+            
             cropImageVC = [[CropImageViewController alloc]initWithNibName:@"CropImageViewController" bundle:nil];
             cropImageVC.imageTest = imagePicker;
-            cropImageVC.sizeWidth = 100.0f;
-            cropImageVC.sizeHeight = 100.0f;
+            cropImageVC.sizeWidth = [dInputPic.width floatValue];
+            cropImageVC.sizeHeight = [dInputPic.height floatValue];
             cropImageVC.tagImage = tagSelected;
             cropImageVC.delegate = self;
             UINavigationController *navigationCropImg = [[UINavigationController alloc]initWithRootViewController:cropImageVC];
@@ -745,6 +763,7 @@
 }
 
 - (void)cropImageButtonDonePress:(CropImageViewController*)cropImageVC image:(UIImage *)image tag:(NSInteger)tag{
+    NSLog(@"cropImageButtonDonePress:%f:%f:%@",image.size.width,image.size.height,image);
     [arrImage replaceObjectAtIndex:tag-2000 withObject:image];
     UIButton *button = (UIButton *) [self.collectionViewAddImage viewWithTag:tag];
     [button setBackgroundImage:image forState:UIControlStateNormal];

@@ -10,6 +10,7 @@
 #import "SWRevealViewController.h"
 #import "HomeTableViewCellFirst.h"
 #import "HomeTableViewCellSecond.h"
+#import "SubCategoryViewController.h"
 
 @interface HomeViewController (){
     NSMutableArray *arrDataSource;
@@ -108,6 +109,8 @@
         cell.arrDataSource = [arrDataSource objectAtIndex:indexPath.row];
         NSLog(@"cell.dCategory:%@",cell.dCategory);
         cell.delegate = self;
+        cell.btnTitle.tag = 4000+indexPath.row;
+        [cell.btnTitle addTarget:self action:@selector(btnTitle:) forControlEvents:UIControlEventTouchUpInside];
         return cell;
     }
 }
@@ -129,9 +132,18 @@
     
 }
 
+- (void)btnTitle:(id)sender{
+    SubCategoryViewController *subCategoryVC = [[SubCategoryViewController alloc]initWithNibName:@"SubCategoryViewController" bundle:nil];
+    subCategoryVC.arrDataSource = [arrDataSource objectAtIndex:[sender tag]-4000];
+    UINavigationController *navigationVC = [[UINavigationController alloc]initWithRootViewController:subCategoryVC];
+    [self presentViewController:navigationVC animated:YES completion:nil];
+}
+
 #pragma mark implement protocol
 - (void)presentVC:(UIViewController *)VC{
     [self presentViewController:VC animated:YES completion:nil];
 }
+
+
 
 @end
