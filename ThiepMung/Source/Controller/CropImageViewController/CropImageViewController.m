@@ -8,6 +8,7 @@
 
 #import "CropImageViewController.h"
 #import "Cropper.h"
+#import "MacroUtilities.h"
 
 @interface CropImageViewController (){
     UIImageView *uiViewCrop;
@@ -31,7 +32,7 @@
     [super viewDidLoad];
     
     [self.navigationController setNavigationBarHidden:NO];
-    [self.navigationController.navigationBar setBarTintColor:[UIColor colorWithRed:108/255.0f green:46/255.0f blue:184/255.0f alpha:1.0f]];
+    [self.navigationController.navigationBar setBarTintColor:MU_RGB(108, 46, 184)];
     [self.navigationController.navigationBar setTintColor:[UIColor whiteColor]];
     self.navigationController.navigationBar.titleTextAttributes = [NSDictionary dictionaryWithObject:[UIColor whiteColor] forKey:NSForegroundColorAttributeName];
     UIBarButtonItem *btnBack = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"btn_back.png"] style:UIBarButtonItemStylePlain target:self action:@selector(itemBack:)];
@@ -60,8 +61,8 @@
     [crop1 setFrame:CGRectMake(widthBounds/2-110, originYButonCrop,100 , 40)];
     [crop1 addTarget:self action:@selector(crop1:) forControlEvents:UIControlEventTouchUpInside];
     [crop1 setTitle:@"Crop" forState:UIControlStateNormal];
-    [crop1 setBackgroundColor:[UIColor colorWithRed:0/255.0f green:122/255.0f blue:204/255.0f alpha:0.7f]];
-    [crop1 setBackgroundImage:[self imageWithColor:[UIColor blackColor]] forState:UIControlStateHighlighted];
+    [crop1 setBackgroundColor:MU_RGB(108, 46, 184)];
+    [crop1 setBackgroundImage:[Helper imageWithColor:[UIColor blackColor]] forState:UIControlStateHighlighted];
     [crop1 setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     //    [crop1 setTitleColor:[UIColor blackColor] forState:UIControlStateHighlighted];
     crop1.layer.cornerRadius = 10.0f;
@@ -73,8 +74,8 @@
     [cancel setTitle:@"Cancel" forState:UIControlStateNormal];
     [cancel setFrame:CGRectMake(widthBounds/2+10, originYButonCrop, 100 , 40)];
     [cancel addTarget:self action:@selector(cancel1:) forControlEvents:UIControlEventTouchUpInside];
-    [cancel setBackgroundColor:[UIColor colorWithRed:0/255.0f green:122/255.0f blue:204/255.0f alpha:0.7f]];
-    [cancel setBackgroundImage:[self imageWithColor:[UIColor blackColor]] forState:UIControlStateHighlighted];
+    [cancel setBackgroundColor:MU_RGB(108, 64, 184)];
+    [cancel setBackgroundImage:[Helper imageWithColor:[UIColor blackColor]] forState:UIControlStateHighlighted];
     [cancel setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     //    [cancel setTitleColor:[UIColor blackColor] forState:UIControlStateHighlighted];
     cancel.layer.cornerRadius = 10.0f;
@@ -82,7 +83,7 @@
     cancel.clipsToBounds = YES;
     [cancel.titleLabel setFont:[UIFont systemFontOfSize:20]];
     
-    [self.view setBackgroundColor:[UIColor colorWithRed:255/255.0f green:255/255.0f blue:255/255.0f alpha:0.8f]];
+    [self.view setBackgroundColor:MU_RGBA(255, 255, 255,0.8)];
     
     [self.view addSubview:uiViewCrop];
     [self.view addSubview:crop1];

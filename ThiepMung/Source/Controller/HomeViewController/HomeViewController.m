@@ -111,6 +111,7 @@
             cell = [topLevelObjects objectAtIndex:0];
         }
         [cell.btnTitle setTitle:dCategory1.dCategory_name forState:UIControlStateNormal];
+        [cell.btnTitle setTitleColor:MU_RGB(108, 64, 184) forState:UIControlStateNormal];
         cell.dCategory = dCategory1;
         cell.arrDataSource = [arrDataSource objectAtIndex:indexPath.row];
         NSLog(@"cell.dCategory:%@",cell.dCategory);
@@ -140,6 +141,7 @@
 
 - (void)btnTitle:(id)sender{
     SubCategoryViewController *subCategoryVC = [[SubCategoryViewController alloc]initWithNibName:@"SubCategoryViewController" bundle:nil];
+    subCategoryVC.stringTitle = [[arrDCategory objectAtIndex:[sender tag]-4000] dCategory_name];
     subCategoryVC.arrDataSource = [arrDataSource objectAtIndex:[sender tag]-4000];
     UINavigationController *navigationVC = [[UINavigationController alloc]initWithRootViewController:subCategoryVC];
     [self presentViewController:navigationVC animated:YES completion:nil];

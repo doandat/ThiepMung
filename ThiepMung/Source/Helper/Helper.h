@@ -43,4 +43,6 @@
 //chuyển ảnh sang text dạng base64
 + (NSString *)encodeToBase64String:(UIImage *)imageToEncode;
 + (UIImage *)decodeBase64ToImage:(NSString *)strEncodeData;
++ (UIImage *)imageWithColor:(UIColor *)color;
+
 @end

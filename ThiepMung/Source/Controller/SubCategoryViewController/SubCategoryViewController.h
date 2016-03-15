@@ -11,7 +11,7 @@
 @interface SubCategoryViewController : BaseViewController
 
 @property (nonatomic) NSArray *arrDataSource;
-
+@property (nonatomic) NSString *stringTitle;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 
 @end

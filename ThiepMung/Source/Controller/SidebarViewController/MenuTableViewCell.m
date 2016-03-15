@@ -7,11 +7,13 @@
 //
 
 #import "MenuTableViewCell.h"
+#import "MacroUtilities.h"
 
 @implementation MenuTableViewCell
 
 - (void)awakeFromNib {
     // Initialization code
+    [self.viewSpace setBackgroundColor:MU_RGBA(108, 64, 184, 0.9)];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

@@ -15,8 +15,11 @@
 #import "ResultViewController.h"
 #import "ActivityIndicatorViewController.h"
 
+#import "InputHelper.h"
+
 @interface AddImageTextViewController ()<UICollectionViewDataSource,UICollectionViewDelegate,UITableViewDataSource,UITableViewDelegate,UITextViewDelegate,WYPopoverControllerDelegate,DialogViewDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate,CropImageDelegate,MessageDelegate>{
     UIImageView *imageView;
+    UIView *viewContainDes;
     UILabel *lbDes;
     UILabel *lbTitleViewAddImage;
     UIButton *btnOk;
@@ -57,13 +60,20 @@
     
     [self.scrollView addSubview:imageView];
     
+    viewContainDes = [[UIView alloc]init];
+    [viewContainDes setBackgroundColor:MU_RGB(108, 64,184)];
+    viewContainDes.translatesAutoresizingMaskIntoConstraints = NO;
+    [self.scrollView addSubview:viewContainDes];
+    
     lbDes = [[UILabel alloc]init];
     [lbDes setText:_dEffect.effectDescription];
     [lbDes setNumberOfLines:0];
-    [lbDes setBackgroundColor:[UIColor colorWithRed:180/255.0f green:155/255.0f blue:216/255.0f alpha:1.0f]];
+    lbDes.textAlignment = NSTextAlignmentJustified;
+    [lbDes setFont:[UIFont fontWithName:@"Helvetica Neue" size:14]];
+    [lbDes setTextColor:MU_RGBA(255, 255,255,0.9)];
     lbDes.translatesAutoresizingMaskIntoConstraints = NO;
     
-    [self.scrollView addSubview:lbDes];
+    [viewContainDes addSubview:lbDes];
     
     
     numberInputImg = _dEffect.input_pic.count;
@@ -75,7 +85,7 @@
     if (numberInputImg) {
         lbTitleViewAddImage.text = @"Chọn ảnh ghép";
     }
-    lbTitleViewAddImage.textColor = [UIColor colorWithRed:70/255.0f green:6/255.0f blue:143/255.0f alpha:1.0];
+    lbTitleViewAddImage.textColor =MU_RGB(70, 6, 143);
     lbTitleViewAddImage.translatesAutoresizingMaskIntoConstraints = NO;
 
     [self.scrollView addSubview:lbTitleViewAddImage];
@@ -92,7 +102,8 @@
     
     
     btnOk = [[UIButton alloc]init];
-    [btnOk setBackgroundColor:[UIColor redColor]];
+    [btnOk setBackgroundColor:MU_RGB(108,46 , 184)];
+    btnOk.layer.cornerRadius = 6.0f;
     [btnOk setTitle:@"OK" forState:UIControlStateNormal];
     [btnOk addTarget:self action:@selector(btnOK:) forControlEvents:UIControlEventTouchUpInside];
     btnOk.translatesAutoresizingMaskIntoConstraints = NO;
@@ -122,13 +133,14 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(_keyboardWillShowNotification:) name:UIKeyboardWillShowNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(_keyboardWillHideNotification:) name:UIKeyboardWillHideNotification object:nil];
     [self.view layoutIfNeeded];
+    
 
 }
 -(void)viewWillAppear:(BOOL)animated{
     [self.navigationController setNavigationBarHidden:YES];
     [_btnBack addTarget:self action:@selector(btnBack:) forControlEvents:UIControlEventTouchUpInside];
 
-    [self.scrollView setContentSize:CGSizeMake([UIScreen mainScreen].bounds.size.width, 600+numberInputText*80+215)];
+    [self.scrollView setContentSize:CGSizeMake([UIScreen mainScreen].bounds.size.width, imageView.frame.size.height+100+self.addImageView.frame.size.height+numberInputText*80)];
     NSLog(@"viewWillAppear dEffect:%@",_dEffect);
 }
 -(void)viewWillDisappear:(BOOL)animated{
@@ -184,18 +196,45 @@
                                                           multiplier:1.0
                                                             constant:0.0f]];
 
+    /*add constraint for viewContainDes with constraint Top (imageview), left, right, height(70) */
     
-    /*add constraint for lbDes with constraint Top (imageview), left, right, height(70) */
+    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:viewContainDes attribute:NSLayoutAttributeTop
+                                                          relatedBy:NSLayoutRelationEqual
+                                                             toItem:imageView attribute:NSLayoutAttributeBottom
+                                                         multiplier:1.0 constant:0]];
+    
+    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:viewContainDes
+                                                          attribute:NSLayoutAttributeLeading
+                                                          relatedBy:NSLayoutRelationEqual
+                                                             toItem:self.scrollView
+                                                          attribute:NSLayoutAttributeLeading
+                                                         multiplier:1.0
+                                                           constant:0.0]];
+    
+    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:viewContainDes
+                                                          attribute:NSLayoutAttributeTrailing
+                                                          relatedBy:NSLayoutRelationEqual
+                                                             toItem:self.scrollView
+                                                          attribute:NSLayoutAttributeTrailing
+                                                         multiplier:1.0
+                                                           constant:0.0]];
+    
+    
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[viewContainDes(==70)]"
+                                                                      options:0
+                                                                      metrics:nil
+                                                                        views:NSDictionaryOfVariableBindings(viewContainDes)]];
+    /*add constraint for lbDes with constraint Top (ViewContainDes), left, right, height(70) */
     
     [self.view addConstraint:[NSLayoutConstraint constraintWithItem:lbDes attribute:NSLayoutAttributeTop
                                                           relatedBy:NSLayoutRelationEqual
-                                                             toItem:imageView attribute:NSLayoutAttributeBottom
+                                                             toItem:viewContainDes attribute:NSLayoutAttributeTop
                                                          multiplier:1.0 constant:0]];
     
     [self.view addConstraint:[NSLayoutConstraint constraintWithItem:lbDes
                                                           attribute:NSLayoutAttributeLeading
                                                           relatedBy:NSLayoutRelationEqual
-                                                             toItem:self.scrollView
+                                                             toItem:viewContainDes
                                                           attribute:NSLayoutAttributeLeading
                                                          multiplier:1.0
                                                            constant:10.0]];
@@ -203,23 +242,23 @@
     [self.view addConstraint:[NSLayoutConstraint constraintWithItem:lbDes
                                                           attribute:NSLayoutAttributeTrailing
                                                           relatedBy:NSLayoutRelationEqual
-                                                             toItem:self.scrollView
+                                                             toItem:viewContainDes
                                                           attribute:NSLayoutAttributeTrailing
                                                          multiplier:1.0
                                                            constant:-10.0]];
     
     
-    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[lbDes(==70)]"
-                                                                      options:0
-                                                                      metrics:nil
-                                                                        views:NSDictionaryOfVariableBindings(lbDes)]];
+    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:lbDes attribute:NSLayoutAttributeBottom
+                                                          relatedBy:NSLayoutRelationEqual
+                                                             toItem:viewContainDes attribute:NSLayoutAttributeBottom
+                                                         multiplier:1.0 constant:0]];
 
 
     /*add constraint for lbTitleViewAddImage with constraint Top (lbDes), left, right, height(30) */
 
     [self.view addConstraint:[NSLayoutConstraint constraintWithItem:lbTitleViewAddImage attribute:NSLayoutAttributeTop
                                                           relatedBy:NSLayoutRelationEqual
-                                                             toItem:lbDes attribute:NSLayoutAttributeBottom
+                                                             toItem:viewContainDes attribute:NSLayoutAttributeBottom
                                                          multiplier:1.0 constant:0]];
     
     [self.view addConstraint:[NSLayoutConstraint constraintWithItem:lbTitleViewAddImage
@@ -325,7 +364,7 @@
                                                                       options:0
                                                                       metrics:nil
                                                                         views:NSDictionaryOfVariableBindings(btnOk)]];
-    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:[btnOk(==70)]"
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:[btnOk(==100)]"
                                                                       options:0
                                                                       metrics:nil
                                                                         views:NSDictionaryOfVariableBindings(btnOk)]];
@@ -389,70 +428,18 @@
     NSData *bodyEncodedString = [encodedDictionary dataUsingEncoding:NSUTF8StringEncoding];
     
     dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
-        
-        NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:URL_CREATE_PICTURE] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:15];
-        
-        [request setHTTPBody:bodyEncodedString];
-        
-        [request setHTTPMethod:@"POST"];
-        
-        NSURLResponse *response;
-        NSError *err;
-        UIImage *imageResult;
-        NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&err];
-        if (!err) {
-            
-            NSDictionary *JSON = [NSJSONSerialization JSONObjectWithData:responseData options: NSJSONReadingMutableContainers error: &err];
-            ////NSLog(@"Ket qua tra ve: %@",JSON);
-            NSString *urlImageJson = [JSON objectForKey:@"image"];
-            
-            NSMutableString *urlImage = [[NSMutableString alloc] init];
-            [urlImage appendString:@"http://apipic.yome.vn"];
-            [urlImage appendString:[NSString stringWithFormat:@"%@",urlImageJson]];
-            //
-            NSURL *urlImgaeResult = [NSURL URLWithString:urlImage];
-            NSURLResponse* urlResponseImage;
-            NSError* error;
-            NSMutableURLRequest* urlRequestImage = [NSMutableURLRequest requestWithURL:urlImgaeResult cachePolicy:NSURLRequestReloadIgnoringCacheData timeoutInterval:15];
-            NSData* dataImageResult = [NSURLConnection sendSynchronousRequest:urlRequestImage returningResponse:&urlResponseImage error:&error];
-            imageResult = [[UIImage alloc] initWithData:dataImageResult];
-            
-            
-            
-        }
-        
+        UIImage *imageResult = [AppService createPictureWithUrlString:URL_CREATE_PICTURE bodyRequest:bodyEncodedString];
         
         dispatch_async(dispatch_get_main_queue(), ^{
             //đặt lại dữ liệu
-            for (int i = 1; i<= numberInputImg; i++) {
-//                UIButton* aButton = (UIButton*) [viewScroll viewWithTag:i];
-//                UIImage *imageBtn = [UIImage imageNamed:@"image_add_icon"];
-//                [aButton setBackgroundImage:imageBtn forState:UIControlStateNormal];
-                ////NSLog(@"da dat lai");
+            for (int i = 0; i< numberInputImg; i++) {
+                UIButton *button = (UIButton *) [self.collectionViewAddImage viewWithTag:2000+i];
+                [button setBackgroundImage:[UIImage imageNamed:@"addpicture.png"] forState:UIControlStateNormal];
             }
             
             for (int i = 0; i < numberInputImg; i++) {
                 [arrImage replaceObjectAtIndex:i withObject:[NSNull null]];
-                //NSLog(@"Dat lai du lieu");
             }
-//            if (viewResult != NULL) {
-//                for (int i = 11; i<countLine1+11; i++) {
-//                    //                    k++;
-//                    //                    ////NSLog(@"countline = %d k = %d",countLine1, k);
-//                    UITextField* atext = (UITextField*) [viewScroll viewWithTag:i];
-//                    ////NSLog(@"atext: %@",atext.text);
-//                    
-//                    [atext setText:@""];
-//                }
-//                UILabel* aLabelError = (UILabel*) [viewImageDescription viewWithTag:103];
-//                [aLabelError setText:@""];
-//                [self.navigationController pushViewController:viewResult animated:true];
-//                [alertViewCustom setHidden:true];
-//            }else{
-//                [alertViewCustom setHidden:true];
-//                UIAlertView *alertErr = [[UIAlertView alloc] initWithTitle:@"Cellular Data is turned off" message:@"Turn on cellular data or use Wi-Fi to access data" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
-//                [alertErr show];
-//            }
             ResultViewController *resultVC = [[ResultViewController alloc]initWithNibName:@"ResultViewController" bundle:nil];
             resultVC.imageResult = imageResult;
             [Helper removeDialogViewController:self];
@@ -481,7 +468,7 @@
     return heightView;
 }
 - (void)viewDidAppear:(BOOL)animated{
-    [self.scrollView setContentSize:CGSizeMake(self.viewContent.frame.size.width, 600+numberInputText*80)];
+    [self.scrollView setContentSize:CGSizeMake(self.viewContent.frame.size.width,imageView.frame.size.height+200+self.addImageView.frame.size.height+numberInputText*80)];
 }
 
 - (void)btnBack:(id) sender{
@@ -526,7 +513,9 @@
 -(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
     return CGSizeMake(heightImgAdd, heightImgAdd);
 }
-
+//- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
+//    return UIEdgeInsetsMake(0, 40, 0, 0);
+//}
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -549,6 +538,7 @@
     cell.lbMessage.text = [NSString stringWithFormat:@"Thông điệp %tu:",indexPath.row+1];
     cell.tvMessage.delegate = self;
     [cell.tvMessage setTag:(3000+indexPath.row)];
+    [cell.lbMessage setTextColor:MU_RGBA(108, 64, 184, 0.9)];
     
     return cell;
 }
@@ -728,20 +718,21 @@
 
 //
 - (void)_keyboardWillShowNotification:(NSNotification*)notification{
-    CGFloat hightOfset  = imageView.frame.size.height+120+self.addImageView.frame.size.height+indexTextViewChanging*75;
-    [self.scrollView setContentOffset:CGPointMake(0, hightOfset) animated:YES];
-    [self.scrollView setContentSize:CGSizeMake([UIScreen mainScreen].bounds.size.width, 600+numberInputText*80+215)];
+//    CGFloat hightOfset  = imageView.frame.size.height+70+self.addImageView.frame.size.height+indexTextViewChanging*75;
+//    CGFloat hightOfset =  [sender.superview convertRect:sender.frame toView:self.view];
+//    [self.scrollView setContentOffset:CGPointMake(0, hightOfset) animated:YES];
+//    [self.scrollView setContentSize:CGSizeMake([UIScreen mainScreen].bounds.size.width, imageView.frame.size.height+200+self.addImageView.frame.size.height+numberInputText*80+215)];
 }
 
 - (void)_keyboardWillHideNotification:(NSNotification*)notification{
-    [self.scrollView setContentSize:CGSizeMake([UIScreen mainScreen].bounds.size.width, 600+numberInputText*80)];
+    [self.scrollView setContentSize:CGSizeMake([UIScreen mainScreen].bounds.size.width,imageView.frame.size.height+200+self.addImageView.frame.size.height+numberInputText*80)];
 }
 - (BOOL)textViewShouldBeginEditing:(UITextView *)textView{
     indexTextViewChanging = textView.tag-3000;
-    CGFloat hightOfset  = imageView.frame.size.height+120+self.addImageView.frame.size.height+indexTextViewChanging*75;
+    CGFloat hightOfset  = [textView.superview convertRect:textView.frame toView:self.scrollView].origin.y-30 ;
 
     [self.scrollView setContentOffset:CGPointMake(0, hightOfset) animated:YES];
-    [self.scrollView setContentSize:CGSizeMake([UIScreen mainScreen].bounds.size.width, 600+numberInputText*80+215)];
+    [self.scrollView setContentSize:CGSizeMake([UIScreen mainScreen].bounds.size.width, imageView.frame.size.height+100+self.addImageView.frame.size.height+numberInputText*80+315)];
 
     return YES;
 }
@@ -752,20 +743,4 @@
     [Helper removeDialogViewController:self];
 }
 
-
-// giảm dung lượng ảnh
-- (UIImage *)compressImage:(UIImage *)imageToCompress
-{
-    int maxSize = 300000; // byte
-    NSData *data;
-    float k = 1;
-    //    do {
-    data = UIImageJPEGRepresentation(imageToCompress, k);
-    long long imageSize3   = data.length;
-    ////////////NSLog(@"size of image in KB: %f ", imageSize3/1024.0);
-    
-    k *= 0.5;
-    //    } while ([data length] > maxSize);
-    return [UIImage imageWithData:data];
-}
 @end

@@ -21,7 +21,7 @@
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YFr-YW-e3q">
                         <rect key="frame" x="0.0" y="42" width="320" height="1"/>
-                        <color key="backgroundColor" red="0.10588235294117647" green="0.61176470588235299" blue="0.87058823529411766" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.42352941176470588" green="0.61176470588235299" blue="0.87058823529411766" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="1" id="5yv-bk-5g5"/>
                         </constraints>
@@ -50,6 +50,7 @@
             <connections>
                 <outlet property="imageDes" destination="jV9-T6-TvQ" id="AYb-vv-brL"/>
                 <outlet property="lbTitle" destination="flh-oy-tDF" id="Jf9-Ph-qNj"/>
+                <outlet property="viewSpace" destination="YFr-YW-e3q" id="XWB-da-FCa"/>
             </connections>
             <point key="canvasLocation" x="220" y="260"/>
         </tableViewCell>

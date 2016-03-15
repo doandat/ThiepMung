@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BaseViewController.h"
 
 @class CropImageViewController;
 @protocol CropImageDelegate <NSObject>
@@ -16,7 +17,7 @@
 
 @end
 
-@interface CropImageViewController : UIViewController
+@interface CropImageViewController : BaseViewController
 @property (weak, nonatomic) UIImage *imageTest;
 @property (nonatomic) CGFloat sizeWidth;
 @property (nonatomic) CGFloat sizeHeight;

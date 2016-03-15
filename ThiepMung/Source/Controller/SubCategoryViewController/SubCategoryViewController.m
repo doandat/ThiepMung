@@ -22,12 +22,13 @@
     self.collectionView.dataSource = self;
     self.collectionView.delegate = self;
     [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"cellIdentifier"];
+    [self.collectionView setBackgroundColor:MU_RGBA(108, 64, 184, 0.7)];
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"btn_back.png"] style:UIBarButtonItemStylePlain target:self action:@selector(btnBack:)];
     [self.navigationController setNavigationBarHidden:NO];
     [self.navigationController.navigationBar setBarTintColor:[UIColor colorWithRed:108/255.0f green:46/255.0f blue:184/255.0f alpha:1.0f]];
     [self.navigationController.navigationBar setTintColor:[UIColor whiteColor]];
     self.navigationController.navigationBar.titleTextAttributes = [NSDictionary dictionaryWithObject:[UIColor whiteColor] forKey:NSForegroundColorAttributeName];
-    self.navigationItem.title = @"SUB CATEGORY";
+    self.navigationItem.title = _stringTitle;
 }
 - (void)btnBack:(id)sender{
     [self.navigationController dismissViewControllerAnimated:YES completion:nil];

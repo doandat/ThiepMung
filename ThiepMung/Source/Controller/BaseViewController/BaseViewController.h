@@ -13,8 +13,8 @@
 #import "Helper.h"
 #import "config.h"
 #import "AppService.h"
+#import "UIView+Toast.h"
 
 @interface BaseViewController : UIViewController
-- (UIImage *)imageWithColor:(UIColor *)color;
 
 @end

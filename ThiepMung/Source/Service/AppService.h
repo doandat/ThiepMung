@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 #import "config.h"
 #import "DCategory.h"
@@ -19,5 +20,5 @@
 + (NSDictionary*) getDicFromUrlString:(NSString*)urlString;
 + (NSArray *) getDCategoryFromUrlString:(NSString *)urlString;
 + (NSArray *) getEffectListWithCategoryId:(NSString *)dCategoryId;
-
++ (UIImage *) createPictureWithUrlString:(NSString *)urlString bodyRequest:(NSData *)bodyRequest;
 @end

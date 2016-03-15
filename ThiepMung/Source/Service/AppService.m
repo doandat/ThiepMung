@@ -103,6 +103,50 @@
     return arrDEffect;
 }
 
++ (UIImage *) createPictureWithUrlString:(NSString *)urlString bodyRequest:(NSData *)bodyRequest{
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:urlString] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:15];
+    
+    [request setHTTPBody:bodyRequest];
+    
+    [request setHTTPMethod:@"POST"];
+    
+    NSURLResponse *response;
+    NSError *err;
+    UIImage *imageResult;
+    NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&err];
+    if (!err) {
+        
+        NSDictionary *JSON = [NSJSONSerialization JSONObjectWithData:responseData options: NSJSONReadingMutableContainers error: &err];
+        ////NSLog(@"Ket qua tra ve: %@",JSON);
+        NSString *urlImageJson = [JSON objectForKey:@"image"];
+        
+        NSMutableString *urlImage = [[NSMutableString alloc] init];
+        [urlImage appendString:@"http://apipic.yome.vn"];
+        [urlImage appendString:[NSString stringWithFormat:@"%@",urlImageJson]];
+        //
+        NSURL *urlImgaeResult = [NSURL URLWithString:urlImage];
+        NSURLResponse* urlResponseImage;
+        NSError* error;
+        NSMutableURLRequest* urlRequestImage = [NSMutableURLRequest requestWithURL:urlImgaeResult cachePolicy:NSURLRequestReloadIgnoringCacheData timeoutInterval:15];
+        NSData* dataImageResult = [NSURLConnection sendSynchronousRequest:urlRequestImage returningResponse:&urlResponseImage error:&error];
+        imageResult = [[UIImage alloc] initWithData:dataImageResult];
+    }
+    return imageResult;
+}
 
-
+// giảm dung lượng ảnh
+- (UIImage *)compressImage:(UIImage *)imageToCompress
+{
+    int maxSize = 300000; // byte
+    NSData *data;
+    float k = 1;
+    //    do {
+    data = UIImageJPEGRepresentation(imageToCompress, k);
+    long long imageSize3   = data.length;
+    ////////////NSLog(@"size of image in KB: %f ", imageSize3/1024.0);
+    
+    k *= 0.5;
+    //    } while ([data length] > maxSize);
+    return [UIImage imageWithData:data];
+}
 @end

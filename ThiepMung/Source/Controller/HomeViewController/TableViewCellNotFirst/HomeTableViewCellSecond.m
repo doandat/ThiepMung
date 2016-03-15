@@ -37,11 +37,13 @@
     self.collectionView.delegate = self;
     self.collectionView.dataSource = self;
     [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"cellIdentifier"];
+    [self.collectionView setBackgroundColor:MU_RGBA(108, 64, 184, 0.7)];
+
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
     [flowLayout setScrollDirection:UICollectionViewScrollDirectionHorizontal];
     flowLayout.itemSize = CGSizeMake((_collectionView.frame.size.height-20)*4/3, _collectionView.frame.size.height);
-    flowLayout.minimumInteritemSpacing = 10;
-    flowLayout.minimumLineSpacing = 10;
+    flowLayout.minimumInteritemSpacing = 5;
+    flowLayout.minimumLineSpacing = 5;
     [self.collectionView setCollectionViewLayout:flowLayout];
     
 }

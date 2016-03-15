@@ -55,8 +55,8 @@
     [btnShare setFrame:CGRectMake(widthBounds/2-110, originYButonCrop,100 , 40)];
     [btnShare addTarget:self action:@selector(btnShare:) forControlEvents:UIControlEventTouchUpInside];
     [btnShare setTitle:@"Share" forState:UIControlStateNormal];
-    [btnShare setBackgroundColor:[UIColor colorWithRed:0/255.0f green:122/255.0f blue:204/255.0f alpha:0.7f]];
-    [btnShare setBackgroundImage:[self imageWithColor:[UIColor blackColor]] forState:UIControlStateHighlighted];
+    [btnShare setBackgroundColor:MU_RGB(108, 64, 184)];
+    [btnShare setBackgroundImage:[Helper imageWithColor:[UIColor blackColor]] forState:UIControlStateHighlighted];
     [btnShare setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     //    [crop1 setTitleColor:[UIColor blackColor] forState:UIControlStateHighlighted];
     btnShare.layer.cornerRadius = 10.0f;
@@ -68,8 +68,8 @@
     [btnSave setTitle:@"Save" forState:UIControlStateNormal];
     [btnSave setFrame:CGRectMake(widthBounds/2+10, originYButonCrop, 100 , 40)];
     [btnSave addTarget:self action:@selector(btnSave:) forControlEvents:UIControlEventTouchUpInside];
-    [btnSave setBackgroundColor:[UIColor colorWithRed:0/255.0f green:122/255.0f blue:204/255.0f alpha:0.7f]];
-    [btnSave setBackgroundImage:[self imageWithColor:[UIColor blackColor]] forState:UIControlStateHighlighted];
+    [btnSave setBackgroundColor:MU_RGB(108, 64, 184)];
+    [btnSave setBackgroundImage:[Helper imageWithColor:[UIColor blackColor]] forState:UIControlStateHighlighted];
     [btnSave setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     //    [cancel setTitleColor:[UIColor blackColor] forState:UIControlStateHighlighted];
     btnSave.layer.cornerRadius = 10.0f;
@@ -77,7 +77,7 @@
     btnSave.clipsToBounds = YES;
     [btnSave.titleLabel setFont:[UIFont systemFontOfSize:20]];
     
-    [self.view setBackgroundColor:[UIColor colorWithRed:255/255.0f green:255/255.0f blue:255/255.0f alpha:0.8f]];
+    [self.view setBackgroundColor:MU_RGBA(255, 255, 255, 0.8)];
     
     [self.view addSubview:imageView];
     [self.view addSubview:btnShare];
@@ -89,6 +89,9 @@
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         UIImageWriteToSavedPhotosAlbum(_imageResult, nil, nil, nil);
         NSLog(@"image saved");
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.view makeToast:@"Saved image"];
+        });
     });
 }
 
@@ -124,15 +127,5 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
