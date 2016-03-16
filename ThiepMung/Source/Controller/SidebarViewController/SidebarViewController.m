@@ -8,6 +8,7 @@
 
 #import "SidebarViewController.h"
 #import "MenuTableViewCell.h"
+#import "AboutViewController.h"
 
 @interface SidebarViewController (){
     NSArray *arrMenu;
@@ -65,7 +66,10 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+    if (indexPath.row ==2) {
+        AboutViewController *infoVC = [[AboutViewController alloc]initWithNibName:@"AboutViewController" bundle:nil];
+        [self presentViewController:infoVC animated:YES completion:nil];
+    }
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{

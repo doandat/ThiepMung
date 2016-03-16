@@ -121,6 +121,7 @@
     /*config tableview view*/
     self.tableViewAddText.dataSource = self;
     self.tableViewAddText.delegate = self;
+    self.tableViewAddText.scrollEnabled = NO;
     [self.tableViewAddText reloadData];
     [self.tableViewAddText registerNib:[UINib nibWithNibName:@"AddTextTableViewCell" bundle:nil] forCellReuseIdentifier:@"AddTextTableViewCellIdentifier"];
     self.tableViewAddText.allowsSelection = NO;
@@ -390,7 +391,7 @@
     //set text cho các dòng
     for (int i = 0; i< numberInputText; i++) {
         AddTextTableViewCell *cell =(AddTextTableViewCell *) [self.tableViewAddText cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
-        if (([[(DInputLine*)[_dEffect.input_line objectAtIndex:i] require] isEqualToString:@"true"])&& ([cell.tvMessage.text isEqual: @""])){
+        if (([[(DInputLine*)[_dEffect.input_line objectAtIndex:i] require] isEqualToString:@"true"])&& (([cell.tvMessage.text isEqual: @""])|| ([cell.tvMessage.text isEqual:[(DInputLine*)[_dEffect.input_line objectAtIndex:i] title]]))){
             MessageViewController *messageVC = [[MessageViewController alloc]initWithNibName:@"MessageViewController" bundle:nil];
             messageVC.titleText = @"Message";
             messageVC.message = @"You must fill input line. Please fill now";
@@ -399,7 +400,11 @@
 
             return;
         }else{
-            [_params setObject:cell.tvMessage.text forKey:arrLine[i]];
+            if ([cell.tvMessage.text isEqualToString:[(DInputLine*)[_dEffect.input_line objectAtIndex:i] title]]) {
+                [_params setObject:@"" forKey:arrLine[i]];
+            }else{
+                [_params setObject:cell.tvMessage.text forKey:arrLine[i]];
+            }
         }
     }
     
@@ -530,13 +535,17 @@
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    DInputLine *inputLine = [_dEffect.input_line objectAtIndex:indexPath.row];
     static NSString *CellIdentifier = @"AddTextTableViewCellIdentifier";
+    
     AddTextTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
         cell = [[AddTextTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     cell.lbMessage.text = [NSString stringWithFormat:@"Thông điệp %tu:",indexPath.row+1];
     cell.tvMessage.delegate = self;
+    cell.tvMessage.text = inputLine.title;
+    cell.tvMessage.textColor = [UIColor grayColor];
     [cell.tvMessage setTag:(3000+indexPath.row)];
     [cell.lbMessage setTextColor:MU_RGBA(108, 64, 184, 0.9)];
     
@@ -552,17 +561,6 @@
     return 75.0f;
 }
 
-#pragma mark config keyboard
-
-- (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text {
-    
-    if([text isEqualToString:@"\n"]) {
-        [textView resignFirstResponder];
-        return NO;
-    }
-    
-    return YES;
-}
 
 - (void)btnAddImage:(id)sender{
     if (btnAddImagePopoverController == nil)
@@ -729,11 +727,46 @@
 }
 - (BOOL)textViewShouldBeginEditing:(UITextView *)textView{
     indexTextViewChanging = textView.tag-3000;
+    DInputLine *inputLine = [_dEffect.input_line objectAtIndex:indexTextViewChanging];
+    if ([textView.text isEqualToString:inputLine.title]) {
+        textView.text = @"";
+        textView.textColor = [UIColor blackColor];
+    }
+
     CGFloat hightOfset  = [textView.superview convertRect:textView.frame toView:self.scrollView].origin.y-30 ;
 
     [self.scrollView setContentOffset:CGPointMake(0, hightOfset) animated:YES];
-    [self.scrollView setContentSize:CGSizeMake([UIScreen mainScreen].bounds.size.width, imageView.frame.size.height+100+self.addImageView.frame.size.height+numberInputText*80+315)];
+    [self.scrollView setContentSize:CGSizeMake([UIScreen mainScreen].bounds.size.width, hightOfset+[UIScreen mainScreen].bounds.size.height)];
 
+    return YES;
+}
+-(BOOL)textViewShouldEndEditing:(UITextView *)textView{
+    indexTextViewChanging = textView.tag-3000;
+    DInputLine *inputLine = [_dEffect.input_line objectAtIndex:indexTextViewChanging];
+    if ([textView.text isEqualToString:@""]) {
+        textView.text = inputLine.title;
+        textView.textColor = [UIColor grayColor];
+    }
+    return YES;
+}
+
+#pragma mark config keyboard
+
+- (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text {
+    
+    if([text isEqualToString:@"\n"]) {
+        indexTextViewChanging = textView.tag-3000;
+        if (indexTextViewChanging <numberInputText-1) {
+            NSIndexPath *indexPath = [NSIndexPath indexPathForRow:indexTextViewChanging+1 inSection:0];
+            UITableViewCell *cell = [self.tableViewAddText cellForRowAtIndexPath:indexPath];
+            UITextView *textView1 =(UITextView *)[cell viewWithTag:indexTextViewChanging+3001];
+            [textView1 becomeFirstResponder];
+        }else{
+            [textView resignFirstResponder];
+        }
+        return NO;
+    }
+    
     return YES;
 }
 

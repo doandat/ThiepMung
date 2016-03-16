@@ -17,6 +17,7 @@
 @interface HomeViewController (){
     NSMutableArray *arrDataSource;
     NSMutableArray *arrDCategory;
+    NSMutableArray *arrDataHot;
 }
 
 @end
@@ -59,7 +60,11 @@
             }
             
         }
+        
         NSLog(@"aaa:%tu",arrDataSource.count);
+        
+        arrDataHot =[NSMutableArray arrayWithArray:[AppService getEffectListHot]];
+        
         dispatch_async(dispatch_get_main_queue(), ^{
             //            [self.collectionView reloadItemsAtIndexPaths:[self.collectionView indexPathsForVisibleItems]];
             [Helper removeDialogViewController:[RootViewController sharedInstance]];
@@ -99,6 +104,7 @@
             NSArray *topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"HomeTableViewCellFirst" owner:self options:nil];
             cell = [topLevelObjects objectAtIndex:0];
         }
+        cell.homeCellFirstVC.arrDataSource = arrDataHot;
         [self addChildViewController:cell.homeCellFirstVC];
         [cell.homeCellFirstVC didMoveToParentViewController:self];
 //        cell.userInteractionEnabled = NO;

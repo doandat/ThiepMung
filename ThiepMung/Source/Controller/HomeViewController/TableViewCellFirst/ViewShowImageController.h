@@ -11,6 +11,7 @@
 @interface ViewShowImageController : BaseViewController
 
 @property (assign,nonatomic) NSInteger index;
+@property (nonatomic) DEffect *dEffect;
 @property (weak, nonatomic) IBOutlet UIImageView *imageViewContent;
 
 @end

@@ -56,7 +56,7 @@
                 DEffect *dEffect = [DEffect new];
                 NSDictionary *dicInputLine = [dicDEffect1 objectForKey:k_input_line];
                 NSDictionary *dicInputPic = [dicDEffect1 objectForKey:k_input_picture];
-                NSLog(@"dicInputPic:%@",dicInputPic);
+//                NSLog(@"dicInputPic:%@",dicInputPic);
                 dEffect.dEffect_id = [dicDEffect1 objectForKey:k_id];
                 dEffect.label = [dicDEffect1 objectForKey:k_label];
                 dEffect.effectDescription = [dicDEffect1 objectForKey:k_description];
@@ -87,6 +87,63 @@
                             continue;
                         }
 
+                        dInputPic.require = [dicInputPic1 objectForKey:k_require];
+                        dInputPic.width = [dicInputPic1 objectForKey:k_width];
+                        dInputPic.height = [dicInputPic1 objectForKey:k_height];
+                        [arrInputPic addObject:dInputPic];
+                    }
+                    dEffect.input_pic = arrInputPic;
+                }
+                
+                [arrDEffect addObject:dEffect];
+                
+            }
+        }
+    }
+    return arrDEffect;
+}
+
++ (NSArray *) getEffectListHot{
+    NSMutableArray *arrDEffect = [[NSMutableArray alloc]init];
+    NSDictionary *dicDEffect = [self getDicFromUrlString:[NSString stringWithFormat:URL_GET_HOT_LIST]];
+    if (dicDEffect) {
+        NSDictionary *dicDEffectList = [dicDEffect objectForKey:k_effect_list];
+        if (dicDEffectList) {
+            for (NSDictionary *dicDEffect1 in dicDEffectList) {
+                DEffect *dEffect = [DEffect new];
+                NSDictionary *dicInputLine = [dicDEffect1 objectForKey:k_input_line];
+                NSDictionary *dicInputPic = [dicDEffect1 objectForKey:k_input_picture];
+//                NSLog(@"dicInputPic:%@",dicInputPic);
+                dEffect.dEffect_id = [dicDEffect1 objectForKey:k_id];
+                dEffect.label = [dicDEffect1 objectForKey:k_label];
+                dEffect.effectDescription = [dicDEffect1 objectForKey:k_description];
+                dEffect.function = [dicDEffect1 objectForKey:k_function];
+                dEffect.avatar = [dicDEffect1 objectForKey:k_avatar];
+                if (dicInputLine) {
+                    NSMutableArray *arrInputLine = [[NSMutableArray alloc]init];
+                    for (NSDictionary *dicInputLine1 in dicInputLine) {
+                        DInputLine *dInputLine = [DInputLine new];
+                        dInputLine.type = [dicInputLine1 objectForKey:k_type];
+                        if ([dInputLine.type isEqualToString:@""]) {
+                            continue;
+                        }
+                        dInputLine.title = [dicInputLine1 objectForKey:k_title];
+                        dInputLine.require = [dicInputLine1 objectForKey:k_require];
+                        [arrInputLine addObject:dInputLine];
+                    }
+                    dEffect.input_line = arrInputLine;
+                }
+                
+                if (dicInputPic) {
+                    NSMutableArray *arrInputPic = [[NSMutableArray alloc]init];
+                    for (NSDictionary *dicInputPic1 in dicInputPic) {
+                        DInputPic *dInputPic = [DInputPic new];
+                        dInputPic.type = [dicInputPic1 objectForKey:k_type];
+                        NSLog(@"");
+                        if ([dInputPic.type isEqualToString:@""]) {
+                            continue;
+                        }
+                        
                         dInputPic.require = [dicInputPic1 objectForKey:k_require];
                         dInputPic.width = [dicInputPic1 objectForKey:k_width];
                         dInputPic.height = [dicInputPic1 objectForKey:k_height];

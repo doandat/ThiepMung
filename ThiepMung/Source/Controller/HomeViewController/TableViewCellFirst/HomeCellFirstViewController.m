@@ -9,11 +9,12 @@
 #import "HomeCellFirstViewController.h"
 #import "ViewShowImageController.h"
 
-@interface HomeCellFirstViewController (){
+@interface HomeCellFirstViewController ()<UIPageViewControllerDataSource,UIPageViewControllerDelegate>{
     UIView *viewTitle;
     UILabel *lbTitle;
     NSInteger indexPendingView;
     NSArray *arrTitleFake;
+    
 }
 
 @end
@@ -23,6 +24,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     NSLog(@"viewDidLoad HomeCellFirstViewController");
+    
+
+}
+- (void)viewWillAppear:(BOOL)animated{
+    NSLog(@"viewWillAppear HomeCellFirstViewController");
     self.pageController = [[UIPageViewController alloc] initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];
     
     self.pageController.dataSource = self;
@@ -40,29 +46,24 @@
     [self.viewContainPage addSubview:[self.pageController view]];
     NSLog(@"viewContainPage:%lu",(unsigned long)_viewContainPage.subviews.count);
     [self.pageController didMoveToParentViewController:self];
-
+    
     viewTitle = [[UIView alloc]initWithFrame:CGRectMake(0, self.viewContainPage.frame.size.height-60, 200, 30)];
     
     [viewTitle setBackgroundColor:[UIColor colorWithRed:176/255.0f green:150/255.0f blue:217/255.0f alpha:1.0f]];
     
     viewTitle.autoresizingMask = (UIViewAutoresizingFlexibleTopMargin|UIViewAutoresizingFlexibleBottomMargin |UIViewAutoresizingFlexibleLeftMargin|UIViewAutoresizingFlexibleRightMargin|UIViewAutoresizingFlexibleWidth|
-                                             UIViewAutoresizingFlexibleHeight);
+                                  UIViewAutoresizingFlexibleHeight);
     lbTitle = [[UILabel alloc]initWithFrame:CGRectMake(10, 0, viewTitle.frame.size.width-10, viewTitle.frame.size.height)];
     [lbTitle setText:@"Khung anh phong thuy"];
     lbTitle.autoresizingMask = (UIViewAutoresizingFlexibleTopMargin|UIViewAutoresizingFlexibleBottomMargin |UIViewAutoresizingFlexibleLeftMargin|UIViewAutoresizingFlexibleRightMargin|UIViewAutoresizingFlexibleWidth|
-                                  UIViewAutoresizingFlexibleHeight);
+                                UIViewAutoresizingFlexibleHeight);
     [viewTitle addSubview:lbTitle];
-
+    
     [self.viewContainPage addSubview:viewTitle];
-
+    
     self.pageControl.numberOfPages = 5;
     [self.viewContainPage bringSubviewToFront:self.pageControl];
     arrTitleFake = [NSArray arrayWithObjects:@"Khung ảnh phong thuỷ",@"KHung ảnh sinh nhật màu hồng",@"Cover facebook",@"Khung ảnh giọt nước",@"Khung ảnh điện thoại", nil];
-
-}
-- (void)viewWillAppear:(BOOL)animated{
-    NSLog(@"viewWillAppear HomeCellFirstViewController");
-
     
 }
 - (void)didReceiveMemoryWarning {
@@ -82,6 +83,7 @@
     // Assuming you have SomePageViewController.xib
     ViewShowImageController *newController = [[ViewShowImageController alloc] initWithNibName:@"ViewShowImageController" bundle:nil];
     newController.index = index;
+    newController.dEffect = [_arrDataSource objectAtIndex:index];
 //    newController.date = [Helper calculateDateFromDate:currentDay offset:index-3];
     NSLog(@"viewControllerAtIndex:%i---%@",index,newController);
     return newController;

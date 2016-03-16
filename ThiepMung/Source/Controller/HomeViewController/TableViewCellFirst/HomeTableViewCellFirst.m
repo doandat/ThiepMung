@@ -16,6 +16,7 @@
     homeCellFirstVC = [[HomeCellFirstViewController alloc]initWithNibName:@"HomeCellFirstViewController" bundle:nil];
     homeCellFirstVC.view.autoresizingMask = (UIViewAutoresizingFlexibleTopMargin|UIViewAutoresizingFlexibleBottomMargin |UIViewAutoresizingFlexibleLeftMargin|UIViewAutoresizingFlexibleRightMargin|UIViewAutoresizingFlexibleWidth|
                                              UIViewAutoresizingFlexibleHeight);
+//    homeCellFirstVC.arrDataSource = self.arrDataHot;
 //    [self addChildViewController:self.homeCellFirstVC];
     [self.viewContent addSubview:homeCellFirstVC.view];
 //    [self.homeCellFirstVC didMoveToParentViewController:self];

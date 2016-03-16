@@ -1,28 +1,23 @@
 //
-//  ViewShowImageController.m
-//  ThiepMung
+//  AboutViewController.m
+//  Weather
 //
-//  Created by DatDV on 3/4/16.
+//  Created by TaiND on 2/25/16.
 //  Copyright (c) 2016 Amobi. All rights reserved.
 //
 
-#import "ViewShowImageController.h"
+#import "AboutViewController.h"
 
-@interface ViewShowImageController ()
+@interface AboutViewController ()
 
 @end
 
-@implementation ViewShowImageController
+@implementation AboutViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    
-}
-
--(void)viewWillAppear:(BOOL)animated{
-    [self.imageViewContent setImage:[UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:_dEffect.avatar]]]];
-
+    [self.navigationController setNavigationBarHidden:YES];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -40,4 +35,7 @@
 }
 */
 
+- (IBAction)btnBack:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 @end

@@ -10,6 +10,8 @@
 #import "HomeCellFirstViewController.h"
 
 @interface HomeTableViewCellFirst : UITableViewCell
+
+@property (nonatomic) NSArray *arrDataHot;
 @property (weak, nonatomic) IBOutlet UIView *viewContent;
 @property (nonatomic) HomeCellFirstViewController *homeCellFirstVC;
 @end

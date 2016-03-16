@@ -20,5 +20,6 @@
 + (NSDictionary*) getDicFromUrlString:(NSString*)urlString;
 + (NSArray *) getDCategoryFromUrlString:(NSString *)urlString;
 + (NSArray *) getEffectListWithCategoryId:(NSString *)dCategoryId;
++ (NSArray *) getEffectListHot;
 + (UIImage *) createPictureWithUrlString:(NSString *)urlString bodyRequest:(NSData *)bodyRequest;
 @end

@@ -8,9 +8,12 @@
 
 #import "BaseViewController.h"
 
-@interface HomeCellFirstViewController : BaseViewController<UIPageViewControllerDataSource,UIPageViewControllerDelegate>
+@interface HomeCellFirstViewController : BaseViewController
 
 @property (strong, nonatomic) UIPageViewController *pageController;
+@property (nonatomic) NSArray *arrDataSource;
+
+
 @property (nonatomic) IBOutlet UIView *viewContainPage;
 @property (weak, nonatomic) IBOutlet UIPageControl *pageControl;
 @property (weak, nonatomic) IBOutlet UILabel *lbDesciption;

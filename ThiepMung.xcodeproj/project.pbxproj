@@ -157,6 +157,14 @@
 		D90B597A1C966DFE000640B0 /* SubCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D90B59771C966DFE000640B0 /* SubCategoryViewController.m */; };
 		D90B597B1C966DFE000640B0 /* SubCategoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D90B59781C966DFE000640B0 /* SubCategoryViewController.xib */; };
 		D90B597C1C966DFE000640B0 /* SubCategoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D90B59781C966DFE000640B0 /* SubCategoryViewController.xib */; };
+		D90CB4F91C991045008D051F /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D90CB4F71C991045008D051F /* AboutViewController.m */; };
+		D90CB4FA1C991045008D051F /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D90CB4F71C991045008D051F /* AboutViewController.m */; };
+		D90CB4FB1C991045008D051F /* AboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D90CB4F81C991045008D051F /* AboutViewController.xib */; };
+		D90CB4FC1C991045008D051F /* AboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D90CB4F81C991045008D051F /* AboutViewController.xib */; };
+		D90CB4FE1C991085008D051F /* ava.png in Resources */ = {isa = PBXBuildFile; fileRef = D90CB4FD1C991085008D051F /* ava.png */; };
+		D90CB4FF1C991085008D051F /* ava.png in Resources */ = {isa = PBXBuildFile; fileRef = D90CB4FD1C991085008D051F /* ava.png */; };
+		D90CB5011C9910DC008D051F /* image.png in Resources */ = {isa = PBXBuildFile; fileRef = D90CB5001C9910DC008D051F /* image.png */; };
+		D90CB5021C9910DC008D051F /* image.png in Resources */ = {isa = PBXBuildFile; fileRef = D90CB5001C9910DC008D051F /* image.png */; };
 		D90D3F8F1C97A19C00252C18 /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = D90D3F8E1C97A19C00252C18 /* UIView+Toast.m */; };
 		D90D3F901C97A19C00252C18 /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = D90D3F8E1C97A19C00252C18 /* UIView+Toast.m */; };
 		D90D3FA11C97A23A00252C18 /* ActivityIndicatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D90D3F941C97A23A00252C18 /* ActivityIndicatorViewController.m */; };
@@ -335,6 +343,11 @@
 		D90B59761C966DFE000640B0 /* SubCategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubCategoryViewController.h; sourceTree = "<group>"; };
 		D90B59771C966DFE000640B0 /* SubCategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubCategoryViewController.m; sourceTree = "<group>"; };
 		D90B59781C966DFE000640B0 /* SubCategoryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SubCategoryViewController.xib; sourceTree = "<group>"; };
+		D90CB4F61C991045008D051F /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
+		D90CB4F71C991045008D051F /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
+		D90CB4F81C991045008D051F /* AboutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutViewController.xib; sourceTree = "<group>"; };
+		D90CB4FD1C991085008D051F /* ava.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ava.png; sourceTree = "<group>"; };
+		D90CB5001C9910DC008D051F /* image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image.png; sourceTree = "<group>"; };
 		D90D3F8D1C97A19C00252C18 /* UIView+Toast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Toast.h"; sourceTree = "<group>"; };
 		D90D3F8E1C97A19C00252C18 /* UIView+Toast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Toast.m"; sourceTree = "<group>"; };
 		D90D3F931C97A23A00252C18 /* ActivityIndicatorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityIndicatorViewController.h; sourceTree = "<group>"; };
@@ -411,6 +424,7 @@
 		B05B06F11C930A6B0063DAD2 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				D90CB4F51C991045008D051F /* AboutViewController */,
 				B05B06FA1C930A6B0063DAD2 /* BaseViewController */,
 				B05B072F1C930A6B0063DAD2 /* RootViewController */,
 				D90D3F911C97A23900252C18 /* SupportViewController */,
@@ -718,6 +732,16 @@
 			path = SubCategoryViewController;
 			sourceTree = "<group>";
 		};
+		D90CB4F51C991045008D051F /* AboutViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D90CB4F61C991045008D051F /* AboutViewController.h */,
+				D90CB4F71C991045008D051F /* AboutViewController.m */,
+				D90CB4F81C991045008D051F /* AboutViewController.xib */,
+			);
+			path = AboutViewController;
+			sourceTree = "<group>";
+		};
 		D90D3F8C1C97A19C00252C18 /* Toast */ = {
 			isa = PBXGroup;
 			children = (
@@ -837,6 +861,8 @@
 		D974BE811C87E4B60005938A /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				D90CB5001C9910DC008D051F /* image.png */,
+				D90CB4FD1C991085008D051F /* ava.png */,
 				D9E789171C927EF6008A81D9 /* close.png */,
 				D9E789181C927EF6008A81D9 /* close@2x.png */,
 				D9E789191C927EF6008A81D9 /* close@3x.png */,
@@ -938,6 +964,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D90CB4FE1C991085008D051F /* ava.png in Resources */,
 				B05B07921C930A6B0063DAD2 /* CustomNavigationBar.xib in Resources */,
 				D9E7891E1C927EF6008A81D9 /* close@3x.png in Resources */,
 				B05B07CE1C930A6B0063DAD2 /* SidebarViewController.xib in Resources */,
@@ -960,6 +987,8 @@
 				D90B55E71C96514E000640B0 /* HomeTableViewCellFirst.xib in Resources */,
 				B05B08001C930A6B0063DAD2 /* LaunchScreen.xib in Resources */,
 				B05B077C1C930A6B0063DAD2 /* Info.plist in Resources */,
+				D90CB5011C9910DC008D051F /* image.png in Resources */,
+				D90CB4FB1C991045008D051F /* AboutViewController.xib in Resources */,
 				D90B55EF1C96514E000640B0 /* HomeTableViewCellSecond.xib in Resources */,
 				B05B07C61C930A6B0063DAD2 /* RootViewController.xib in Resources */,
 				D9E788F81C925F7F008A81D9 /* camera@2x.png in Resources */,
@@ -988,6 +1017,7 @@
 			files = (
 				D9E788FD1C925F7F008A81D9 /* library@2x.png in Resources */,
 				D90B55F01C96514E000640B0 /* HomeTableViewCellSecond.xib in Resources */,
+				D90CB4FC1C991045008D051F /* AboutViewController.xib in Resources */,
 				B05B07931C930A6B0063DAD2 /* CustomNavigationBar.xib in Resources */,
 				D904C92D1C8D128300E349E6 /* btn_back@2x.png in Resources */,
 				B05B077D1C930A6B0063DAD2 /* Info.plist in Resources */,
@@ -1003,6 +1033,8 @@
 				D90B55E41C96514E000640B0 /* HomeCellFirstViewController.xib in Resources */,
 				D9E788F91C925F7F008A81D9 /* camera@2x.png in Resources */,
 				B05B07C71C930A6B0063DAD2 /* RootViewController.xib in Resources */,
+				D90CB5021C9910DC008D051F /* image.png in Resources */,
+				D90CB4FF1C991085008D051F /* ava.png in Resources */,
 				D904C92B1C8D128300E349E6 /* btn_back.png in Resources */,
 				B05B07CB1C930A6B0063DAD2 /* MenuTableViewCell.xib in Resources */,
 				D90B55E81C96514E000640B0 /* HomeTableViewCellFirst.xib in Resources */,
@@ -1077,6 +1109,7 @@
 				B05B07F61C930A6B0063DAD2 /* UIImageView+WebCache.m in Sources */,
 				B05B07B81C930A6B0063DAD2 /* InfoViewController.m in Sources */,
 				D90B55E51C96514E000640B0 /* HomeTableViewCellFirst.m in Sources */,
+				D90CB4F91C991045008D051F /* AboutViewController.m in Sources */,
 				B05B07EE1C930A6B0063DAD2 /* UIImage+GIF.m in Sources */,
 				B05B07E41C930A6B0063DAD2 /* SDWebImageDownloader.m in Sources */,
 				B05B07801C930A6B0063DAD2 /* AddImageTextViewController.m in Sources */,
@@ -1107,6 +1140,7 @@
 				B05B07811C930A6B0063DAD2 /* AddImageTextViewController.m in Sources */,
 				D90B55EA1C96514E000640B0 /* ViewShowImageController.m in Sources */,
 				B05B07D51C930A6B0063DAD2 /* ItemCollection.m in Sources */,
+				D90CB4FA1C991045008D051F /* AboutViewController.m in Sources */,
 				B05B07B91C930A6B0063DAD2 /* InfoViewController.m in Sources */,
 				B05B07D11C930A6B0063DAD2 /* Global.m in Sources */,
 				B05B07891C930A6B0063DAD2 /* BaseViewController.m in Sources */,
