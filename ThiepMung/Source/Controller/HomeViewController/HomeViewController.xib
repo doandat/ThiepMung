@@ -9,12 +9,14 @@
             <connections>
                 <outlet property="homeCellFirst" destination="2ol-UN-j73" id="aeX-KH-JLw"/>
                 <outlet property="lbDesciption" destination="hwj-Qs-07q" id="PgJ-o7-dKW"/>
+                <outlet property="lbTitle" destination="hDK-kS-3wg" id="4Gw-Uz-vl8"/>
                 <outlet property="navigationBar" destination="zbU-y7-ekV" id="ybD-eF-Ijw"/>
                 <outlet property="pageControl" destination="ocg-Gh-h29" id="ihz-Bc-7xE"/>
                 <outlet property="tableView" destination="Ukj-eY-05k" id="cpI-o1-Mot"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="viewContain" destination="e3d-V3-CZp" id="rbv-Mf-8LE"/>
                 <outlet property="viewContainPage" destination="ShL-gN-0zf" id="hU1-jl-i8d"/>
+                <outlet property="viewTitle" destination="TfO-JY-Ylc" id="jht-zp-W1g"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -75,9 +77,31 @@
                                 <constraint firstAttribute="height" constant="37" id="rsZ-qz-Pt0"/>
                             </constraints>
                         </pageControl>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TfO-JY-Ylc">
+                            <rect key="frame" x="0.0" y="145" width="205" height="35"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hDK-kS-3wg">
+                                    <rect key="frame" x="0.0" y="0.0" width="205" height="35"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="35" id="4Sp-NL-RWE"/>
+                                <constraint firstAttribute="bottom" secondItem="hDK-kS-3wg" secondAttribute="bottom" id="EqQ-9x-3Oz"/>
+                                <constraint firstItem="hDK-kS-3wg" firstAttribute="leading" secondItem="TfO-JY-Ylc" secondAttribute="leading" id="LTc-3M-Zcr"/>
+                                <constraint firstAttribute="trailing" secondItem="hDK-kS-3wg" secondAttribute="trailing" id="XGm-gc-fmM"/>
+                                <constraint firstAttribute="width" constant="205" id="cGe-fq-noQ"/>
+                                <constraint firstItem="hDK-kS-3wg" firstAttribute="top" secondItem="TfO-JY-Ylc" secondAttribute="top" id="r2h-2g-qTX"/>
+                            </constraints>
+                        </view>
                     </subviews>
                     <color key="backgroundColor" red="0.26274509800000001" green="0.65490196079999996" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
+                        <constraint firstAttribute="bottom" secondItem="TfO-JY-Ylc" secondAttribute="bottom" constant="33" id="LxO-0K-jO2"/>
+                        <constraint firstItem="TfO-JY-Ylc" firstAttribute="leading" secondItem="ShL-gN-0zf" secondAttribute="leading" id="OyV-7e-E28"/>
                         <constraint firstAttribute="trailing" secondItem="ocg-Gh-h29" secondAttribute="trailing" id="R7Y-kf-ZtS"/>
                         <constraint firstItem="ocg-Gh-h29" firstAttribute="leading" secondItem="ShL-gN-0zf" secondAttribute="leading" id="gKe-rs-R3K"/>
                         <constraint firstAttribute="bottom" secondItem="ocg-Gh-h29" secondAttribute="bottom" id="qI6-fk-mfI"/>

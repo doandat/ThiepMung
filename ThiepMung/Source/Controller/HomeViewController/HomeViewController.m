@@ -18,8 +18,6 @@
     NSMutableArray *arrDataSource;
     NSMutableArray *arrDCategory;
     NSMutableArray *arrDataHot;
-    UIView *viewTitle;
-    UILabel *lbTitle;
     NSInteger indexPendingView;
 }
 @property (strong, nonatomic) IBOutlet UIView *homeCellFirst;
@@ -27,6 +25,8 @@
 @property (nonatomic) IBOutlet UIView *viewContainPage;
 @property (weak, nonatomic) IBOutlet UIPageControl *pageControl;
 @property (weak, nonatomic) IBOutlet UILabel *lbDesciption;
+@property (weak, nonatomic) IBOutlet UIView *viewTitle;
+@property (weak, nonatomic) IBOutlet UILabel *lbTitle;
 
 @end
 
@@ -86,19 +86,8 @@ static HomeViewController *sharedInstance;
     NSLog(@"viewContainPage:%lu",(unsigned long)_viewContainPage.subviews.count);
     [self.pageController didMoveToParentViewController:self];
     
-    viewTitle = [[UIView alloc]initWithFrame:CGRectMake(0, self.viewContainPage.frame.size.height-60, 200, 30)];
     
-    [viewTitle setBackgroundColor:[UIColor colorWithRed:176/255.0f green:150/255.0f blue:217/255.0f alpha:1.0f]];
-    
-    viewTitle.autoresizingMask = (UIViewAutoresizingFlexibleTopMargin|UIViewAutoresizingFlexibleBottomMargin |UIViewAutoresizingFlexibleLeftMargin|UIViewAutoresizingFlexibleRightMargin|UIViewAutoresizingFlexibleWidth|
-                                  UIViewAutoresizingFlexibleHeight);
-    lbTitle = [[UILabel alloc]initWithFrame:CGRectMake(10, 0, viewTitle.frame.size.width-10, viewTitle.frame.size.height)];
-    [lbTitle setText:@"Khung anh phong thuy"];
-    lbTitle.autoresizingMask = (UIViewAutoresizingFlexibleTopMargin|UIViewAutoresizingFlexibleBottomMargin |UIViewAutoresizingFlexibleLeftMargin|UIViewAutoresizingFlexibleRightMargin|UIViewAutoresizingFlexibleWidth|
-                                UIViewAutoresizingFlexibleHeight);
-    [viewTitle addSubview:lbTitle];
-    
-//    [self.viewContainPage addSubview:viewTitle];
+    [_viewTitle setBackgroundColor:[UIColor colorWithRed:176/255.0f green:150/255.0f blue:217/255.0f alpha:1.0f]];
     
     
     
@@ -127,10 +116,11 @@ static HomeViewController *sharedInstance;
             
             NSArray *viewControllers = [NSArray arrayWithObject:initialViewController];
             [_lbDesciption setText:[(DEffect *)[arrDataHot objectAtIndex:indexPendingView] effectDescription]];
-
+            [_lbTitle setText:[(DEffect *)[arrDataHot objectAtIndex:indexPendingView] label]];
             [self.pageController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
             self.pageControl.numberOfPages = arrDataHot.count;
             [self.viewContainPage bringSubviewToFront:self.pageControl];
+            [self.viewContainPage bringSubviewToFront:self.viewTitle];
 
             [self.tableView reloadData];
         });
@@ -275,7 +265,7 @@ static HomeViewController *sharedInstance;
 - (void)pageViewController:(UIPageViewController *)pageViewController didFinishAnimating:(BOOL)finished previousViewControllers:(NSArray *)previousViewControllers transitionCompleted:(BOOL)completed{
     if (completed) {
         [self.pageControl setCurrentPage:indexPendingView];
-//        [lbTitle setText:[arrTitleFake objectAtIndex:indexPendingView]];
+        [_lbTitle setText:[(DEffect *)[arrDataHot objectAtIndex:indexPendingView] label]];
         [_lbDesciption setText:[(DEffect *)[arrDataHot objectAtIndex:indexPendingView] effectDescription]];
     }
     
