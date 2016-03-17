@@ -13,5 +13,6 @@
 @property (assign,nonatomic) NSInteger index;
 @property (nonatomic) DEffect *dEffect;
 @property (weak, nonatomic) IBOutlet UIImageView *imageViewContent;
+@property (weak, nonatomic) IBOutlet UIButton *btnFull;
 
 @end

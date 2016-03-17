@@ -17,6 +17,9 @@
 
 @interface HomeViewController : BaseViewController<UITableViewDelegate,UITableViewDataSource,HomeViewControllerDelegate>
 
++(HomeViewController*)sharedInstance;
+
+
 @property (weak, nonatomic) IBOutlet UIView *viewContain;
 
 @property (weak, nonatomic) IBOutlet CustomNavigationBar *navigationBar;
@@ -24,5 +27,7 @@
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @property (nonatomic, weak) id<HomeViewControllerDelegate> delegate;
+
+
 
 @end

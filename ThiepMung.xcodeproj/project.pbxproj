@@ -131,14 +131,6 @@
 		D904C9581C8D3E9200E349E6 /* khunganhmua.png in Resources */ = {isa = PBXBuildFile; fileRef = D904C9561C8D3E9200E349E6 /* khunganhmua.png */; };
 		D90797DF1C8936BD0088F3C5 /* placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = D90797DE1C8936BD0088F3C5 /* placeholder.png */; };
 		D90797E01C8936BD0088F3C5 /* placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = D90797DE1C8936BD0088F3C5 /* placeholder.png */; };
-		D90B55E11C96514E000640B0 /* HomeCellFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D90B55D21C96514E000640B0 /* HomeCellFirstViewController.m */; };
-		D90B55E21C96514E000640B0 /* HomeCellFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D90B55D21C96514E000640B0 /* HomeCellFirstViewController.m */; };
-		D90B55E31C96514E000640B0 /* HomeCellFirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D90B55D31C96514E000640B0 /* HomeCellFirstViewController.xib */; };
-		D90B55E41C96514E000640B0 /* HomeCellFirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D90B55D31C96514E000640B0 /* HomeCellFirstViewController.xib */; };
-		D90B55E51C96514E000640B0 /* HomeTableViewCellFirst.m in Sources */ = {isa = PBXBuildFile; fileRef = D90B55D51C96514E000640B0 /* HomeTableViewCellFirst.m */; };
-		D90B55E61C96514E000640B0 /* HomeTableViewCellFirst.m in Sources */ = {isa = PBXBuildFile; fileRef = D90B55D51C96514E000640B0 /* HomeTableViewCellFirst.m */; };
-		D90B55E71C96514E000640B0 /* HomeTableViewCellFirst.xib in Resources */ = {isa = PBXBuildFile; fileRef = D90B55D61C96514E000640B0 /* HomeTableViewCellFirst.xib */; };
-		D90B55E81C96514E000640B0 /* HomeTableViewCellFirst.xib in Resources */ = {isa = PBXBuildFile; fileRef = D90B55D61C96514E000640B0 /* HomeTableViewCellFirst.xib */; };
 		D90B55E91C96514E000640B0 /* ViewShowImageController.m in Sources */ = {isa = PBXBuildFile; fileRef = D90B55D81C96514E000640B0 /* ViewShowImageController.m */; };
 		D90B55EA1C96514E000640B0 /* ViewShowImageController.m in Sources */ = {isa = PBXBuildFile; fileRef = D90B55D81C96514E000640B0 /* ViewShowImageController.m */; };
 		D90B55EB1C96514E000640B0 /* ViewShowImageController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D90B55D91C96514E000640B0 /* ViewShowImageController.xib */; };
@@ -323,12 +315,6 @@
 		D904C9481C8D1E5800E349E6 /* addpicture@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "addpicture@3x.png"; sourceTree = "<group>"; };
 		D904C9561C8D3E9200E349E6 /* khunganhmua.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = khunganhmua.png; sourceTree = "<group>"; };
 		D90797DE1C8936BD0088F3C5 /* placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder.png; sourceTree = "<group>"; };
-		D90B55D11C96514E000640B0 /* HomeCellFirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeCellFirstViewController.h; sourceTree = "<group>"; };
-		D90B55D21C96514E000640B0 /* HomeCellFirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeCellFirstViewController.m; sourceTree = "<group>"; };
-		D90B55D31C96514E000640B0 /* HomeCellFirstViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeCellFirstViewController.xib; sourceTree = "<group>"; };
-		D90B55D41C96514E000640B0 /* HomeTableViewCellFirst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeTableViewCellFirst.h; sourceTree = "<group>"; };
-		D90B55D51C96514E000640B0 /* HomeTableViewCellFirst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeTableViewCellFirst.m; sourceTree = "<group>"; };
-		D90B55D61C96514E000640B0 /* HomeTableViewCellFirst.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeTableViewCellFirst.xib; sourceTree = "<group>"; };
 		D90B55D71C96514E000640B0 /* ViewShowImageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewShowImageController.h; sourceTree = "<group>"; };
 		D90B55D81C96514E000640B0 /* ViewShowImageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewShowImageController.m; sourceTree = "<group>"; };
 		D90B55D91C96514E000640B0 /* ViewShowImageController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewShowImageController.xib; sourceTree = "<group>"; };
@@ -687,12 +673,6 @@
 		D90B55D01C96514E000640B0 /* TableViewCellFirst */ = {
 			isa = PBXGroup;
 			children = (
-				D90B55D11C96514E000640B0 /* HomeCellFirstViewController.h */,
-				D90B55D21C96514E000640B0 /* HomeCellFirstViewController.m */,
-				D90B55D31C96514E000640B0 /* HomeCellFirstViewController.xib */,
-				D90B55D41C96514E000640B0 /* HomeTableViewCellFirst.h */,
-				D90B55D51C96514E000640B0 /* HomeTableViewCellFirst.m */,
-				D90B55D61C96514E000640B0 /* HomeTableViewCellFirst.xib */,
 				D90B55D71C96514E000640B0 /* ViewShowImageController.h */,
 				D90B55D81C96514E000640B0 /* ViewShowImageController.m */,
 				D90B55D91C96514E000640B0 /* ViewShowImageController.xib */,
@@ -984,7 +964,6 @@
 				D90797DF1C8936BD0088F3C5 /* placeholder.png in Resources */,
 				D9E7891A1C927EF6008A81D9 /* close.png in Resources */,
 				D90D3FAF1C97A23A00252C18 /* MessageViewController.xib in Resources */,
-				D90B55E71C96514E000640B0 /* HomeTableViewCellFirst.xib in Resources */,
 				B05B08001C930A6B0063DAD2 /* LaunchScreen.xib in Resources */,
 				B05B077C1C930A6B0063DAD2 /* Info.plist in Resources */,
 				D90CB5011C9910DC008D051F /* image.png in Resources */,
@@ -1000,7 +979,6 @@
 				D904C94B1C8D1E5800E349E6 /* addpicture@2x.png in Resources */,
 				D9E788FA1C925F7F008A81D9 /* library.png in Resources */,
 				B009F1711C89DB6E00B6D197 /* imgCell1.png in Resources */,
-				D90B55E31C96514E000640B0 /* HomeCellFirstViewController.xib in Resources */,
 				D904C9571C8D3E9200E349E6 /* khunganhmua.png in Resources */,
 				B05B07CA1C930A6B0063DAD2 /* MenuTableViewCell.xib in Resources */,
 				D90D3FA71C97A23A00252C18 /* DiaLogTableViewCell.xib in Resources */,
@@ -1030,14 +1008,12 @@
 				B05B078F1C930A6B0063DAD2 /* CropImageViewController.xib in Resources */,
 				D90B55EC1C96514E000640B0 /* ViewShowImageController.xib in Resources */,
 				D9E788FB1C925F7F008A81D9 /* library.png in Resources */,
-				D90B55E41C96514E000640B0 /* HomeCellFirstViewController.xib in Resources */,
 				D9E788F91C925F7F008A81D9 /* camera@2x.png in Resources */,
 				B05B07C71C930A6B0063DAD2 /* RootViewController.xib in Resources */,
 				D90CB5021C9910DC008D051F /* image.png in Resources */,
 				D90CB4FF1C991085008D051F /* ava.png in Resources */,
 				D904C92B1C8D128300E349E6 /* btn_back.png in Resources */,
 				B05B07CB1C930A6B0063DAD2 /* MenuTableViewCell.xib in Resources */,
-				D90B55E81C96514E000640B0 /* HomeTableViewCellFirst.xib in Resources */,
 				D90B597C1C966DFE000640B0 /* SubCategoryViewController.xib in Resources */,
 				D90797E01C8936BD0088F3C5 /* placeholder.png in Resources */,
 				D90D3FA41C97A23A00252C18 /* ActivityIndicatorViewController.xib in Resources */,
@@ -1073,7 +1049,6 @@
 				B05B07F21C930A6B0063DAD2 /* UIImage+WebP.m in Sources */,
 				B05B07EA1C930A6B0063DAD2 /* SDWebImagePrefetcher.m in Sources */,
 				B05B07D01C930A6B0063DAD2 /* Global.m in Sources */,
-				D90B55E11C96514E000640B0 /* HomeCellFirstViewController.m in Sources */,
 				B05B07DE1C930A6B0063DAD2 /* SDImageCache.m in Sources */,
 				B05B07E81C930A6B0063DAD2 /* SDWebImageManager.m in Sources */,
 				B05B07D81C930A6B0063DAD2 /* Cropper.m in Sources */,
@@ -1108,7 +1083,6 @@
 				D90B55F11C96514E000640B0 /* SubItemCollectionView.m in Sources */,
 				B05B07F61C930A6B0063DAD2 /* UIImageView+WebCache.m in Sources */,
 				B05B07B81C930A6B0063DAD2 /* InfoViewController.m in Sources */,
-				D90B55E51C96514E000640B0 /* HomeTableViewCellFirst.m in Sources */,
 				D90CB4F91C991045008D051F /* AboutViewController.m in Sources */,
 				B05B07EE1C930A6B0063DAD2 /* UIImage+GIF.m in Sources */,
 				B05B07E41C930A6B0063DAD2 /* SDWebImageDownloader.m in Sources */,
@@ -1162,11 +1136,9 @@
 				D90D3FA61C97A23A00252C18 /* DiaLogTableViewCell.m in Sources */,
 				B05B080D1C930E730063DAD2 /* DCategory.m in Sources */,
 				D90B596C1C9669A9000640B0 /* JBWatchActivityIndicator.m in Sources */,
-				D90B55E21C96514E000640B0 /* HomeCellFirstViewController.m in Sources */,
 				B05B07D91C930A6B0063DAD2 /* Cropper.m in Sources */,
 				B05B07DF1C930A6B0063DAD2 /* SDImageCache.m in Sources */,
 				B05B07C51C930A6B0063DAD2 /* RootViewController.m in Sources */,
-				D90B55E61C96514E000640B0 /* HomeTableViewCellFirst.m in Sources */,
 				B05B07E91C930A6B0063DAD2 /* SDWebImageManager.m in Sources */,
 				B05B07F31C930A6B0063DAD2 /* UIImage+WebP.m in Sources */,
 				B05B077F1C930A6B0063DAD2 /* AppDelegate.m in Sources */,
