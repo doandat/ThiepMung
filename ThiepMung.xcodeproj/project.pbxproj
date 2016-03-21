@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		68C78DC7588A315A6490A686 /* libPods-ThiepMungTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E8DD3A2C68FC64F15DE96ACA /* libPods-ThiepMungTests.a */; };
+		98F5C17FB82EE01AA7FC46D3 /* libPods-ThiepMung.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EB8FE2145F3CCB0EA5740AB /* libPods-ThiepMung.a */; };
 		B009F1711C89DB6E00B6D197 /* imgCell1.png in Resources */ = {isa = PBXBuildFile; fileRef = B009F1701C89DB6E00B6D197 /* imgCell1.png */; };
 		B009F1721C89DB6E00B6D197 /* imgCell1.png in Resources */ = {isa = PBXBuildFile; fileRef = B009F1701C89DB6E00B6D197 /* imgCell1.png */; };
 		B05B077C1C930A6B0063DAD2 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B05B06EC1C930A6B0063DAD2 /* Info.plist */; };
@@ -177,6 +179,30 @@
 		D90D3FB01C97A23A00252C18 /* MessageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D90D3FA01C97A23A00252C18 /* MessageViewController.xib */; };
 		D90D3FB41C97C8D000252C18 /* InputHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D90D3FB31C97C8D000252C18 /* InputHelper.m */; };
 		D90D3FB51C97C8D000252C18 /* InputHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D90D3FB31C97C8D000252C18 /* InputHelper.m */; };
+		D92FBE761C9F9E1F00589D7D /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = D92FBE731C9F9E1F00589D7D /* star.png */; };
+		D92FBE771C9F9E1F00589D7D /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = D92FBE731C9F9E1F00589D7D /* star.png */; };
+		D92FBE781C9F9E1F00589D7D /* star@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D92FBE741C9F9E1F00589D7D /* star@2x.png */; };
+		D92FBE791C9F9E1F00589D7D /* star@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D92FBE741C9F9E1F00589D7D /* star@2x.png */; };
+		D92FBE7A1C9F9E1F00589D7D /* star@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D92FBE751C9F9E1F00589D7D /* star@3x.png */; };
+		D92FBE7B1C9F9E1F00589D7D /* star@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D92FBE751C9F9E1F00589D7D /* star@3x.png */; };
+		D92FBE7F1C9F9EC000589D7D /* favorite.png in Resources */ = {isa = PBXBuildFile; fileRef = D92FBE7C1C9F9EC000589D7D /* favorite.png */; };
+		D92FBE801C9F9EC000589D7D /* favorite.png in Resources */ = {isa = PBXBuildFile; fileRef = D92FBE7C1C9F9EC000589D7D /* favorite.png */; };
+		D92FBE811C9F9EC000589D7D /* favorite@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D92FBE7D1C9F9EC000589D7D /* favorite@2x.png */; };
+		D92FBE821C9F9EC000589D7D /* favorite@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D92FBE7D1C9F9EC000589D7D /* favorite@2x.png */; };
+		D92FBE831C9F9EC000589D7D /* favorite@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D92FBE7E1C9F9EC000589D7D /* favorite@3x.png */; };
+		D92FBE841C9F9EC000589D7D /* favorite@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D92FBE7E1C9F9EC000589D7D /* favorite@3x.png */; };
+		D92FBE871C9FA0CF00589D7D /* EffectBookMark.m in Sources */ = {isa = PBXBuildFile; fileRef = D92FBE861C9FA0CF00589D7D /* EffectBookMark.m */; };
+		D92FBE881C9FA0CF00589D7D /* EffectBookMark.m in Sources */ = {isa = PBXBuildFile; fileRef = D92FBE861C9FA0CF00589D7D /* EffectBookMark.m */; };
+		D92FBE951C9FA76900589D7D /* InputLineBookMark.m in Sources */ = {isa = PBXBuildFile; fileRef = D92FBE921C9FA76900589D7D /* InputLineBookMark.m */; };
+		D92FBE961C9FA76900589D7D /* InputLineBookMark.m in Sources */ = {isa = PBXBuildFile; fileRef = D92FBE921C9FA76900589D7D /* InputLineBookMark.m */; };
+		D92FBE971C9FA76900589D7D /* InputPicBookMark.m in Sources */ = {isa = PBXBuildFile; fileRef = D92FBE941C9FA76900589D7D /* InputPicBookMark.m */; };
+		D92FBE981C9FA76900589D7D /* InputPicBookMark.m in Sources */ = {isa = PBXBuildFile; fileRef = D92FBE941C9FA76900589D7D /* InputPicBookMark.m */; };
+		D92FBE9C1C9FAE7E00589D7D /* favorited.png in Resources */ = {isa = PBXBuildFile; fileRef = D92FBE991C9FAE7E00589D7D /* favorited.png */; };
+		D92FBE9D1C9FAE7E00589D7D /* favorited.png in Resources */ = {isa = PBXBuildFile; fileRef = D92FBE991C9FAE7E00589D7D /* favorited.png */; };
+		D92FBE9E1C9FAE7E00589D7D /* favorited@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D92FBE9A1C9FAE7E00589D7D /* favorited@2x.png */; };
+		D92FBE9F1C9FAE7E00589D7D /* favorited@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D92FBE9A1C9FAE7E00589D7D /* favorited@2x.png */; };
+		D92FBEA01C9FAE7E00589D7D /* favorited@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D92FBE9B1C9FAE7E00589D7D /* favorited@3x.png */; };
+		D92FBEA11C9FAE7E00589D7D /* favorited@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D92FBE9B1C9FAE7E00589D7D /* favorited@3x.png */; };
 		D974BE631C87DFC90005938A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D974BE621C87DFC90005938A /* Images.xcassets */; };
 		D974BE721C87DFC90005938A /* ThiepMungTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D974BE711C87DFC90005938A /* ThiepMungTests.m */; };
 		D974BEC11C87EAF00005938A /* btn_menu.png in Resources */ = {isa = PBXBuildFile; fileRef = D974BEBF1C87EAF00005938A /* btn_menu.png */; };
@@ -210,6 +236,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1FB28203EDB07A984692EAB8 /* Pods-ThiepMung.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThiepMung.release.xcconfig"; path = "Pods/Target Support Files/Pods-ThiepMung/Pods-ThiepMung.release.xcconfig"; sourceTree = "<group>"; };
+		5A1969B885FF851375632F1B /* Pods-ThiepMung.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThiepMung.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ThiepMung/Pods-ThiepMung.debug.xcconfig"; sourceTree = "<group>"; };
+		7EB8FE2145F3CCB0EA5740AB /* libPods-ThiepMung.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ThiepMung.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B009F1701C89DB6E00B6D197 /* imgCell1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imgCell1.png; sourceTree = "<group>"; };
 		B05B06EC1C930A6B0063DAD2 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B05B06EF1C930A6B0063DAD2 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -308,6 +337,8 @@
 		B05B08131C9317DC0063DAD2 /* DInputLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DInputLine.m; sourceTree = "<group>"; };
 		B05B08161C9317EB0063DAD2 /* DInputPic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DInputPic.h; sourceTree = "<group>"; };
 		B05B08171C9317EB0063DAD2 /* DInputPic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DInputPic.m; sourceTree = "<group>"; };
+		B83B810861A14DC174E1CFB0 /* Pods-ThiepMungTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThiepMungTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ThiepMungTests/Pods-ThiepMungTests.release.xcconfig"; sourceTree = "<group>"; };
+		D46857E1BEF9A7CCC505ED5D /* Pods-ThiepMungTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThiepMungTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ThiepMungTests/Pods-ThiepMungTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D904C9281C8D128300E349E6 /* btn_back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_back.png; sourceTree = "<group>"; };
 		D904C9291C8D128300E349E6 /* btn_back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_back@2x.png"; sourceTree = "<group>"; };
 		D904C9461C8D1E5800E349E6 /* addpicture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = addpicture.png; sourceTree = "<group>"; };
@@ -350,6 +381,21 @@
 		D90D3FA01C97A23A00252C18 /* MessageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageViewController.xib; sourceTree = "<group>"; };
 		D90D3FB21C97C8D000252C18 /* InputHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputHelper.h; sourceTree = "<group>"; };
 		D90D3FB31C97C8D000252C18 /* InputHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputHelper.m; sourceTree = "<group>"; };
+		D92FBE731C9F9E1F00589D7D /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star.png; sourceTree = "<group>"; };
+		D92FBE741C9F9E1F00589D7D /* star@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star@2x.png"; sourceTree = "<group>"; };
+		D92FBE751C9F9E1F00589D7D /* star@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star@3x.png"; sourceTree = "<group>"; };
+		D92FBE7C1C9F9EC000589D7D /* favorite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = favorite.png; sourceTree = "<group>"; };
+		D92FBE7D1C9F9EC000589D7D /* favorite@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "favorite@2x.png"; sourceTree = "<group>"; };
+		D92FBE7E1C9F9EC000589D7D /* favorite@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "favorite@3x.png"; sourceTree = "<group>"; };
+		D92FBE851C9FA0CF00589D7D /* EffectBookMark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EffectBookMark.h; sourceTree = "<group>"; };
+		D92FBE861C9FA0CF00589D7D /* EffectBookMark.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EffectBookMark.m; sourceTree = "<group>"; };
+		D92FBE911C9FA76900589D7D /* InputLineBookMark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputLineBookMark.h; sourceTree = "<group>"; };
+		D92FBE921C9FA76900589D7D /* InputLineBookMark.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputLineBookMark.m; sourceTree = "<group>"; };
+		D92FBE931C9FA76900589D7D /* InputPicBookMark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputPicBookMark.h; sourceTree = "<group>"; };
+		D92FBE941C9FA76900589D7D /* InputPicBookMark.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputPicBookMark.m; sourceTree = "<group>"; };
+		D92FBE991C9FAE7E00589D7D /* favorited.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = favorited.png; sourceTree = "<group>"; };
+		D92FBE9A1C9FAE7E00589D7D /* favorited@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "favorited@2x.png"; sourceTree = "<group>"; };
+		D92FBE9B1C9FAE7E00589D7D /* favorited@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "favorited@3x.png"; sourceTree = "<group>"; };
 		D974BE521C87DFC90005938A /* ThiepMung.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThiepMung.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D974BE621C87DFC90005938A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		D974BE6B1C87DFC90005938A /* ThiepMungTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ThiepMungTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -364,6 +410,7 @@
 		D9E789171C927EF6008A81D9 /* close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = close.png; sourceTree = "<group>"; };
 		D9E789181C927EF6008A81D9 /* close@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "close@2x.png"; sourceTree = "<group>"; };
 		D9E789191C927EF6008A81D9 /* close@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "close@3x.png"; sourceTree = "<group>"; };
+		E8DD3A2C68FC64F15DE96ACA /* libPods-ThiepMungTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ThiepMungTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -371,6 +418,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				98F5C17FB82EE01AA7FC46D3 /* libPods-ThiepMung.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -378,12 +426,33 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68C78DC7588A315A6490A686 /* libPods-ThiepMungTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6FFDB3669584D5FF36CF943B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7EB8FE2145F3CCB0EA5740AB /* libPods-ThiepMung.a */,
+				E8DD3A2C68FC64F15DE96ACA /* libPods-ThiepMungTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		89DBA394ED6944F25B595A8E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5A1969B885FF851375632F1B /* Pods-ThiepMung.debug.xcconfig */,
+				1FB28203EDB07A984692EAB8 /* Pods-ThiepMung.release.xcconfig */,
+				D46857E1BEF9A7CCC505ED5D /* Pods-ThiepMungTests.debug.xcconfig */,
+				B83B810861A14DC174E1CFB0 /* Pods-ThiepMungTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		B05B06ED1C930A6B0063DAD2 /* Source */ = {
 			isa = PBXGroup;
 			children = (
@@ -555,6 +624,10 @@
 		B05B07421C930A6B0063DAD2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D92FBE911C9FA76900589D7D /* InputLineBookMark.h */,
+				D92FBE921C9FA76900589D7D /* InputLineBookMark.m */,
+				D92FBE931C9FA76900589D7D /* InputPicBookMark.h */,
+				D92FBE941C9FA76900589D7D /* InputPicBookMark.m */,
 				B05B07431C930A6B0063DAD2 /* ItemCollection.h */,
 				B05B07441C930A6B0063DAD2 /* ItemCollection.m */,
 				B05B080A1C930E730063DAD2 /* DCategory.h */,
@@ -565,6 +638,8 @@
 				B05B08131C9317DC0063DAD2 /* DInputLine.m */,
 				B05B08161C9317EB0063DAD2 /* DInputPic.h */,
 				B05B08171C9317EB0063DAD2 /* DInputPic.m */,
+				D92FBE851C9FA0CF00589D7D /* EffectBookMark.h */,
+				D92FBE861C9FA0CF00589D7D /* EffectBookMark.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -789,6 +864,8 @@
 				D974BE541C87DFC90005938A /* ThiepMung */,
 				D974BE6E1C87DFC90005938A /* ThiepMungTests */,
 				D974BE531C87DFC90005938A /* Products */,
+				89DBA394ED6944F25B595A8E /* Pods */,
+				6FFDB3669584D5FF36CF943B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -841,6 +918,15 @@
 		D974BE811C87E4B60005938A /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				D92FBE991C9FAE7E00589D7D /* favorited.png */,
+				D92FBE9A1C9FAE7E00589D7D /* favorited@2x.png */,
+				D92FBE9B1C9FAE7E00589D7D /* favorited@3x.png */,
+				D92FBE7C1C9F9EC000589D7D /* favorite.png */,
+				D92FBE7D1C9F9EC000589D7D /* favorite@2x.png */,
+				D92FBE7E1C9F9EC000589D7D /* favorite@3x.png */,
+				D92FBE731C9F9E1F00589D7D /* star.png */,
+				D92FBE741C9F9E1F00589D7D /* star@2x.png */,
+				D92FBE751C9F9E1F00589D7D /* star@3x.png */,
 				D90CB5001C9910DC008D051F /* image.png */,
 				D90CB4FD1C991085008D051F /* ava.png */,
 				D9E789171C927EF6008A81D9 /* close.png */,
@@ -871,9 +957,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D974BE751C87DFC90005938A /* Build configuration list for PBXNativeTarget "ThiepMung" */;
 			buildPhases = (
+				BB5D3FB1A6220D188AD1689F /* Check Pods Manifest.lock */,
 				D974BE4E1C87DFC90005938A /* Sources */,
 				D974BE4F1C87DFC90005938A /* Frameworks */,
 				D974BE501C87DFC90005938A /* Resources */,
+				A9E09935030E38DCA3D7BB7A /* Embed Pods Frameworks */,
+				D911AFF4594BEA155EE6B34E /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -888,9 +977,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D974BE781C87DFC90005938A /* Build configuration list for PBXNativeTarget "ThiepMungTests" */;
 			buildPhases = (
+				528B4F811AB9512637F8C051 /* Check Pods Manifest.lock */,
 				D974BE671C87DFC90005938A /* Sources */,
 				D974BE681C87DFC90005938A /* Frameworks */,
 				D974BE691C87DFC90005938A /* Resources */,
+				C5A31D5363E898DD9B51B5D2 /* Embed Pods Frameworks */,
+				EC5639A98F7EB63D7F537AB9 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -950,12 +1042,16 @@
 				B05B07CE1C930A6B0063DAD2 /* SidebarViewController.xib in Resources */,
 				B05B078E1C930A6B0063DAD2 /* CropImageViewController.xib in Resources */,
 				D90B597B1C966DFE000640B0 /* SubCategoryViewController.xib in Resources */,
+				D92FBE761C9F9E1F00589D7D /* star.png in Resources */,
 				D904C92A1C8D128300E349E6 /* btn_back.png in Resources */,
 				D904C92C1C8D128300E349E6 /* btn_back@2x.png in Resources */,
+				D92FBE7A1C9F9E1F00589D7D /* star@3x.png in Resources */,
 				B05B07C21C930A6B0063DAD2 /* ResultViewController.xib in Resources */,
 				D90D3FAB1C97A23A00252C18 /* DialogViewController.xib in Resources */,
 				B05B07821C930A6B0063DAD2 /* AddImageTextViewController.xib in Resources */,
 				D90B55F31C96514E000640B0 /* SubItemCollectionView.xib in Resources */,
+				D92FBE9C1C9FAE7E00589D7D /* favorited.png in Resources */,
+				D92FBEA01C9FAE7E00589D7D /* favorited@3x.png in Resources */,
 				D974BEC31C87EAF00005938A /* btn_menu@2x.png in Resources */,
 				D974BEC11C87EAF00005938A /* btn_menu.png in Resources */,
 				D9E788F61C925F7F008A81D9 /* camera.png in Resources */,
@@ -965,10 +1061,14 @@
 				D9E7891A1C927EF6008A81D9 /* close.png in Resources */,
 				D90D3FAF1C97A23A00252C18 /* MessageViewController.xib in Resources */,
 				B05B08001C930A6B0063DAD2 /* LaunchScreen.xib in Resources */,
+				D92FBE781C9F9E1F00589D7D /* star@2x.png in Resources */,
 				B05B077C1C930A6B0063DAD2 /* Info.plist in Resources */,
 				D90CB5011C9910DC008D051F /* image.png in Resources */,
 				D90CB4FB1C991045008D051F /* AboutViewController.xib in Resources */,
+				D92FBE811C9F9EC000589D7D /* favorite@2x.png in Resources */,
 				D90B55EF1C96514E000640B0 /* HomeTableViewCellSecond.xib in Resources */,
+				D92FBE831C9F9EC000589D7D /* favorite@3x.png in Resources */,
+				D92FBE9E1C9FAE7E00589D7D /* favorited@2x.png in Resources */,
 				B05B07C61C930A6B0063DAD2 /* RootViewController.xib in Resources */,
 				D9E788F81C925F7F008A81D9 /* camera@2x.png in Resources */,
 				B05B07BA1C930A6B0063DAD2 /* InfoViewController.xib in Resources */,
@@ -984,6 +1084,7 @@
 				D90D3FA71C97A23A00252C18 /* DiaLogTableViewCell.xib in Resources */,
 				B05B078A1C930A6B0063DAD2 /* BaseViewController.xib in Resources */,
 				D90B55EB1C96514E000640B0 /* ViewShowImageController.xib in Resources */,
+				D92FBE7F1C9F9EC000589D7D /* favorite.png in Resources */,
 				D974BE631C87DFC90005938A /* Images.xcassets in Resources */,
 				D9E788FC1C925F7F008A81D9 /* library@2x.png in Resources */,
 			);
@@ -994,8 +1095,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				D9E788FD1C925F7F008A81D9 /* library@2x.png in Resources */,
+				D92FBE841C9F9EC000589D7D /* favorite@3x.png in Resources */,
 				D90B55F01C96514E000640B0 /* HomeTableViewCellSecond.xib in Resources */,
 				D90CB4FC1C991045008D051F /* AboutViewController.xib in Resources */,
+				D92FBE9D1C9FAE7E00589D7D /* favorited.png in Resources */,
+				D92FBE9F1C9FAE7E00589D7D /* favorited@2x.png in Resources */,
+				D92FBE7B1C9F9E1F00589D7D /* star@3x.png in Resources */,
 				B05B07931C930A6B0063DAD2 /* CustomNavigationBar.xib in Resources */,
 				D904C92D1C8D128300E349E6 /* btn_back@2x.png in Resources */,
 				B05B077D1C930A6B0063DAD2 /* Info.plist in Resources */,
@@ -1004,15 +1109,18 @@
 				D974BEC41C87EAF00005938A /* btn_menu@2x.png in Resources */,
 				D904C9581C8D3E9200E349E6 /* khunganhmua.png in Resources */,
 				B05B07871C930A6B0063DAD2 /* AddTextTableViewCell.xib in Resources */,
+				D92FBE771C9F9E1F00589D7D /* star.png in Resources */,
 				D9E7891F1C927EF6008A81D9 /* close@3x.png in Resources */,
 				B05B078F1C930A6B0063DAD2 /* CropImageViewController.xib in Resources */,
 				D90B55EC1C96514E000640B0 /* ViewShowImageController.xib in Resources */,
+				D92FBE801C9F9EC000589D7D /* favorite.png in Resources */,
 				D9E788FB1C925F7F008A81D9 /* library.png in Resources */,
 				D9E788F91C925F7F008A81D9 /* camera@2x.png in Resources */,
 				B05B07C71C930A6B0063DAD2 /* RootViewController.xib in Resources */,
 				D90CB5021C9910DC008D051F /* image.png in Resources */,
 				D90CB4FF1C991085008D051F /* ava.png in Resources */,
 				D904C92B1C8D128300E349E6 /* btn_back.png in Resources */,
+				D92FBEA11C9FAE7E00589D7D /* favorited@3x.png in Resources */,
 				B05B07CB1C930A6B0063DAD2 /* MenuTableViewCell.xib in Resources */,
 				D90B597C1C966DFE000640B0 /* SubCategoryViewController.xib in Resources */,
 				D90797E01C8936BD0088F3C5 /* placeholder.png in Resources */,
@@ -1032,12 +1140,107 @@
 				D90D3FAC1C97A23A00252C18 /* DialogViewController.xib in Resources */,
 				D904C94A1C8D1E5800E349E6 /* addpicture.png in Resources */,
 				D9E7891D1C927EF6008A81D9 /* close@2x.png in Resources */,
+				D92FBE791C9F9E1F00589D7D /* star@2x.png in Resources */,
 				D9E788F71C925F7F008A81D9 /* camera.png in Resources */,
+				D92FBE821C9F9EC000589D7D /* favorite@2x.png in Resources */,
 				D974BEC21C87EAF00005938A /* btn_menu.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		528B4F811AB9512637F8C051 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A9E09935030E38DCA3D7BB7A /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ThiepMung/Pods-ThiepMung-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BB5D3FB1A6220D188AD1689F /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C5A31D5363E898DD9B51B5D2 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ThiepMungTests/Pods-ThiepMungTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D911AFF4594BEA155EE6B34E /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ThiepMung/Pods-ThiepMung-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EC5639A98F7EB63D7F537AB9 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ThiepMungTests/Pods-ThiepMungTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D974BE4E1C87DFC90005938A /* Sources */ = {
@@ -1062,6 +1265,7 @@
 				D90B596B1C9669A9000640B0 /* JBWatchActivityIndicator.m in Sources */,
 				B05B077E1C930A6B0063DAD2 /* AppDelegate.m in Sources */,
 				B05B07E21C930A6B0063DAD2 /* SDWebImageDecoder.m in Sources */,
+				D92FBE951C9FA76900589D7D /* InputLineBookMark.m in Sources */,
 				B05B07D41C930A6B0063DAD2 /* ItemCollection.m in Sources */,
 				B05B07881C930A6B0063DAD2 /* BaseViewController.m in Sources */,
 				D90D3F8F1C97A19C00252C18 /* UIView+Toast.m in Sources */,
@@ -1072,6 +1276,7 @@
 				B05B07F01C930A6B0063DAD2 /* UIImage+MultiFormat.m in Sources */,
 				B05B08181C9317EB0063DAD2 /* DInputPic.m in Sources */,
 				D90D3FAD1C97A23A00252C18 /* MessageViewController.m in Sources */,
+				D92FBE871C9FA0CF00589D7D /* EffectBookMark.m in Sources */,
 				D90D3FA91C97A23A00252C18 /* DialogViewController.m in Sources */,
 				B05B07DA1C930A6B0063DAD2 /* MKAnnotationView+WebCache.m in Sources */,
 				B05B08141C9317DC0063DAD2 /* DInputLine.m in Sources */,
@@ -1097,6 +1302,7 @@
 				B05B07C01C930A6B0063DAD2 /* ResultViewController.m in Sources */,
 				B05B07FE1C930A6B0063DAD2 /* WYStoryboardPopoverSegue.m in Sources */,
 				D90D3FA11C97A23A00252C18 /* ActivityIndicatorViewController.m in Sources */,
+				D92FBE971C9FA76900589D7D /* InputPicBookMark.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1116,6 +1322,7 @@
 				B05B07D51C930A6B0063DAD2 /* ItemCollection.m in Sources */,
 				D90CB4FA1C991045008D051F /* AboutViewController.m in Sources */,
 				B05B07B91C930A6B0063DAD2 /* InfoViewController.m in Sources */,
+				D92FBE961C9FA76900589D7D /* InputLineBookMark.m in Sources */,
 				B05B07D11C930A6B0063DAD2 /* Global.m in Sources */,
 				B05B07891C930A6B0063DAD2 /* BaseViewController.m in Sources */,
 				B05B07E71C930A6B0063DAD2 /* SDWebImageDownloaderOperation.m in Sources */,
@@ -1136,7 +1343,9 @@
 				D90D3FA61C97A23A00252C18 /* DiaLogTableViewCell.m in Sources */,
 				B05B080D1C930E730063DAD2 /* DCategory.m in Sources */,
 				D90B596C1C9669A9000640B0 /* JBWatchActivityIndicator.m in Sources */,
+				D92FBE981C9FA76900589D7D /* InputPicBookMark.m in Sources */,
 				B05B07D91C930A6B0063DAD2 /* Cropper.m in Sources */,
+				D92FBE881C9FA0CF00589D7D /* EffectBookMark.m in Sources */,
 				B05B07DF1C930A6B0063DAD2 /* SDImageCache.m in Sources */,
 				B05B07C51C930A6B0063DAD2 /* RootViewController.m in Sources */,
 				B05B07E91C930A6B0063DAD2 /* SDWebImageManager.m in Sources */,
@@ -1267,6 +1476,7 @@
 		};
 		D974BE761C87DFC90005938A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5A1969B885FF851375632F1B /* Pods-ThiepMung.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ThiepMung/Info.plist;
@@ -1278,6 +1488,7 @@
 		};
 		D974BE771C87DFC90005938A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1FB28203EDB07A984692EAB8 /* Pods-ThiepMung.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ThiepMung/Info.plist;
@@ -1289,6 +1500,7 @@
 		};
 		D974BE791C87DFC90005938A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D46857E1BEF9A7CCC505ED5D /* Pods-ThiepMungTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1308,6 +1520,7 @@
 		};
 		D974BE7A1C87DFC90005938A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B83B810861A14DC174E1CFB0 /* Pods-ThiepMungTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (

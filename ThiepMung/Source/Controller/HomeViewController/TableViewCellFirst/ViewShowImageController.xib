@@ -26,6 +26,7 @@
                     </state>
                 </button>
             </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="fuE-Wd-G0V" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="0MF-wO-3Nt"/>
                 <constraint firstAttribute="trailing" secondItem="QiF-zx-L82" secondAttribute="trailing" id="3DC-Nb-c6D"/>

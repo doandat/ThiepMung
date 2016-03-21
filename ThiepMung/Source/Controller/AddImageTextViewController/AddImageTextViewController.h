@@ -24,4 +24,7 @@
 
 
 @property (weak, nonatomic) IBOutlet UIButton *btnBack;
+
+@property (weak, nonatomic) IBOutlet UIButton *btnBookmark;
+
 @end

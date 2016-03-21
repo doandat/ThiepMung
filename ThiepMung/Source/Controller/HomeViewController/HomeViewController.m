@@ -73,7 +73,7 @@ static HomeViewController *sharedInstance;
     self.pageController.dataSource = self;
     self.pageController.delegate = self;
     [[self.pageController view] setFrame:CGRectMake(0, 0, self.viewContainPage.frame.size.width, self.viewContainPage.frame.size.height)];
-    [self.pageController.view setBackgroundColor:[UIColor colorWithRed:180/255.0f green:228/255.0f blue:250/255.0f alpha:1.0f]];
+//    [self.pageController.view setBackgroundColor:[UIColor colorWithRed:180/255.0f green:228/255.0f blue:250/255.0f alpha:1.0f]];
     
     
 //    ViewShowImageController *initialViewController = [self viewControllerAtIndex:0];
@@ -162,7 +162,7 @@ static HomeViewController *sharedInstance;
         if (cell == nil) {
             cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
         }
-        [self.homeCellFirst setFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.width*2/3+50)];
+        [self.homeCellFirst setFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.width*2/3+60)];
         [cell addSubview:self.homeCellFirst];
         
         return cell;
@@ -192,7 +192,7 @@ static HomeViewController *sharedInstance;
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.section==0) {
-        return [UIScreen mainScreen].bounds.size.width*2/3+50;
+        return [UIScreen mainScreen].bounds.size.width*2/3+60;
     }else{
         return 170.0f;
     }

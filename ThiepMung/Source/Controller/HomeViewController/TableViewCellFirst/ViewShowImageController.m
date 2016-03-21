@@ -9,6 +9,7 @@
 #import "ViewShowImageController.h"
 #import "HomeViewController.h"
 #import "AddImageTextViewController.h"
+#import "UIImageView+WebCache.h"
 
 @interface ViewShowImageController ()
 
@@ -23,7 +24,8 @@
 }
 
 -(void)viewWillAppear:(BOOL)animated{
-    [self.imageViewContent setImage:[UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:_dEffect.avatar]]]];
+//    [self.imageViewContent setImage:[UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:_dEffect.avatar]]]];
+    [self.imageViewContent sd_setImageWithURL:[NSURL URLWithString:_dEffect.avatar] placeholderImage:[UIImage imageNamed:@"placeholder.png"]];
     NSLog(@"_dEffect.avatar:%@",_dEffect.avatar);
     [self.btnFull setBackgroundColor:MU_RGBA(0, 0, 0, 0.1)];
     [self.btnFull addTarget:self action:@selector(btnFull:) forControlEvents:UIControlEventTouchUpInside];

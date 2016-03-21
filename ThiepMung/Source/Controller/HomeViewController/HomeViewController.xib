@@ -98,7 +98,7 @@
                             </constraints>
                         </view>
                     </subviews>
-                    <color key="backgroundColor" red="0.26274509800000001" green="0.65490196079999996" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" red="0.62352941176470589" green="0.50196078431372548" blue="0.81568627450980391" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="bottom" secondItem="TfO-JY-Ylc" secondAttribute="bottom" constant="33" id="LxO-0K-jO2"/>
                         <constraint firstItem="TfO-JY-Ylc" firstAttribute="leading" secondItem="ShL-gN-0zf" secondAttribute="leading" id="OyV-7e-E28"/>
@@ -111,7 +111,7 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Mv-pQ-PIb">
                     <rect key="frame" x="0.0" y="213" width="320" height="96"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hwj-Qs-07q">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hwj-Qs-07q">
                             <rect key="frame" x="0.0" y="5" width="320" height="86"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -127,7 +127,6 @@
                     </constraints>
                 </view>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="ShL-gN-0zf" secondAttribute="trailing" id="7wv-hQ-9WK"/>
                 <constraint firstItem="ShL-gN-0zf" firstAttribute="leading" secondItem="2ol-UN-j73" secondAttribute="leading" id="CPe-15-xkh"/>

@@ -12,5 +12,7 @@
 
 @property (weak, nonatomic) IBOutlet UIImageView *imgAvatar;
 @property (weak, nonatomic) IBOutlet UILabel *lbDes;
+@property (weak, nonatomic) IBOutlet UIView *viewContaint;
+
 
 @end

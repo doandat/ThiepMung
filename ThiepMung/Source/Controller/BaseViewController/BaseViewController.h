@@ -14,6 +14,9 @@
 #import "config.h"
 #import "AppService.h"
 #import "UIView+Toast.h"
+#import "EffectBookMark.h"
+#import "InputLineBookMark.h"
+#import "InputPicBookMark.h"
 
 @interface BaseViewController : UIViewController
 

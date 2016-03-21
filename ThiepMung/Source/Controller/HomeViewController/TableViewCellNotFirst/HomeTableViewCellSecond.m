@@ -37,13 +37,14 @@
     self.collectionView.delegate = self;
     self.collectionView.dataSource = self;
     [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"cellIdentifier"];
-    [self.collectionView setBackgroundColor:MU_RGBA(108, 64, 184, 0.7)];
+//    [self.collectionView setBackgroundColor:MU_RGBA(108, 64, 184, 0.7)];
 
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
     [flowLayout setScrollDirection:UICollectionViewScrollDirectionHorizontal];
     flowLayout.itemSize = CGSizeMake((_collectionView.frame.size.height-20)*4/3, _collectionView.frame.size.height);
     flowLayout.minimumInteritemSpacing = 5;
     flowLayout.minimumLineSpacing = 5;
+    flowLayout.sectionInset= UIEdgeInsetsMake(0, 10, 0, 0);
     [self.collectionView setCollectionViewLayout:flowLayout];
     
 }
@@ -66,7 +67,7 @@
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     UICollectionViewCell *cell=[collectionView dequeueReusableCellWithReuseIdentifier:@"cellIdentifier" forIndexPath:indexPath];
-    [cell setBackgroundColor:[UIColor colorWithRed:19/255.0f green:19/255.0f blue:19/255.0f alpha:1.0f]];
+//    [cell setBackgroundColor:[UIColor colorWithRed:19/255.0f green:19/255.0f blue:19/255.0f alpha:1.0f]];
     DEffect *dEffect = [arrDataSource objectAtIndex:indexPath.row];
     SubItemCollectionView *subItemView = [[SubItemCollectionView alloc]initWithFrame:CGRectMake(0, 0, (_collectionView.frame.size.height-40)*4/3, _collectionView.frame.size.height)];
     subItemView.autoresizingMask = (UIViewAutoresizingFlexibleTopMargin |
@@ -76,7 +77,8 @@
     
     [subItemView.imgAvatar sd_setImageWithURL:[NSURL URLWithString: dEffect.avatar] placeholderImage:[UIImage imageNamed:@"placeholder.png"]];
     subItemView.lbDes.text = dEffect.effectDescription;
-    [subItemView setBackgroundColor:[UIColor redColor]];
+//    [subItemView setBackgroundColor:[UIColor redColor]];
+    subItemView.viewContaint.layer.cornerRadius = 5.0f;
     [cell addSubview:subItemView];
     
     return cell;

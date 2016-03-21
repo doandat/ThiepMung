@@ -23,6 +23,9 @@
     self.window.rootViewController = rootVC;
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSLog(@"aaaa:%@",[paths objectAtIndex:0]);
+
     return YES;
 }
 

@@ -31,6 +31,7 @@
     
     NSInteger indexTextViewChanging;
     NSInteger indexImageInputSelected;
+    BOOL checkBookMark;
 
 }
 @property (strong, nonatomic) UIImagePickerController *imagePickerController;
@@ -53,7 +54,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    RLMResults *bookMark = [EffectBookMark objectsWhere:@"dEffect_id = %@",[NSString stringWithFormat:@"%@",_dEffect.dEffect_id]];
+    if (bookMark.count) {
+        NSLog(@"đã lưu rồi");
+        checkBookMark = YES;
+        [_btnBookmark setSelected:YES];
+    }
+    [_btnBookmark addTarget:self action:@selector(btnBookmark:) forControlEvents:UIControlEventTouchUpInside];
+    [_btnBookmark setImage:[UIImage imageNamed:@"favorite.png"] forState:UIControlStateNormal];
+    [_btnBookmark setImage:[UIImage imageNamed:@"favorited.png"] forState:UIControlStateSelected];
+
     imageView = [[UIImageView alloc]init];
     [imageView sd_setImageWithURL:[NSURL URLWithString:_dEffect.avatar ] placeholderImage:[UIImage imageNamed:@"placeholder.png"]];
     imageView.translatesAutoresizingMaskIntoConstraints = NO;
@@ -484,6 +494,76 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+-(void)btnBookmark:(id)sender{
+    if ([sender isSelected]) {
+        RLMResults *inputLineArr = [InputLineBookMark objectsWhere:@"dEffect_id = %@",[NSString stringWithFormat:@"%@",_dEffect.dEffect_id]];
+        for (InputLineBookMark *inputLineBM in inputLineArr) {
+            RLMRealm *realm = RLMRealm.defaultRealm;
+            [realm beginWriteTransaction];
+            [realm deleteObject:inputLineBM];
+            [realm commitWriteTransaction];
+        }
+        RLMResults *inputPicArr = [InputPicBookMark objectsWhere:@"dEffect_id = %@",[NSString stringWithFormat:@"%@",_dEffect.dEffect_id]];
+        for (InputPicBookMark *inputPicBM in inputPicArr) {
+            RLMRealm *realm = RLMRealm.defaultRealm;
+            [realm beginWriteTransaction];
+            [realm deleteObject:inputPicBM];
+            [realm commitWriteTransaction];
+        }
+        RLMResults *effectBMArr = [EffectBookMark objectsWhere:@"dEffect_id = %@",[NSString stringWithFormat:@"%@",_dEffect.dEffect_id]];
+        for (EffectBookMark *effBM in effectBMArr) {
+            RLMRealm *realm = RLMRealm.defaultRealm;
+            [realm beginWriteTransaction];
+            [realm deleteObject:effBM];
+            [realm commitWriteTransaction];
+
+        }
+        [_btnBookmark setSelected:NO];
+    }else{
+        EffectBookMark *effBM = [[EffectBookMark alloc]init];
+        effBM.dEffect_id = _dEffect.dEffect_id;
+        effBM.label = _dEffect.label;
+        effBM.effectDescription = _dEffect.effectDescription;
+        effBM.function = _dEffect.function;
+        effBM.avatar = _dEffect.avatar;
+        RLMRealm *defaultRealm = [RLMRealm defaultRealm];
+        [defaultRealm beginWriteTransaction];
+        [EffectBookMark createOrUpdateInRealm:defaultRealm withValue:effBM];
+        [defaultRealm commitWriteTransaction];
+        
+        for (DInputLine *inputLine in _dEffect.input_line) {
+            InputLineBookMark *inputLineBM = [[InputLineBookMark alloc]init];
+            inputLineBM.idInputLine = [[NSUUID UUID] UUIDString];
+            inputLineBM.dEffect_id = _dEffect.dEffect_id;
+            inputLineBM.type =  inputLine.type;
+            inputLineBM.title = inputLine.title;
+            inputLineBM.require = inputLine.require;
+            RLMRealm *defaultRealm = [RLMRealm defaultRealm];
+            [defaultRealm beginWriteTransaction];
+            [InputLineBookMark createOrUpdateInRealm:defaultRealm withValue:inputLineBM];
+            [defaultRealm commitWriteTransaction];
+        }
+        
+        for (DInputPic *inputPic in _dEffect.input_pic) {
+            InputPicBookMark *inputPicBM = [[InputPicBookMark alloc]init];
+            inputPicBM.idInputPic = [[NSUUID UUID] UUIDString];
+            inputPicBM.dEffect_id = _dEffect.dEffect_id;
+            inputPicBM.type =  inputPic.type;
+            inputPicBM.require = inputPic.require;
+            inputPicBM.width = inputPic.width;
+            inputPicBM.height = inputPic.height;
+            RLMRealm *defaultRealm = [RLMRealm defaultRealm];
+            [defaultRealm beginWriteTransaction];
+            [InputPicBookMark createOrUpdateInRealm:defaultRealm withValue:inputPicBM];
+            [defaultRealm commitWriteTransaction];
+        }
+        [_btnBookmark setSelected:YES];
+
+
+    }
+    
+}
 #pragma mark config collectionView
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
