@@ -13,6 +13,7 @@
 #import "ActivityIndicatorViewController.h"
 #import "RootViewController.h"
 #import "ViewShowImageController.h"
+#import "BookMarkViewController.h"
 
 @interface HomeViewController ()<UIPageViewControllerDataSource,UIPageViewControllerDelegate>{
     NSMutableArray *arrDataSource;
@@ -56,6 +57,8 @@ static HomeViewController *sharedInstance;
     [_navigationBar.btnMenu addTarget:revealController action:@selector(revealToggle:) forControlEvents:UIControlEventTouchUpInside];
     [_navigationBar.lbTitle setText:@"Home"];
     [_navigationBar.lbTitle setFont:[UIFont fontWithName:@"Helvetica-Bold" size:25]];
+    [_navigationBar.btnBookMark addTarget:self action:@selector(btnBookMark:) forControlEvents:UIControlEventTouchUpInside];
+    [_navigationBar.btnReload addTarget:self action:@selector(btnReload:) forControlEvents:UIControlEventTouchUpInside];
     
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
@@ -124,14 +127,17 @@ static HomeViewController *sharedInstance;
 
             [self.tableView reloadData];
         });
-    });
-    
-    ////
-    
-    
+    });    
     
 }
 
+-(void)btnBookMark:(id)sender{
+    BookMarkViewController *bookMarkVC = [[BookMarkViewController alloc]initWithNibName:@"BookMarkViewController" bundle:nil];
+    [self.navigationController pushViewController:bookMarkVC animated:YES];
+}
+-(void)btnReload:(id)sender{
+    
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

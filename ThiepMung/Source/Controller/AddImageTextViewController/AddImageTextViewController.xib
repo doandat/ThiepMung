@@ -45,10 +45,10 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kq5-OH-NBE">
-                            <rect key="frame" x="266" y="28" width="54" height="33"/>
+                            <rect key="frame" x="276" y="30" width="27" height="25"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="33" id="A9e-Bq-k6n"/>
-                                <constraint firstAttribute="width" constant="54" id="Afe-Vo-xA7"/>
+                                <constraint firstAttribute="height" constant="25" id="A9e-Bq-k6n"/>
+                                <constraint firstAttribute="width" constant="27" id="Afe-Vo-xA7"/>
                             </constraints>
                             <state key="normal" image="favorite.png">
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -58,13 +58,13 @@
                     <color key="backgroundColor" red="0.42352941176470588" green="0.1803921568627451" blue="0.72156862745098038" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="65" id="0q5-Ps-i9R"/>
-                        <constraint firstAttribute="trailing" secondItem="kq5-OH-NBE" secondAttribute="trailing" id="8l8-UJ-NQk"/>
+                        <constraint firstAttribute="trailing" secondItem="kq5-OH-NBE" secondAttribute="trailing" constant="17" id="8l8-UJ-NQk"/>
                         <constraint firstItem="C3B-7I-erH" firstAttribute="leading" secondItem="bAB-9P-O2M" secondAttribute="leading" id="AxS-te-uql"/>
                         <constraint firstAttribute="bottom" secondItem="wfg-2h-bFJ" secondAttribute="bottom" id="GjC-Q6-RPG"/>
                         <constraint firstItem="wfg-2h-bFJ" firstAttribute="leading" secondItem="C3B-7I-erH" secondAttribute="trailing" constant="8" id="Hlh-cf-RUr"/>
                         <constraint firstAttribute="bottom" secondItem="C3B-7I-erH" secondAttribute="bottom" id="M7l-SV-NLW"/>
                         <constraint firstAttribute="centerX" secondItem="wfg-2h-bFJ" secondAttribute="centerX" id="bn2-yq-2ig"/>
-                        <constraint firstAttribute="bottom" secondItem="kq5-OH-NBE" secondAttribute="bottom" constant="4" id="tpO-cV-w1t"/>
+                        <constraint firstAttribute="bottom" secondItem="kq5-OH-NBE" secondAttribute="bottom" constant="10" id="tpO-cV-w1t"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Li-1d-3et" userLabel="ViewContentAddImageText">
@@ -138,7 +138,7 @@
     </objects>
     <resources>
         <image name="btn_back.png" width="24" height="19"/>
-        <image name="favorite.png" width="16" height="16"/>
+        <image name="favorite.png" width="32" height="32"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

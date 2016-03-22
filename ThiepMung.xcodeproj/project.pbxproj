@@ -179,6 +179,14 @@
 		D90D3FB01C97A23A00252C18 /* MessageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D90D3FA01C97A23A00252C18 /* MessageViewController.xib */; };
 		D90D3FB41C97C8D000252C18 /* InputHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D90D3FB31C97C8D000252C18 /* InputHelper.m */; };
 		D90D3FB51C97C8D000252C18 /* InputHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D90D3FB31C97C8D000252C18 /* InputHelper.m */; };
+		D9118CF11CA0DEE800E62E5C /* reload.png in Resources */ = {isa = PBXBuildFile; fileRef = D9118CEE1CA0DEE800E62E5C /* reload.png */; };
+		D9118CF21CA0DEE800E62E5C /* reload.png in Resources */ = {isa = PBXBuildFile; fileRef = D9118CEE1CA0DEE800E62E5C /* reload.png */; };
+		D9118CF31CA0DEE800E62E5C /* reload@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D9118CEF1CA0DEE800E62E5C /* reload@2x.png */; };
+		D9118CF41CA0DEE800E62E5C /* reload@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D9118CEF1CA0DEE800E62E5C /* reload@2x.png */; };
+		D9118CFB1CA0E4F200E62E5C /* BookMarkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9118CF91CA0E4F200E62E5C /* BookMarkViewController.m */; };
+		D9118CFC1CA0E4F200E62E5C /* BookMarkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9118CF91CA0E4F200E62E5C /* BookMarkViewController.m */; };
+		D9118CFD1CA0E4F200E62E5C /* BookMarkViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9118CFA1CA0E4F200E62E5C /* BookMarkViewController.xib */; };
+		D9118CFE1CA0E4F200E62E5C /* BookMarkViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9118CFA1CA0E4F200E62E5C /* BookMarkViewController.xib */; };
 		D92FBE761C9F9E1F00589D7D /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = D92FBE731C9F9E1F00589D7D /* star.png */; };
 		D92FBE771C9F9E1F00589D7D /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = D92FBE731C9F9E1F00589D7D /* star.png */; };
 		D92FBE781C9F9E1F00589D7D /* star@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D92FBE741C9F9E1F00589D7D /* star@2x.png */; };
@@ -189,8 +197,6 @@
 		D92FBE801C9F9EC000589D7D /* favorite.png in Resources */ = {isa = PBXBuildFile; fileRef = D92FBE7C1C9F9EC000589D7D /* favorite.png */; };
 		D92FBE811C9F9EC000589D7D /* favorite@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D92FBE7D1C9F9EC000589D7D /* favorite@2x.png */; };
 		D92FBE821C9F9EC000589D7D /* favorite@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D92FBE7D1C9F9EC000589D7D /* favorite@2x.png */; };
-		D92FBE831C9F9EC000589D7D /* favorite@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D92FBE7E1C9F9EC000589D7D /* favorite@3x.png */; };
-		D92FBE841C9F9EC000589D7D /* favorite@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D92FBE7E1C9F9EC000589D7D /* favorite@3x.png */; };
 		D92FBE871C9FA0CF00589D7D /* EffectBookMark.m in Sources */ = {isa = PBXBuildFile; fileRef = D92FBE861C9FA0CF00589D7D /* EffectBookMark.m */; };
 		D92FBE881C9FA0CF00589D7D /* EffectBookMark.m in Sources */ = {isa = PBXBuildFile; fileRef = D92FBE861C9FA0CF00589D7D /* EffectBookMark.m */; };
 		D92FBE951C9FA76900589D7D /* InputLineBookMark.m in Sources */ = {isa = PBXBuildFile; fileRef = D92FBE921C9FA76900589D7D /* InputLineBookMark.m */; };
@@ -201,8 +207,6 @@
 		D92FBE9D1C9FAE7E00589D7D /* favorited.png in Resources */ = {isa = PBXBuildFile; fileRef = D92FBE991C9FAE7E00589D7D /* favorited.png */; };
 		D92FBE9E1C9FAE7E00589D7D /* favorited@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D92FBE9A1C9FAE7E00589D7D /* favorited@2x.png */; };
 		D92FBE9F1C9FAE7E00589D7D /* favorited@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D92FBE9A1C9FAE7E00589D7D /* favorited@2x.png */; };
-		D92FBEA01C9FAE7E00589D7D /* favorited@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D92FBE9B1C9FAE7E00589D7D /* favorited@3x.png */; };
-		D92FBEA11C9FAE7E00589D7D /* favorited@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D92FBE9B1C9FAE7E00589D7D /* favorited@3x.png */; };
 		D974BE631C87DFC90005938A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D974BE621C87DFC90005938A /* Images.xcassets */; };
 		D974BE721C87DFC90005938A /* ThiepMungTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D974BE711C87DFC90005938A /* ThiepMungTests.m */; };
 		D974BEC11C87EAF00005938A /* btn_menu.png in Resources */ = {isa = PBXBuildFile; fileRef = D974BEBF1C87EAF00005938A /* btn_menu.png */; };
@@ -381,12 +385,16 @@
 		D90D3FA01C97A23A00252C18 /* MessageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageViewController.xib; sourceTree = "<group>"; };
 		D90D3FB21C97C8D000252C18 /* InputHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputHelper.h; sourceTree = "<group>"; };
 		D90D3FB31C97C8D000252C18 /* InputHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputHelper.m; sourceTree = "<group>"; };
+		D9118CEE1CA0DEE800E62E5C /* reload.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reload.png; sourceTree = "<group>"; };
+		D9118CEF1CA0DEE800E62E5C /* reload@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "reload@2x.png"; sourceTree = "<group>"; };
+		D9118CF81CA0E4F200E62E5C /* BookMarkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookMarkViewController.h; sourceTree = "<group>"; };
+		D9118CF91CA0E4F200E62E5C /* BookMarkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookMarkViewController.m; sourceTree = "<group>"; };
+		D9118CFA1CA0E4F200E62E5C /* BookMarkViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookMarkViewController.xib; sourceTree = "<group>"; };
 		D92FBE731C9F9E1F00589D7D /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star.png; sourceTree = "<group>"; };
 		D92FBE741C9F9E1F00589D7D /* star@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star@2x.png"; sourceTree = "<group>"; };
 		D92FBE751C9F9E1F00589D7D /* star@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star@3x.png"; sourceTree = "<group>"; };
 		D92FBE7C1C9F9EC000589D7D /* favorite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = favorite.png; sourceTree = "<group>"; };
 		D92FBE7D1C9F9EC000589D7D /* favorite@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "favorite@2x.png"; sourceTree = "<group>"; };
-		D92FBE7E1C9F9EC000589D7D /* favorite@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "favorite@3x.png"; sourceTree = "<group>"; };
 		D92FBE851C9FA0CF00589D7D /* EffectBookMark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EffectBookMark.h; sourceTree = "<group>"; };
 		D92FBE861C9FA0CF00589D7D /* EffectBookMark.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EffectBookMark.m; sourceTree = "<group>"; };
 		D92FBE911C9FA76900589D7D /* InputLineBookMark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputLineBookMark.h; sourceTree = "<group>"; };
@@ -395,7 +403,6 @@
 		D92FBE941C9FA76900589D7D /* InputPicBookMark.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputPicBookMark.m; sourceTree = "<group>"; };
 		D92FBE991C9FAE7E00589D7D /* favorited.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = favorited.png; sourceTree = "<group>"; };
 		D92FBE9A1C9FAE7E00589D7D /* favorited@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "favorited@2x.png"; sourceTree = "<group>"; };
-		D92FBE9B1C9FAE7E00589D7D /* favorited@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "favorited@3x.png"; sourceTree = "<group>"; };
 		D974BE521C87DFC90005938A /* ThiepMung.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThiepMung.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D974BE621C87DFC90005938A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		D974BE6B1C87DFC90005938A /* ThiepMungTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ThiepMungTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -479,6 +486,7 @@
 		B05B06F11C930A6B0063DAD2 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				D9118CF71CA0E4D200E62E5C /* BookMarkViewController */,
 				D90CB4F51C991045008D051F /* AboutViewController */,
 				B05B06FA1C930A6B0063DAD2 /* BaseViewController */,
 				B05B072F1C930A6B0063DAD2 /* RootViewController */,
@@ -858,6 +866,16 @@
 			path = InputHelper;
 			sourceTree = "<group>";
 		};
+		D9118CF71CA0E4D200E62E5C /* BookMarkViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D9118CF81CA0E4F200E62E5C /* BookMarkViewController.h */,
+				D9118CF91CA0E4F200E62E5C /* BookMarkViewController.m */,
+				D9118CFA1CA0E4F200E62E5C /* BookMarkViewController.xib */,
+			);
+			path = BookMarkViewController;
+			sourceTree = "<group>";
+		};
 		D974BE491C87DFC90005938A = {
 			isa = PBXGroup;
 			children = (
@@ -918,12 +936,12 @@
 		D974BE811C87E4B60005938A /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				D9118CEE1CA0DEE800E62E5C /* reload.png */,
+				D9118CEF1CA0DEE800E62E5C /* reload@2x.png */,
 				D92FBE991C9FAE7E00589D7D /* favorited.png */,
 				D92FBE9A1C9FAE7E00589D7D /* favorited@2x.png */,
-				D92FBE9B1C9FAE7E00589D7D /* favorited@3x.png */,
 				D92FBE7C1C9F9EC000589D7D /* favorite.png */,
 				D92FBE7D1C9F9EC000589D7D /* favorite@2x.png */,
-				D92FBE7E1C9F9EC000589D7D /* favorite@3x.png */,
 				D92FBE731C9F9E1F00589D7D /* star.png */,
 				D92FBE741C9F9E1F00589D7D /* star@2x.png */,
 				D92FBE751C9F9E1F00589D7D /* star@3x.png */,
@@ -1040,18 +1058,19 @@
 				B05B07921C930A6B0063DAD2 /* CustomNavigationBar.xib in Resources */,
 				D9E7891E1C927EF6008A81D9 /* close@3x.png in Resources */,
 				B05B07CE1C930A6B0063DAD2 /* SidebarViewController.xib in Resources */,
+				D9118CFD1CA0E4F200E62E5C /* BookMarkViewController.xib in Resources */,
 				B05B078E1C930A6B0063DAD2 /* CropImageViewController.xib in Resources */,
 				D90B597B1C966DFE000640B0 /* SubCategoryViewController.xib in Resources */,
 				D92FBE761C9F9E1F00589D7D /* star.png in Resources */,
 				D904C92A1C8D128300E349E6 /* btn_back.png in Resources */,
 				D904C92C1C8D128300E349E6 /* btn_back@2x.png in Resources */,
+				D9118CF31CA0DEE800E62E5C /* reload@2x.png in Resources */,
 				D92FBE7A1C9F9E1F00589D7D /* star@3x.png in Resources */,
 				B05B07C21C930A6B0063DAD2 /* ResultViewController.xib in Resources */,
 				D90D3FAB1C97A23A00252C18 /* DialogViewController.xib in Resources */,
 				B05B07821C930A6B0063DAD2 /* AddImageTextViewController.xib in Resources */,
 				D90B55F31C96514E000640B0 /* SubItemCollectionView.xib in Resources */,
 				D92FBE9C1C9FAE7E00589D7D /* favorited.png in Resources */,
-				D92FBEA01C9FAE7E00589D7D /* favorited@3x.png in Resources */,
 				D974BEC31C87EAF00005938A /* btn_menu@2x.png in Resources */,
 				D974BEC11C87EAF00005938A /* btn_menu.png in Resources */,
 				D9E788F61C925F7F008A81D9 /* camera.png in Resources */,
@@ -1067,7 +1086,6 @@
 				D90CB4FB1C991045008D051F /* AboutViewController.xib in Resources */,
 				D92FBE811C9F9EC000589D7D /* favorite@2x.png in Resources */,
 				D90B55EF1C96514E000640B0 /* HomeTableViewCellSecond.xib in Resources */,
-				D92FBE831C9F9EC000589D7D /* favorite@3x.png in Resources */,
 				D92FBE9E1C9FAE7E00589D7D /* favorited@2x.png in Resources */,
 				B05B07C61C930A6B0063DAD2 /* RootViewController.xib in Resources */,
 				D9E788F81C925F7F008A81D9 /* camera@2x.png in Resources */,
@@ -1076,6 +1094,7 @@
 				B05B07861C930A6B0063DAD2 /* AddTextTableViewCell.xib in Resources */,
 				B05B07AE1C930A6B0063DAD2 /* HomeViewController.xib in Resources */,
 				D904C94D1C8D1E5800E349E6 /* addpicture@3x.png in Resources */,
+				D9118CF11CA0DEE800E62E5C /* reload.png in Resources */,
 				D904C94B1C8D1E5800E349E6 /* addpicture@2x.png in Resources */,
 				D9E788FA1C925F7F008A81D9 /* library.png in Resources */,
 				B009F1711C89DB6E00B6D197 /* imgCell1.png in Resources */,
@@ -1095,7 +1114,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D9E788FD1C925F7F008A81D9 /* library@2x.png in Resources */,
-				D92FBE841C9F9EC000589D7D /* favorite@3x.png in Resources */,
+				D9118CF41CA0DEE800E62E5C /* reload@2x.png in Resources */,
 				D90B55F01C96514E000640B0 /* HomeTableViewCellSecond.xib in Resources */,
 				D90CB4FC1C991045008D051F /* AboutViewController.xib in Resources */,
 				D92FBE9D1C9FAE7E00589D7D /* favorited.png in Resources */,
@@ -1110,6 +1129,7 @@
 				D904C9581C8D3E9200E349E6 /* khunganhmua.png in Resources */,
 				B05B07871C930A6B0063DAD2 /* AddTextTableViewCell.xib in Resources */,
 				D92FBE771C9F9E1F00589D7D /* star.png in Resources */,
+				D9118CF21CA0DEE800E62E5C /* reload.png in Resources */,
 				D9E7891F1C927EF6008A81D9 /* close@3x.png in Resources */,
 				B05B078F1C930A6B0063DAD2 /* CropImageViewController.xib in Resources */,
 				D90B55EC1C96514E000640B0 /* ViewShowImageController.xib in Resources */,
@@ -1120,12 +1140,12 @@
 				D90CB5021C9910DC008D051F /* image.png in Resources */,
 				D90CB4FF1C991085008D051F /* ava.png in Resources */,
 				D904C92B1C8D128300E349E6 /* btn_back.png in Resources */,
-				D92FBEA11C9FAE7E00589D7D /* favorited@3x.png in Resources */,
 				B05B07CB1C930A6B0063DAD2 /* MenuTableViewCell.xib in Resources */,
 				D90B597C1C966DFE000640B0 /* SubCategoryViewController.xib in Resources */,
 				D90797E01C8936BD0088F3C5 /* placeholder.png in Resources */,
 				D90D3FA41C97A23A00252C18 /* ActivityIndicatorViewController.xib in Resources */,
 				B05B078B1C930A6B0063DAD2 /* BaseViewController.xib in Resources */,
+				D9118CFE1CA0E4F200E62E5C /* BookMarkViewController.xib in Resources */,
 				D90B55F41C96514E000640B0 /* SubItemCollectionView.xib in Resources */,
 				B05B07AF1C930A6B0063DAD2 /* HomeViewController.xib in Resources */,
 				B05B07BB1C930A6B0063DAD2 /* InfoViewController.xib in Resources */,
@@ -1265,6 +1285,7 @@
 				D90B596B1C9669A9000640B0 /* JBWatchActivityIndicator.m in Sources */,
 				B05B077E1C930A6B0063DAD2 /* AppDelegate.m in Sources */,
 				B05B07E21C930A6B0063DAD2 /* SDWebImageDecoder.m in Sources */,
+				D9118CFB1CA0E4F200E62E5C /* BookMarkViewController.m in Sources */,
 				D92FBE951C9FA76900589D7D /* InputLineBookMark.m in Sources */,
 				B05B07D41C930A6B0063DAD2 /* ItemCollection.m in Sources */,
 				B05B07881C930A6B0063DAD2 /* BaseViewController.m in Sources */,
@@ -1310,6 +1331,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9118CFC1CA0E4F200E62E5C /* BookMarkViewController.m in Sources */,
 				D90D3F901C97A19C00252C18 /* UIView+Toast.m in Sources */,
 				B05B07F91C930A6B0063DAD2 /* UIView+WebCacheOperation.m in Sources */,
 				B05B078D1C930A6B0063DAD2 /* CropImageViewController.m in Sources */,

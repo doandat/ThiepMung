@@ -12,5 +12,7 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *btnMenu;
 @property (weak, nonatomic) IBOutlet UILabel *lbTitle;
+@property (weak, nonatomic) IBOutlet UIButton *btnReload;
+@property (weak, nonatomic) IBOutlet UIButton *btnBookMark;
 
 @end
