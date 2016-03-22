@@ -48,7 +48,7 @@
                     </constraints>
                 </view>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="RmJ-Cd-dka">
-                    <rect key="frame" x="0.0" y="45" width="320" height="484"/>
+                    <rect key="frame" x="0.0" y="45" width="320" height="523"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="pew-fo-s8S">
                         <size key="itemSize" width="50" height="50"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -59,7 +59,7 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="RmJ-Cd-dka" secondAttribute="bottom" constant="39" id="4T8-Ki-ZBZ"/>
+                <constraint firstAttribute="bottom" secondItem="RmJ-Cd-dka" secondAttribute="bottom" id="4T8-Ki-ZBZ"/>
                 <constraint firstItem="QfU-nx-gb2" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="6zC-HG-Tl6"/>
                 <constraint firstAttribute="trailing" secondItem="RmJ-Cd-dka" secondAttribute="trailing" id="PZT-wk-nw2"/>
                 <constraint firstItem="RmJ-Cd-dka" firstAttribute="top" secondItem="QfU-nx-gb2" secondAttribute="bottom" id="Qcp-8k-zf0"/>
