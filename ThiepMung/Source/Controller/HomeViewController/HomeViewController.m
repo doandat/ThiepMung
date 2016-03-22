@@ -214,8 +214,8 @@ static HomeViewController *sharedInstance;
     SubCategoryViewController *subCategoryVC = [[SubCategoryViewController alloc]initWithNibName:@"SubCategoryViewController" bundle:nil];
     subCategoryVC.stringTitle = [[arrDCategory objectAtIndex:[sender tag]-4000] dCategory_name];
     subCategoryVC.arrDataSource = [arrDataSource objectAtIndex:[sender tag]-4000];
-    UINavigationController *navigationVC = [[UINavigationController alloc]initWithRootViewController:subCategoryVC];
-    [self presentViewController:navigationVC animated:YES completion:nil];
+//    UINavigationController *navigationVC = [[UINavigationController alloc]initWithRootViewController:subCategoryVC];
+    [self.navigationController pushViewController:subCategoryVC animated:YES];
 }
 
 #pragma mark implement protocol

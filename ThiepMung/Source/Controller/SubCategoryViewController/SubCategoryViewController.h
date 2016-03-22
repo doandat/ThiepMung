@@ -13,5 +13,7 @@
 @property (nonatomic) NSArray *arrDataSource;
 @property (nonatomic) NSString *stringTitle;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
+@property (weak, nonatomic) IBOutlet UIButton *btnBack;
+@property (weak, nonatomic) IBOutlet UILabel *lbTitle;
 
 @end

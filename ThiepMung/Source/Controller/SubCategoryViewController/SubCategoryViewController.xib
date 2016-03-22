@@ -6,7 +6,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SubCategoryViewController">
             <connections>
+                <outlet property="btnBack" destination="u5V-UX-YFA" id="bE0-0U-EdW"/>
                 <outlet property="collectionView" destination="BY5-z5-tfb" id="BKf-zw-T5E"/>
+                <outlet property="lbTitle" destination="YMy-xJ-ycP" id="N84-IC-Coz"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -16,7 +18,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="BY5-z5-tfb">
-                    <rect key="frame" x="0.0" y="8" width="320" height="560"/>
+                    <rect key="frame" x="0.0" y="45" width="320" height="523"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="cXU-6r-429">
                         <size key="itemSize" width="50" height="50"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -24,17 +26,55 @@
                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                     </collectionViewFlowLayout>
                 </collectionView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ktp-wb-9wW">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="45"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u5V-UX-YFA">
+                            <rect key="frame" x="0.0" y="0.0" width="60" height="45"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="60" id="ahB-Bi-M3U"/>
+                            </constraints>
+                            <state key="normal" image="btn_back.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YMy-xJ-ycP">
+                            <rect key="frame" x="68" y="0.0" width="184" height="45"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.42352941179999998" green="0.18039215689999999" blue="0.72156862749999995" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="YMy-xJ-ycP" firstAttribute="top" secondItem="ktp-wb-9wW" secondAttribute="top" id="3NF-dS-aWU"/>
+                        <constraint firstItem="YMy-xJ-ycP" firstAttribute="leading" secondItem="u5V-UX-YFA" secondAttribute="trailing" constant="8" id="4z1-uV-cz1"/>
+                        <constraint firstAttribute="centerX" secondItem="YMy-xJ-ycP" secondAttribute="centerX" id="P6K-A4-dP5"/>
+                        <constraint firstItem="u5V-UX-YFA" firstAttribute="top" secondItem="ktp-wb-9wW" secondAttribute="top" id="Pf1-6H-Y3i"/>
+                        <constraint firstItem="u5V-UX-YFA" firstAttribute="leading" secondItem="ktp-wb-9wW" secondAttribute="leading" id="ULz-bq-tTj"/>
+                        <constraint firstAttribute="height" constant="45" id="XtY-gF-aGS"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="eGd-XE-nWP"/>
+                        <constraint firstAttribute="bottom" secondItem="u5V-UX-YFA" secondAttribute="bottom" id="q27-Tm-zjW"/>
+                        <constraint firstAttribute="bottom" secondItem="YMy-xJ-ycP" secondAttribute="bottom" id="r5a-Tn-Fsm"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="BY5-z5-tfb" secondAttribute="trailing" id="0tV-QC-ggG"/>
+                <constraint firstAttribute="trailing" secondItem="ktp-wb-9wW" secondAttribute="trailing" id="95D-YU-B2K"/>
                 <constraint firstItem="BY5-z5-tfb" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="LPy-ZP-YRn"/>
+                <constraint firstItem="ktp-wb-9wW" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Xa6-gf-zA5"/>
                 <constraint firstAttribute="bottom" secondItem="BY5-z5-tfb" secondAttribute="bottom" id="Zde-6W-yXy"/>
-                <constraint firstItem="BY5-z5-tfb" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="8" id="oEa-eL-KOZ"/>
+                <constraint firstItem="ktp-wb-9wW" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="eqW-CB-MNW"/>
+                <constraint firstItem="BY5-z5-tfb" firstAttribute="top" secondItem="ktp-wb-9wW" secondAttribute="bottom" id="kW9-19-QTN"/>
             </constraints>
             <point key="canvasLocation" x="140" y="217"/>
         </view>
     </objects>
+    <resources>
+        <image name="btn_back.png" width="24" height="19"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
