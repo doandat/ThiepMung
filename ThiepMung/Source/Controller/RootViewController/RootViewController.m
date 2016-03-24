@@ -63,7 +63,14 @@ static RootViewController *sharedInstance;
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
+- (void)revealController:(SWRevealViewController *)revealController didMoveToPosition:(FrontViewPosition)position
+{
+    if(position == FrontViewPositionLeft) {
+        revealController.frontViewController.view.userInteractionEnabled = YES;
+    } else {
+        revealController.frontViewController.view.userInteractionEnabled = NO;
+    }
+}
 /*
 #pragma mark - Navigation
 

@@ -59,6 +59,8 @@ static HomeViewController *sharedInstance;
     [_navigationBar.lbTitle setFont:[UIFont fontWithName:@"Helvetica-Bold" size:25]];
     [_navigationBar.btnBookMark addTarget:self action:@selector(btnBookMark:) forControlEvents:UIControlEventTouchUpInside];
     [_navigationBar.btnReload addTarget:self action:@selector(btnReload:) forControlEvents:UIControlEventTouchUpInside];
+    [_navigationBar.btnBookMark setHidden:YES];
+    [_navigationBar.btnReload setHidden:YES];
     
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
@@ -89,7 +91,7 @@ static HomeViewController *sharedInstance;
     NSLog(@"viewContainPage:%lu",(unsigned long)_viewContainPage.subviews.count);
     [self.pageController didMoveToParentViewController:self];
     
-    
+
     [_viewTitle setBackgroundColor:[UIColor colorWithRed:176/255.0f green:150/255.0f blue:217/255.0f alpha:1.0f]];
     
     
@@ -127,7 +129,7 @@ static HomeViewController *sharedInstance;
 
             [self.tableView reloadData];
         });
-    });    
+    });
     
 }
 
