@@ -32,7 +32,7 @@
     NSInteger indexTextViewChanging;
     NSInteger indexImageInputSelected;
     BOOL checkBookMark;
-
+    
 }
 @property (strong, nonatomic) UIImagePickerController *imagePickerController;
 @property (strong, nonatomic) UIImage *imagePicker;
@@ -395,20 +395,17 @@
     NSString *text;
     NSArray *arrLine = [NSArray arrayWithObjects:@"line_1", @"line_2", @"line_3", @"line_4", @"line_5", @"line_6", @"line_7", @"line_8", @"line_9", @"line_10", nil];
     NSArray *arrPic = [NSArray arrayWithObjects: @"picture_1", @"picture_2", @"picture_3", @"picture_4", @"picture_5", @"picture_6", @"picture_7", @"picture_8", @"picture_9", @"picture_10", nil];
+    
+    BOOL checkInputLine = true;
     // Dictionary that holds post parameters.
     NSMutableDictionary* _params = [[NSMutableDictionary alloc] init];
     [_params setObject:_dEffect.function forKey:@"function"];
     //set text cho các dòng
     for (int i = 0; i< numberInputText; i++) {
-        AddTextTableViewCell *cell =(AddTextTableViewCell *) [self.tableViewAddText cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
+        AddTextTableViewCell *cell =(AddTextTableViewCell *) [self.tableViewAddText cellForRowAtIndexPath:[NSIndexPath indexPathForRow:i inSection:0]];
         if (([[(DInputLine*)[_dEffect.input_line objectAtIndex:i] require] isEqualToString:@"true"])&& (([cell.tvMessage.text isEqual: @""])|| ([cell.tvMessage.text isEqual:[(DInputLine*)[_dEffect.input_line objectAtIndex:i] title]]))){
-            MessageViewController *messageVC = [[MessageViewController alloc]initWithNibName:@"MessageViewController" bundle:nil];
-            messageVC.titleText = @"Message";
-            messageVC.message = @"You must fill input line. Please fill now";
-            messageVC.delegate = self;
-            [Helper showViewController:messageVC inViewController:self withSize:CGSizeMake(300, 200)];
-
-            return;
+            checkInputLine = false;
+            [cell.tvMessage setTextColor:[UIColor redColor]];
         }else{
             if ([cell.tvMessage.text isEqualToString:[(DInputLine*)[_dEffect.input_line objectAtIndex:i] title]]) {
                 [_params setObject:@"" forKey:arrLine[i]];
@@ -417,7 +414,16 @@
             }
         }
     }
-    
+    if (!checkInputLine) {
+        
+        MessageViewController *messageVC = [[MessageViewController alloc]initWithNibName:@"MessageViewController" bundle:nil];
+        messageVC.titleText = @"Message";
+        messageVC.message = @"You must fill input line. Please fill now";
+        messageVC.delegate = self;
+        [Helper showViewController:messageVC inViewController:self withSize:CGSizeMake(300, 200)];
+        
+        return;
+    }
     //set các picture
     for (int i = 0; i< numberInputImg; i++) {
         //NSLog(@"countPic");
@@ -437,6 +443,7 @@
         }
     }
     
+    NSLog(@"_params:%@",_params);
     //encode dữ liệu trước khi gửi server
     NSString *encodedDictionary = [Helper encodeDataFromDictionary:_params];
     
@@ -458,8 +465,11 @@
             ResultViewController *resultVC = [[ResultViewController alloc]initWithNibName:@"ResultViewController" bundle:nil];
             resultVC.imageResult = imageResult;
             [Helper removeDialogViewController:self];
-            
-            [self.navigationController pushViewController:resultVC animated:YES];
+            if (!imageResult) {
+                NSLog(@"err");
+            }else{
+                [self.navigationController pushViewController:resultVC animated:YES];
+            }
             
         });
         

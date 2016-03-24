@@ -33,7 +33,6 @@
     widthBounds = [UIScreen mainScreen].bounds.size.width;
     heightBounds = [UIScreen mainScreen].bounds.size.height;
     
-    
     imageView = [[UIImageView alloc] initWithImage:_imageResult];
     float ratioWidthHeight = _imageResult.size.width/_imageResult.size.height;
     float ratioHeightWidth = _imageResult.size.height/_imageResult.size.width;
