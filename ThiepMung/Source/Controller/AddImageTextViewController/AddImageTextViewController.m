@@ -33,6 +33,9 @@
     NSInteger indexImageInputSelected;
     BOOL checkBookMark;
     
+    
+    BOOL a;
+    
 }
 @property (strong, nonatomic) UIImagePickerController *imagePickerController;
 @property (strong, nonatomic) UIImage *imagePicker;
